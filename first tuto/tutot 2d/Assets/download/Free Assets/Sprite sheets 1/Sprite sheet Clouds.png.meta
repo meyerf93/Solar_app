@@ -1,13 +1,40 @@
 fileFormatVersion: 2
 guid: d1cbabba349ed06428292b005c0d1087
 TextureImporter:
-  fileIDToRecycleName: {}
-  serializedVersion: 2
+  fileIDToRecycleName:
+    21300000: Sprite sheet Clouds_0
+    21300002: Sprite sheet Clouds_1
+    21300004: Sprite sheet Clouds_2
+    21300006: Sprite sheet Clouds_3
+    21300008: Sprite sheet Clouds_4
+    21300010: Sprite sheet Clouds_5
+    21300012: Sprite sheet Clouds_6
+    21300014: Sprite sheet Clouds_7
+    21300016: Sprite sheet Clouds_8
+    21300018: Sprite sheet Clouds_9
+    21300020: Sprite sheet Clouds_10
+    21300022: Sprite sheet Clouds_11
+    21300024: Sprite sheet Clouds_12
+    21300026: Sprite sheet Clouds_13
+    21300028: Sprite sheet Clouds_14
+    21300030: Sprite sheet Clouds_15
+    21300032: Sprite sheet Clouds_16
+    21300034: Sprite sheet Clouds_17
+    21300036: Sprite sheet Clouds_18
+    21300038: Sprite sheet Clouds_19
+    21300040: Sprite sheet Clouds_20
+    21300042: Sprite sheet Clouds_21
+    21300044: Sprite sheet Clouds_22
+    21300046: Sprite sheet Clouds_23
+    21300048: Sprite sheet Clouds_24
+    21300050: Sprite sheet Clouds_25
+    21300052: Sprite sheet Clouds_26
+  serializedVersion: 4
   mipmaps:
     mipMapMode: 0
     enableMipMap: 0
+    sRGBTexture: 1
     linearTexture: 0
-    correctGamma: 0
     fadeOut: 0
     borderMipMap: 0
     mipMapFadeDistanceStart: 1
@@ -19,10 +46,8 @@ TextureImporter:
     normalMapFilter: 0
   isReadable: 0
   grayScaleToAlpha: 0
-  generateCubemap: 0
+  generateCubemap: 6
   cubemapConvolution: 0
-  cubemapConvolutionSteps: 7
-  cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
   maxTextureSize: 1024
@@ -33,9 +58,7 @@ TextureImporter:
     wrapMode: 1
   nPOTScale: 0
   lightmap: 0
-  rGBM: 0
   compressionQuality: 50
-  allowsAlphaSplitting: 0
   spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
@@ -43,12 +66,28 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spritePixelsToUnits: 100
+  alphaUsage: 1
   alphaIsTransparency: 1
+  spriteTessellationDetail: -1
   textureType: 8
-  buildTargetSettings: []
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
   spriteSheet:
+    serializedVersion: 2
     sprites:
-    - name: Sprite sheet Clouds_0
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_0
       rect:
         serializedVersion: 2
         x: 0
@@ -59,7 +98,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_1
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_1
       rect:
         serializedVersion: 2
         x: 525
@@ -70,7 +111,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_2
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_2
       rect:
         serializedVersion: 2
         x: 1090
@@ -81,7 +124,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_3
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_3
       rect:
         serializedVersion: 2
         x: 1414
@@ -92,7 +137,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_4
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_4
       rect:
         serializedVersion: 2
         x: 1483
@@ -103,7 +150,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_5
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_5
       rect:
         serializedVersion: 2
         x: 1065
@@ -114,7 +163,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_6
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_6
       rect:
         serializedVersion: 2
         x: 598
@@ -125,7 +176,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_7
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_7
       rect:
         serializedVersion: 2
         x: 0
@@ -136,7 +189,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_8
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_8
       rect:
         serializedVersion: 2
         x: 26
@@ -147,7 +202,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_9
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_9
       rect:
         serializedVersion: 2
         x: 403
@@ -158,7 +215,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_10
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_10
       rect:
         serializedVersion: 2
         x: 1237
@@ -169,7 +228,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_11
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_11
       rect:
         serializedVersion: 2
         x: 1612
@@ -180,7 +241,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_12
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_12
       rect:
         serializedVersion: 2
         x: 535
@@ -191,7 +254,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_13
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_13
       rect:
         serializedVersion: 2
         x: 18
@@ -202,7 +267,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_14
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_14
       rect:
         serializedVersion: 2
         x: 5
@@ -213,7 +280,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_15
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_15
       rect:
         serializedVersion: 2
         x: 1100
@@ -224,7 +293,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_16
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_16
       rect:
         serializedVersion: 2
         x: 1703
@@ -235,7 +306,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_17
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_17
       rect:
         serializedVersion: 2
         x: 1559
@@ -246,7 +319,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_18
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_18
       rect:
         serializedVersion: 2
         x: 565
@@ -257,7 +332,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_19
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_19
       rect:
         serializedVersion: 2
         x: 0
@@ -268,7 +345,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_20
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_20
       rect:
         serializedVersion: 2
         x: 5
@@ -279,7 +358,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_21
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_21
       rect:
         serializedVersion: 2
         x: 773
@@ -290,7 +371,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_22
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_22
       rect:
         serializedVersion: 2
         x: 1305
@@ -301,7 +384,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_23
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_23
       rect:
         serializedVersion: 2
         x: 859
@@ -312,7 +397,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_24
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_24
       rect:
         serializedVersion: 2
         x: 0
@@ -323,7 +410,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_25
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_25
       rect:
         serializedVersion: 2
         x: 129
@@ -334,7 +423,9 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-    - name: Sprite sheet Clouds_26
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: Sprite sheet Clouds_26
       rect:
         serializedVersion: 2
         x: 999
@@ -345,6 +436,7 @@ TextureImporter:
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
+      tessellationDetail: -1
     outline: []
   spritePackingTag: 
   userData: 
