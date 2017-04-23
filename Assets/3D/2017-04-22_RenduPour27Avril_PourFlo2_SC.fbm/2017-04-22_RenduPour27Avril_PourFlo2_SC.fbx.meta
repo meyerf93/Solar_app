@@ -1,0 +1,187 @@
+fileFormatVersion: 2
+guid: be270abd89e697f4782ff200aaa1f330
+timeCreated: 1492879146
+licenseType: Free
+ModelImporter:
+  serializedVersion: 19
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: Box
+    100004: Box_2
+    100006: Box_3
+    100008: Ceiling
+    100010: Core_Roof
+    100012: Crown
+    100014: Editeur_Cinema_4D
+    100016: Frame
+    100018: Frame_2
+    100020: Frame_3
+    100022: G01
+    100024: G02
+    100026: G03
+    100028: Horizontal
+    100030: Horizontal_2
+    100032: Isolation
+    100034: Middle
+    100036: Roof
+    100038: Skin_Roof
+    100040: Velux
+    100042: Velux_2
+    100044: Velux_G01
+    100046: Velux_G02
+    100048: Velux_G03
+    100050: Vertical
+    100052: Vertical_2
+    100054: Vertical_2_MeshPart0
+    100056: Vertical_2_MeshPart1
+    100058: Wood
+    400000: //RootNode
+    400002: Box
+    400004: Box_2
+    400006: Box_3
+    400008: Ceiling
+    400010: Core_Roof
+    400012: Crown
+    400014: Editeur_Cinema_4D
+    400016: Frame
+    400018: Frame_2
+    400020: Frame_3
+    400022: G01
+    400024: G02
+    400026: G03
+    400028: Horizontal
+    400030: Horizontal_2
+    400032: Isolation
+    400034: Middle
+    400036: Roof
+    400038: Skin_Roof
+    400040: Velux
+    400042: Velux_2
+    400044: Velux_G01
+    400046: Velux_G02
+    400048: Velux_G03
+    400050: Vertical
+    400052: Vertical_2
+    400054: Vertical_2_MeshPart0
+    400056: Vertical_2_MeshPart1
+    400058: Wood
+    2300000: Box
+    2300002: Box_2
+    2300004: Box_3
+    2300006: Ceiling
+    2300008: Crown
+    2300010: Frame
+    2300012: Frame_2
+    2300014: Frame_3
+    2300016: Horizontal
+    2300018: Isolation
+    2300020: Middle
+    2300022: Velux_G01
+    2300024: Velux_G02
+    2300026: Velux_G03
+    2300028: Vertical
+    2300030: Vertical_2_MeshPart0
+    2300032: Vertical_2_MeshPart1
+    3300000: Box
+    3300002: Box_2
+    3300004: Box_3
+    3300006: Ceiling
+    3300008: Crown
+    3300010: Frame
+    3300012: Frame_2
+    3300014: Frame_3
+    3300016: Horizontal
+    3300018: Isolation
+    3300020: Middle
+    3300022: Velux_G01
+    3300024: Velux_G02
+    3300026: Velux_G03
+    3300028: Vertical
+    3300030: Vertical_2_MeshPart0
+    3300032: Vertical_2_MeshPart1
+    4300000: Velux_G01
+    4300002: Velux_G02
+    4300004: Velux_G03
+    4300006: Box
+    4300008: Frame
+    4300010: Frame_2
+    4300012: Box_2
+    4300014: Frame_3
+    4300016: Box_3
+    4300018: Horizontal
+    4300020: Vertical
+    4300022: Ceiling
+    4300024: Middle
+    4300026: Isolation
+    4300028: Crown
+    4300030: Vertical_2_MeshPart0
+    4300032: Vertical_2_MeshPart1
+    9500000: //RootNode
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    resampleCurves: 1
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationImportErrors: 
+    animationImportWarnings: 
+    animationRetargetingWarnings: 
+    animationDoRetargetingWarnings: 0
+    animationCompression: 1
+    animationRotationError: 0.5
+    animationPositionError: 0.5
+    animationScaleError: 0.5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: 1
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    keepQuads: 0
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+    useFileScale: 1
+  tangentSpace:
+    normalSmoothAngle: 60
+    normalImportMode: 0
+    tangentImportMode: 3
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    serializedVersion: 2
+    human: []
+    skeleton: []
+    armTwist: 0.5
+    foreArmTwist: 0.5
+    upperLegTwist: 0.5
+    legTwist: 0.5
+    armStretch: 0.05
+    legStretch: 0.05
+    feetSpacing: 0
+    rootMotionBoneName: 
+    rootMotionBoneRotation: {x: 0, y: 0, z: 0, w: 1}
+    hasTranslationDoF: 0
+    hasExtraRoot: 0
+    skeletonHasParents: 1
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  humanoidOversampling: 1
+  additionalBone: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
