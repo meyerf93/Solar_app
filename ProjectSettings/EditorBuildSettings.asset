@@ -10,6 +10,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/visit_scene.unity
   - enabled: 1
-    path: Assets/Scenes/informations_scene.unity
-  - enabled: 1
     path: Assets/Scenes/control_scene.unity
+  - enabled: 1
+    path: Assets/Scenes/how_scene.unity
