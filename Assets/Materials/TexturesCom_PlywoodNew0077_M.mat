@@ -8,8 +8,8 @@ Material:
   m_PrefabInternal: {fileID: 0}
   m_Name: TexturesCom_PlywoodNew0077_M
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ShaderKeywords: _EMISSION
-  m_LightmapFlags: 1
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -35,10 +35,10 @@ Material:
         m_Offset: {x: 0, y: 0}
     - _EmissionMap:
         m_Texture: {fileID: 0}
-        m_Scale: {x: 2, y: 3.3333333}
-        m_Offset: {x: -0.22, y: -3.3333333}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: c481824829e2bfd459dd08d521b0e9b2, type: 3}
+        m_Texture: {fileID: 2800000, guid: b09807c318f64404abdbe48b8224212a, type: 3}
         m_Scale: {x: 2, y: 3.3333333}
         m_Offset: {x: -0.22, y: -3.3333333}
     - _MetallicGlossMap:
