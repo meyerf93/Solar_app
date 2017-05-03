@@ -3369,7 +3369,7 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
---- !u!1001 &425125642
+--- !u!1001 &1359841708
 Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -3407,10 +3407,6 @@ Prefab:
     - target: {fileID: 4781516450437124, guid: 283ce00074cc7d04c8c4ff062837a0b0, type: 2}
       propertyPath: m_RootOrder
       value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4781516450437124, guid: 283ce00074cc7d04c8c4ff062837a0b0, type: 2}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 283ce00074cc7d04c8c4ff062837a0b0, type: 2}
