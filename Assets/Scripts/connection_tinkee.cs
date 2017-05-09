@@ -18,6 +18,7 @@ public class connection_tinkee : MonoBehaviour
     /*public string userName = null;
     public string password = null;*/
     public string topic = null;
+    public string value = null;
 
     private Queue msgq = new Queue();
 
@@ -26,12 +27,12 @@ public class connection_tinkee : MonoBehaviour
     // Use this for initialization
     void Start()
     {
-        if (brokerHostname != null )//&& userName != null && password != null)
+        if (brokerHostname != null)// && userName != null) && password != null)
         {
             Connect();
             client.Subscribe(topic);
             print("client connected and subscribed");
-            client.Publish(topic, System.Text.Encoding.ASCII.GetBytes("23.0"));
+            client.Publish(topic, System.Text.Encoding.ASCII.GetBytes("{\"cmd\":\"knx1/:1.2.26/:/dim.1\",\"mdl\":\"knx1\",\"value\":"+value+"}"));
             print("client send data");
         }
     }
@@ -39,7 +40,7 @@ public class connection_tinkee : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        client.Publish(topic, System.Text.Encoding.ASCII.GetBytes("nice click!"));
+        //client.Publish(topic, System.Text.Encoding.ASCII.GetBytes("ni!"));
         while (client.Count() > 0)
         {
             string s = client.Receive();
@@ -74,7 +75,7 @@ public class connection_tinkee : MonoBehaviour
     {
         client = new MqttClient4Unity(brokerHostname, brokerPort, false, null);
         string clientId = Guid.NewGuid().ToString();
-        client.Connect(clientId);//, userName, password);
+        client.Connect(clientId);//, userName,password);
     }
 
     public void Publish(string _topic, string msg)

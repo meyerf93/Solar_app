@@ -4005,6 +4005,26 @@ Prefab:
       propertyPath: m_LocalEulerAnglesHint.y
       value: -45
       objectReference: {fileID: 0}
+    - target: {fileID: 114565118745134154, guid: 283ce00074cc7d04c8c4ff062837a0b0,
+        type: 2}
+      propertyPath: topic
+      value: device.command.set.value
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565118745134154, guid: 283ce00074cc7d04c8c4ff062837a0b0,
+        type: 2}
+      propertyPath: brokerHostname
+      value: 192.168.2.45
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565118745134154, guid: 283ce00074cc7d04c8c4ff062837a0b0,
+        type: 2}
+      propertyPath: userName
+      value: mosquitto
+      objectReference: {fileID: 0}
+    - target: {fileID: 114565118745134154, guid: 283ce00074cc7d04c8c4ff062837a0b0,
+        type: 2}
+      propertyPath: value
+      value: 33
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 283ce00074cc7d04c8c4ff062837a0b0, type: 2}
   m_IsPrefabParent: 0
