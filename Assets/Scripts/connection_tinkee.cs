@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+﻿/*using UnityEngine;
 using System.Collections;
 
 using uPLibrary.Networking.M2Mqtt;
@@ -16,13 +16,20 @@ public class connection_tinkee : MonoBehaviour
     public string brokerHostname = null;
     public int brokerPort = 1883;
     /*public string userName = null;
-    public string password = null;*/
-    public string topic = null;
+    public string password = null;
+    public string [] topic = null;
     public string value = null;
 
     private Queue msgq = new Queue();
 
     string lastMessage = null;
+
+
+    byte[] qosLevels = { MqttMsgBase.QOS_LEVEL_AT_MOST_ONCE,
+                         MqttMsgBase.QOS_LEVEL_AT_MOST_ONCE,
+                         MqttMsgBase.QOS_LEVEL_AT_MOST_ONCE,
+                         MqttMsgBase.QOS_LEVEL_AT_MOST_ONCE,
+                         MqttMsgBase.QOS_LEVEL_AT_MOST_ONCE};
 
     // Use this for initialization
     void Start()
@@ -30,10 +37,18 @@ public class connection_tinkee : MonoBehaviour
         if (brokerHostname != null)// && userName != null) && password != null)
         {
             Connect();
-            client.Subscribe(topic);
-            print("client connected and subscribed");
-            client.Publish(topic, System.Text.Encoding.ASCII.GetBytes("{\"cmd\":\"knx1/:1.2.26/:/dim.1\",\"mdl\":\"knx1\",\"value\":"+value+"}"));
-            print("client send data");
+            print("Client connected");
+            client.Subscribe(topic[0]);//,qosLevels);
+            client.Subscribe(topic[1]);//,qosLevels);
+            client.Subscribe(topic[2]);//,qosLevels);
+            client.Subscribe(topic[3]);//,qosLevels);
+            client.Subscribe(topic[4]);//,qosLevels);
+            /*for (int i= 0; i<topic.Length; i++)
+            {
+                
+                print("topic : " + topic[i]+",QOS : " + qosLevels[i]);
+            }
+            print("All topic subscribe subscribed");
         }
     }
 
@@ -41,16 +56,10 @@ public class connection_tinkee : MonoBehaviour
     void Update()
     {
         //client.Publish(topic, System.Text.Encoding.ASCII.GetBytes("ni!"));
-        while (client.Count() > 0)
+        if (client.Count() > 0)
         {
-            string s = client.Receive();
-            msgq.Enqueue(s);
-            Debug.Log("received :" + s);
-        }
-
-        if (Input.GetMouseButtonDown(0) == true)
-        {
-            client.Publish(topic, System.Text.Encoding.ASCII.GetBytes("nice click!"));
+            print("client count : " + client.Count());
+            Debug.Log("received :" + client.ReceiveEvent());
         }
     }
 
@@ -84,6 +93,6 @@ public class connection_tinkee : MonoBehaviour
             _topic, Encoding.UTF8.GetBytes(msg),
             MqttMsgBase.QOS_LEVEL_AT_MOST_ONCE, false);
     }
-}
+}*/
 
 
