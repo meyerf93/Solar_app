@@ -1,0 +1,329 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b60a3bd42dc2d574abd3b71a2ea71e07, type: 3}
+  m_Name: AllConditions
+  m_EditorClassIdentifier: 
+  conditions:
+  - {fileID: 114270425875126340}
+  - {fileID: 114464465273519874}
+  - {fileID: 114315027674158940}
+  - {fileID: 114674272567270672}
+  - {fileID: 114812804824271698}
+  - {fileID: 114851245668720206}
+  - {fileID: 114613532173838470}
+  - {fileID: 114430205281736696}
+  - {fileID: 114117292589539374}
+  - {fileID: 114886392136716610}
+  - {fileID: 114530615477572274}
+  - {fileID: 114799340083980716}
+  - {fileID: 114279642283691070}
+  - {fileID: 114785595945802816}
+  - {fileID: 114007220300094258}
+  - {fileID: 114067828586161860}
+  - {fileID: 114359895970179428}
+  - {fileID: 114996930909448140}
+  - {fileID: 114406084487780956}
+  - {fileID: 114669506197589680}
+  - {fileID: 114959788283693394}
+--- !u!114 &114007220300094258
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: electricCookerPurchased
+  m_EditorClassIdentifier: 
+  description: electricCookerPurchased
+  satisfied: 0
+  hash: -1761069680
+--- !u!114 &114067828586161860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: simpleMultimediaPurchased
+  m_EditorClassIdentifier: 
+  description: simpleMultimediaPurchased
+  satisfied: 0
+  hash: -164852783
+--- !u!114 &114117292589539374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: heatPumpHeatingPurchased
+  m_EditorClassIdentifier: 
+  description: heatPumpHeatingPurchased
+  satisfied: 0
+  hash: 935581049
+--- !u!114 &114270425875126340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: internIsolationPurchased
+  m_EditorClassIdentifier: 
+  description: internIsolationPurchased
+  satisfied: 0
+  hash: 992359624
+--- !u!114 &114279642283691070
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: woodCookerPurchased
+  m_EditorClassIdentifier: 
+  description: woodCookerPurchased
+  satisfied: 0
+  hash: 1319602860
+--- !u!114 &114315027674158940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: doubleIsolationPurchased
+  m_EditorClassIdentifier: 
+  description: doubleIsolationPurchased
+  satisfied: 0
+  hash: -1216511956
+--- !u!114 &114359895970179428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: mediumMultimediaPurchased
+  m_EditorClassIdentifier: 
+  description: mediumMultimediaPurchased
+  satisfied: 0
+  hash: -1566499190
+--- !u!114 &114406084487780956
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: incandescentLightPurchased
+  m_EditorClassIdentifier: 
+  description: incandescentLightPurchased
+  satisfied: 0
+  hash: -669641286
+--- !u!114 &114430205281736696
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: woodHeatingPurchased
+  m_EditorClassIdentifier: 
+  description: woodHeatingPurchased
+  satisfied: 0
+  hash: -1770042841
+--- !u!114 &114464465273519874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: externIsolationPurchased
+  m_EditorClassIdentifier: 
+  description: externIsolationPurchased
+  satisfied: 0
+  hash: 1821729311
+--- !u!114 &114530615477572274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: woodWaterHeaterPurchased
+  m_EditorClassIdentifier: 
+  description: woodWaterHeaterPurchased
+  satisfied: 0
+  hash: 1493235236
+--- !u!114 &114613532173838470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: fuelHeatingPurchased
+  m_EditorClassIdentifier: 
+  description: fuelHeatingPurchased
+  satisfied: 0
+  hash: -1994624981
+--- !u!114 &114669506197589680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: halogenLightPurchased
+  m_EditorClassIdentifier: 
+  description: halogenLightPurchased
+  satisfied: 0
+  hash: -1904874264
+--- !u!114 &114674272567270672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: microwaveOvenPurchased
+  m_EditorClassIdentifier: 
+  description: microwaveOvenPurchased
+  satisfied: 0
+  hash: 1374636286
+--- !u!114 &114785595945802816
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: gasCookerPurchased
+  m_EditorClassIdentifier: 
+  description: gasCookerPurchased
+  satisfied: 0
+  hash: -1930479998
+--- !u!114 &114799340083980716
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: panelWaterHeaterPurchased
+  m_EditorClassIdentifier: 
+  description: panelWaterHeaterPurchased
+  satisfied: 0
+  hash: -1495342705
+--- !u!114 &114812804824271698
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: woodOvenPurchased
+  m_EditorClassIdentifier: 
+  description: woodOvenPurchased
+  satisfied: 0
+  hash: 1271751539
+--- !u!114 &114851245668720206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: electricOvenPurchased
+  m_EditorClassIdentifier: 
+  description: electricOvenPurchased
+  satisfied: 0
+  hash: 1922379386
+--- !u!114 &114886392136716610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: fuelWaterHeaterPurchased
+  m_EditorClassIdentifier: 
+  description: fuelWaterHeaterPurchased
+  satisfied: 0
+  hash: -101573557
+--- !u!114 &114959788283693394
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: ledLightPurchased
+  m_EditorClassIdentifier: 
+  description: ledLightPurchased
+  satisfied: 0
+  hash: 1112735157
+--- !u!114 &114996930909448140
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7232bcc57a8ab344bb6b69e23a95b453, type: 3}
+  m_Name: largeMultimediaPurchased
+  m_EditorClassIdentifier: 
+  description: largeMultimediaPurchased
+  satisfied: 0
+  hash: 1117868222

@@ -17,3 +17,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/home_scene.unity
     guid: 0d9578dab1d91684690eb840b669195b
+  - enabled: 1
+    path: Assets/Scenes/Persistent.unity
+    guid: 53fb4cda61d089e4280c475c4ee9f41c

@@ -59,6 +59,7 @@ namespace HG.iot.mqtt.example
 
 			if(!message.JSONConversionFailed)
 				Debug.Log(JsonUtility.ToJson(message));
+                
 			else
 				Debug.LogWarning("message arrived, but failed JSON conversion");
 		}
