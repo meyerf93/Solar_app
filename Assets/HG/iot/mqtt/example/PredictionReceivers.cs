@@ -6,13 +6,13 @@ using UnityEngine.UI;
 
 namespace HG.iot.mqtt.example
 {
-	public class ProductionReceivers: MonoBehaviour 
+	public class PredictionReceivers: MonoBehaviour 
 	{
         public string []id_to_parse;
-        public Slider prod_slider;
+        public Slider pred_slider;
         public Text text_value;
 
-        private List<float> prod_list = new List<float>();
+        private List<float> pred_list = new List<float>();
         
 		ITopic _cacheGlobalTopic = null;
 
@@ -24,7 +24,7 @@ namespace HG.iot.mqtt.example
 			Debug.Log("onMqttReady invoked");
 			Debug.Log(string.Format("'{0}' topic's SimpleNotifications are set to TRUE",topic.Filter));
 
-			tests(topic);
+			//tests(topic);
 		}
 
 		// Topic.SimpleNotifications=FALSE
@@ -69,7 +69,7 @@ namespace HG.iot.mqtt.example
 
             for(int i = 0; i < id_to_parse.Length; i++)
             {
-                prod_list.Add(0.0F);
+                pred_list.Add(0.0F);
             }
 
             /*Debug.Log("Message arrived on GlobalTopic");
@@ -86,7 +86,7 @@ namespace HG.iot.mqtt.example
                     if (json.Contains(id_to_parse[i]) == true)
                     {
                         test_obj = JsonUtility.FromJson<ProductionJson>(json);
-                        prod_list[i] = (float)test_obj.data;
+                        pred_list[i] = (float)test_obj.data;
                         //Debug.Log("Value of json object : data : " + test_obj.data + ", t : " + test_obj.t + ", id : " + test_obj.id);
                     }
                 }
@@ -95,12 +95,12 @@ namespace HG.iot.mqtt.example
 			else
 				Debug.LogWarning("message arrived, but failed JSON conversion");
 
-            prod_slider.value = 0.0f;
+            pred_slider.value = 0.0f;
             for(int i = 0; i < id_to_parse.Length; i++)
             {
-                prod_slider.value += prod_list[i];  
+                pred_slider.value += pred_list[i];  
             }
-            text_value.text= prod_slider.value.ToString();
+            text_value.text= pred_slider.value.ToString();
         }
 
 		void onMqttSubscriptionSuccess_GlobalTopic(SubscriptionResponse response)

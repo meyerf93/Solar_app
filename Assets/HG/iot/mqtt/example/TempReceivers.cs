@@ -6,18 +6,17 @@ using UnityEngine.UI;
 
 namespace HG.iot.mqtt.example
 {
-	public class ProductionReceivers: MonoBehaviour 
+	public class TempReceivers: MonoBehaviour 
 	{
         public string []id_to_parse;
-        public Slider prod_slider;
         public Text text_value;
 
-        private List<float> prod_list = new List<float>();
+        private List<float> temp_list = new List<float>();
         
 		ITopic _cacheGlobalTopic = null;
 
 		// Topic.SimpleNotifications=TRUE
-		void onMqttReady(ITopic topic)
+		/*void onMqttReady(ITopic topic)
 		{
 			_cacheGlobalTopic = topic;
 
@@ -25,7 +24,7 @@ namespace HG.iot.mqtt.example
 			Debug.Log(string.Format("'{0}' topic's SimpleNotifications are set to TRUE",topic.Filter));
 
 			tests(topic);
-		}
+		}*/
 
 		// Topic.SimpleNotifications=FALSE
 		void onMqttReady_GlobalTopic(ITopic topic)
@@ -69,7 +68,7 @@ namespace HG.iot.mqtt.example
 
             for(int i = 0; i < id_to_parse.Length; i++)
             {
-                prod_list.Add(0.0F);
+                temp_list.Add(0.0F);
             }
 
             /*Debug.Log("Message arrived on GlobalTopic");
@@ -86,8 +85,17 @@ namespace HG.iot.mqtt.example
                     if (json.Contains(id_to_parse[i]) == true)
                     {
                         test_obj = JsonUtility.FromJson<ProductionJson>(json);
-                        prod_list[i] = (float)test_obj.data;
-                        //Debug.Log("Value of json object : data : " + test_obj.data + ", t : " + test_obj.t + ", id : " + test_obj.id);
+                        temp_list[i] = (float)test_obj.data;
+                        Debug.Log("Value of json object : data : " + test_obj.data + ", t : " + test_obj.t + ", id : " + test_obj.id);
+
+                        float temp_value = 0.0f;
+                        print("temp value before addition : " + temp_value);
+                        for (int j = 0; j < id_to_parse.Length; j++)
+                        {
+                            temp_value += temp_list[i];
+                        }
+                        print("temp value : " + temp_value);
+                        text_value.text = temp_list.ToString();               
                     }
                 }
             }
@@ -95,12 +103,6 @@ namespace HG.iot.mqtt.example
 			else
 				Debug.LogWarning("message arrived, but failed JSON conversion");
 
-            prod_slider.value = 0.0f;
-            for(int i = 0; i < id_to_parse.Length; i++)
-            {
-                prod_slider.value += prod_list[i];  
-            }
-            text_value.text= prod_slider.value.ToString();
         }
 
 		void onMqttSubscriptionSuccess_GlobalTopic(SubscriptionResponse response)
