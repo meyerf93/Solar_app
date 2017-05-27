@@ -1532,7 +1532,7 @@ MonoBehaviour:
   filter: new.statement
   subscribeOnConnect: 1
   allowEmptyMessage: 0
-  requestedQualityOfService: 1
+  requestedQualityOfService: 2
 --- !u!114 &754384077
 MonoBehaviour:
   m_ObjectHideFlags: 0
