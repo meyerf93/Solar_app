@@ -28,7 +28,6 @@ PluginImporter:
           Exclude Win64: 0
           Exclude WindowsStoreApps: 1
           Exclude iOS: 1
-          Exclude tvOS: 1
     data:
       first:
         '': Editor
@@ -143,14 +142,6 @@ PluginImporter:
     data:
       first:
         iPhone: iOS
-      second:
-        enabled: 0
-        settings:
-          CompileFlags: 
-          FrameworkDependencies: 
-    data:
-      first:
-        tvOS: tvOS
       second:
         enabled: 0
         settings:

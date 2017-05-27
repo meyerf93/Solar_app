@@ -145,7 +145,11 @@ PlayerSettings:
   buildNumber:
     iOS: 0
   AndroidBundleVersionCode: 1
+<<<<<<< HEAD
   AndroidMinSdkVersion: 23
+=======
+  AndroidMinSdkVersion: 22
+>>>>>>> origin/master
   AndroidTargetSdkVersion: 23
   AndroidPreferredInstallLocation: 1
   aotOptions: 
