@@ -137,7 +137,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reactions:
-  - {fileID: 1827007849}
+  - {fileID: 0}
 --- !u!1 &125
 GameObject:
   m_ObjectHideFlags: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reactions:
-  - {fileID: 2031858614}
+  - {fileID: 0}
 --- !u!1 &141
 GameObject:
   m_ObjectHideFlags: 0
@@ -255,7 +255,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reactions:
-  - {fileID: 1277500727}
+  - {fileID: 0}
 --- !u!1 &165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1217,52 +1217,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dbffbfa104c72f24ab3fda7cba795ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1001 &652384473
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4644391521772738, guid: c816b52376b93a949a0ae85cea68403c, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4644391521772738, guid: c816b52376b93a949a0ae85cea68403c, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4644391521772738, guid: c816b52376b93a949a0ae85cea68403c, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1300
-      objectReference: {fileID: 0}
-    - target: {fileID: 4644391521772738, guid: c816b52376b93a949a0ae85cea68403c, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4644391521772738, guid: c816b52376b93a949a0ae85cea68403c, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0.38268343
-      objectReference: {fileID: 0}
-    - target: {fileID: 4644391521772738, guid: c816b52376b93a949a0ae85cea68403c, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4644391521772738, guid: c816b52376b93a949a0ae85cea68403c, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 0.92387956
-      objectReference: {fileID: 0}
-    - target: {fileID: 4644391521772738, guid: c816b52376b93a949a0ae85cea68403c, type: 2}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 1886015635885992, guid: c816b52376b93a949a0ae85cea68403c, type: 2}
-      propertyPath: m_Name
-      value: Batiment
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: c816b52376b93a949a0ae85cea68403c, type: 2}
-  m_IsPrefabParent: 0
 --- !u!1 &1276602529
 GameObject:
   m_ObjectHideFlags: 0
@@ -1343,39 +1297,46 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1276602529}
---- !u!114 &1277500727
+--- !u!1 &1506652896
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1506652898}
+  - component: {fileID: 1506652897}
+  m_Layer: 0
+  m_Name: moveBuildings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1506652897
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 1506652896}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e47b088a86708e049be2af52f7e7c204, type: 3}
+  m_Script: {fileID: 11500000, guid: a0628076224f54747981758f24e0096f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sceneName: control_scene
---- !u!114 &1827007849
-MonoBehaviour:
+  building_saved_data: {fileID: 11400000, guid: 5ca621157ecd5a049b878bb49ddfba67,
+    type: 2}
+  value_of_rotation: 32.5
+--- !u!4 &1506652898
+Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e47b088a86708e049be2af52f7e7c204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: how_scene
---- !u!114 &2031858614
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e47b088a86708e049be2af52f7e7c204, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneName: visit_scene
+  m_GameObject: {fileID: 1506652896}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

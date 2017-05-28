@@ -1220,7 +1220,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 836848943}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
@@ -1442,7 +1442,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 836848932}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
@@ -2058,7 +2058,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 836848934}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
@@ -2427,7 +2427,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 836848931}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
@@ -3090,7 +3090,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 836848942}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
@@ -3320,7 +3320,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 836848939}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
@@ -3695,7 +3695,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 836848929}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
@@ -3839,7 +3839,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 836848938}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
@@ -3983,7 +3983,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 836848937}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
@@ -4086,132 +4086,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 822354652}
---- !u!1001 &836848927
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 4783846655983280, guid: 283ce00074cc7d04c8c4ff062837a0b0, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: -1000
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783846655983280, guid: 283ce00074cc7d04c8c4ff062837a0b0, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783846655983280, guid: 283ce00074cc7d04c8c4ff062837a0b0, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: -1300
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783846655983280, guid: 283ce00074cc7d04c8c4ff062837a0b0, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783846655983280, guid: 283ce00074cc7d04c8c4ff062837a0b0, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783846655983280, guid: 283ce00074cc7d04c8c4ff062837a0b0, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783846655983280, guid: 283ce00074cc7d04c8c4ff062837a0b0, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4783846655983280, guid: 283ce00074cc7d04c8c4ff062837a0b0, type: 2}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1411812930733664, guid: 283ce00074cc7d04c8c4ff062837a0b0, type: 2}
-      propertyPath: m_Name
-      value: Batiment
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 283ce00074cc7d04c8c4ff062837a0b0, type: 2}
-  m_IsPrefabParent: 0
---- !u!1 &836848928 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1411812930733664, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848929 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1315429624766462, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848930 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1904859993886516, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848931 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1539624447529566, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848932 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1200997449930356, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848933 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1876246235737310, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848934 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1600423319600602, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848935 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1633196757166530, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848936 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1863171876214030, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848937 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1609745850043006, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848938 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1447061082541978, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848939 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1010921983383308, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848940 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1295548657296596, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848941 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1704352370756762, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848942 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1072373852449306, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
---- !u!1 &836848943 stripped
-GameObject:
-  m_PrefabParentObject: {fileID: 1441896037924910, guid: 283ce00074cc7d04c8c4ff062837a0b0,
-    type: 2}
-  m_PrefabInternal: {fileID: 836848927}
 --- !u!1 &837230209
 GameObject:
   m_ObjectHideFlags: 0
@@ -4723,7 +4597,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 836848930}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
@@ -4953,7 +4827,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 836848933}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
@@ -6908,7 +6782,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedRotation: 200
-  Model_3D: {fileID: 836848928}
+  Model_3D: {fileID: 0}
   Sliderval: {fileID: 1441881527}
 --- !u!114 &1441881527
 MonoBehaviour:
@@ -7439,7 +7313,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 836848935}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
@@ -8567,7 +8441,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 836848941}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
@@ -8861,7 +8735,7 @@ MonoBehaviour:
   onValueChanged:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 836848940}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:
@@ -8883,7 +8757,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 836848936}
+      - m_Target: {fileID: 0}
         m_MethodName: SetActive
         m_Mode: 0
         m_Arguments:

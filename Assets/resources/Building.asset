@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de15ba00566766d47927230bdce1d325, type: 3}
+  m_Name: Building
+  m_EditorClassIdentifier: 
+  Base: {fileID: 1981735721002796, guid: e21c272958a19a340b476e787b5f7026, type: 2}
+  Roof: {fileID: 1679613171369972, guid: e21c272958a19a340b476e787b5f7026, type: 2}
+  Ground: {fileID: 1344005374713306, guid: e21c272958a19a340b476e787b5f7026, type: 2}
+  West_facade: {fileID: 1243118362648674, guid: e21c272958a19a340b476e787b5f7026,
+    type: 2}
+  East_facade: {fileID: 1891213362013166, guid: e21c272958a19a340b476e787b5f7026,
+    type: 2}
+  South_facade: {fileID: 1569918922959866, guid: e21c272958a19a340b476e787b5f7026,
+    type: 2}
+  North_facades: {fileID: 1890007313721830, guid: e21c272958a19a340b476e787b5f7026,
+    type: 2}
+  West_skin: {fileID: 1774113421439282, guid: e21c272958a19a340b476e787b5f7026, type: 2}
+  East_skin: {fileID: 1527077169590404, guid: e21c272958a19a340b476e787b5f7026, type: 2}
+  South_skin: {fileID: 1868964519526600, guid: e21c272958a19a340b476e787b5f7026, type: 2}
+  North_skin: {fileID: 1449670142797056, guid: e21c272958a19a340b476e787b5f7026, type: 2}
+  West_core: {fileID: 1581240062348724, guid: e21c272958a19a340b476e787b5f7026, type: 2}
+  East_core: {fileID: 1524002452363166, guid: e21c272958a19a340b476e787b5f7026, type: 2}
+  South_core: {fileID: 1239868991434456, guid: e21c272958a19a340b476e787b5f7026, type: 2}
+  North_core: {fileID: 1348125678583526, guid: e21c272958a19a340b476e787b5f7026, type: 2}
