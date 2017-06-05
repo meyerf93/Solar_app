@@ -11,6 +11,9 @@ public class change_color_light : MonoBehaviour {
     public Text text_quality;
     public Text text_types;
 
+    public GameObject PopUp_quality;
+    public GameObject PopUp_types;
+
     private Color start_color;
 
     private void Start()
@@ -22,7 +25,7 @@ public class change_color_light : MonoBehaviour {
 		if (Button_light_quality.isOn == true) {
 			text_quality.color = Color.white;
 		}
-		else {
+		else if(PopUp_quality.activeSelf == false){
             text_quality.color = start_color;
 		}
 	}
@@ -33,7 +36,7 @@ public class change_color_light : MonoBehaviour {
         {
             text_types.color = Color.white;
         }
-        else
+        else if(PopUp_types.activeSelf == false)
         {
             text_types.color = start_color;
         }

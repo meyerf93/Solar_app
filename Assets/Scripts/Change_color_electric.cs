@@ -16,6 +16,11 @@ public class Change_color_electric : MonoBehaviour {
     public Text text_sun;
     public Text texct_storage;
 
+    public GameObject PopUp_activity;
+    public GameObject PopUp_seasons;
+    public GameObject PopUp_suns_path;
+    public GameObject PopUp_storage;
+
     private Color start_color;
 
     private void Start()
@@ -29,7 +34,7 @@ public class Change_color_electric : MonoBehaviour {
         {
             text_activity.color = Color.white;
         }
-        else
+        else if (PopUp_activity.activeSelf == false)
         {
             text_activity.color = start_color;
         }
@@ -41,7 +46,7 @@ public class Change_color_electric : MonoBehaviour {
         {
             text_season.color = Color.white;
         }
-        else
+        else if (PopUp_seasons.activeSelf == false)
         {
             text_season.color = start_color;
         }
@@ -53,7 +58,7 @@ public class Change_color_electric : MonoBehaviour {
         {
             text_sun.color = Color.white;
         }
-        else
+        else if (PopUp_suns_path.activeSelf == false)
         {
             text_sun.color = start_color;
         }
@@ -65,7 +70,7 @@ public class Change_color_electric : MonoBehaviour {
         {
             texct_storage.color = Color.white;
         }
-        else
+        else if (PopUp_storage.activeSelf == false)
         {
             texct_storage.color = start_color;
         }
