@@ -7050,13 +7050,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4610e7951acca76428cbc677ad11d34c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Button_Consult_last_charge: {fileID: 526691569}
   Button_Consult_state: {fileID: 530176841}
   Button_Modify: {fileID: 112926921}
-  text_last: {fileID: 837694406}
   text_state: {fileID: 1449436632}
   text_modify: {fileID: 113876143}
-  PopUp_last: {fileID: 48273392}
   PopUp_state: {fileID: 393369029}
   PopUp_modifiy: {fileID: 643534248}
 --- !u!114 &624012819

@@ -14,6 +14,7 @@ public class RotationReaction: DelayedReaction
 
     protected override void SpecificInit()
     {
+        Slidervalfloat = Sliderval.value;
         Building.transform.rotation = Quaternion.AngleAxis(multiplier*defaultRotation, rotation);
     }
 
