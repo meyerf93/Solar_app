@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<language>
+	<English>
+		<string name ="car_pop_up">Consult state of the car charger</string>
+		<string name ="car_counter">Numbers if cars connected :</string>
+		<string name ="total_consum">Total consumptions of cars :</string>
+		<string name ="state_charger">State of the car charger :</string>
+		<string name ="state_value_1">Plugged on wallbox</string>
+		<string name ="state_value_2">Plug locked</string>
+		<string name ="state_value_3">Plugged on EV</string>
+		<string name ="status_title">Status for last charge of car charger</string>
+		<string name ="production">Panel production</string>
+		<string name ="consumption">Consumption of last recharge</string>
+	</English>
+	<French>
+		<string name ="car_pop_up">Consulter l'état de la borne de recharge</string>
+		<string name ="car_counter">Nombre de voiture connecté :</string>
+		<string name ="total_consum">Consommation total des voitures :</string>
+		<string name ="state_charger">Etat de la borne de recharge :</string>
+		<string name ="state_value_1">Connecté a la borne de recherge</string>
+		<string name ="state_value_2">Connecteur verouiller</string>
+		<string name ="state_value_3">Connecté à la voiture</string>
+		<string name ="status_title">Statut de la dernière recharge</string>
+		<string name ="production">Production des panneaux solaire</string>
+		<string name ="consumption">Consommation de la dernière recharge</string>
+	</French>
+</language>
