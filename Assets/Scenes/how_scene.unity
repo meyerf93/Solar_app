@@ -264,8 +264,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u2022 avec 70 Wh (6 kcal) tu peu faire 1km en voiture, ou de 4 \xE015
-    km en v\xE9lo !"
+  m_Text: "\u2022 With 70 Wh (6 kcal) \n   the choice is yours : \n   ride 0.62 miles
+    by car \n   or 2.5 to 9.3 miles by\n   bike!"
 --- !u!222 &26262524
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1224,7 +1224,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.609}
   m_AnchorMax: {x: 1, y: 0.61300004}
-  m_AnchoredPosition: {x: -2.000061, y: 157.9107}
+  m_AnchoredPosition: {x: -2.000061, y: 157.91069}
   m_SizeDelta: {x: 17.849854, y: 0.5576172}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &111034066
@@ -1299,7 +1299,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.007888087, y: 0.615}
   m_AnchorMax: {x: 0.99500006, y: 0.77933866}
-  m_AnchoredPosition: {x: -1.9742432, y: 169.92413}
+  m_AnchoredPosition: {x: -1.9742432, y: 169.92404}
   m_SizeDelta: {x: 17.619873, y: 22.911865}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &112926918
@@ -12910,8 +12910,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u2022 Baisser le chauffage d'un \xB0C fait \xE9conomiser 7% d'\xE9nergie.
-    Met un pull et rejoins nous dans la skin"
+  m_Text: "\u2022 By reducing your \n   heating needs by 1\xB0F, \n   you are able
+    to save 7% \n   of energy!"
 --- !u!222 &1131158741
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -14392,8 +14392,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u2022 35% de l'eau que nous consommons sont pour les toilettes et 14%
-    pour la lessive: keep calm and dry toilet"
+  m_Text: "\u2022 Switzerland\u2019s average\n   water consumption is \n   about 35%
+    for the \n   toilets and 14% for \n   the washing machine."
 --- !u!222 &1281255493
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -19490,8 +19490,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.008610109, y: 0.011000001}
   m_AnchorMax: {x: 0.9941662, y: 0.77900004}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: -0.25}
+  m_SizeDelta: {x: 0, y: -0.5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1798484327
 MonoBehaviour:
@@ -20092,8 +20092,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u2022 les m\xE9nagfes repr\xE9sentent environ 35% de l aconsomation \xE9lectrique
-    du pays"
+  m_Text: "\u2022 Residential households \n   consume almost 35%\n   of Switzerland\u2019s\n
+    \  electrical energy."
 --- !u!222 &1835937089
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -21111,8 +21111,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u2022 Et si on s'inpirerait de la \n   nature pour mieux\n   consommer
-    ?"
+  m_Text: "\u2022 What if we inspire ourself \n   from mother nature to \n   consume
+    better?"
 --- !u!222 &1938217548
 CanvasRenderer:
   m_ObjectHideFlags: 0
