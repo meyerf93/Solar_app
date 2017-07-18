@@ -4,9 +4,9 @@ using System.Collections.Generic;
 using System;
 using System.Text;
 using uPLibrary.Networking.M2Mqtt.Exceptions;
-using uPLibrary.Networking.M2Mqtt.Internal;
+//using uPLibrary.Networking.M2Mqtt.Internal;
 using uPLibrary.Networking.M2Mqtt.Messages;
-using uPLibrary.Networking.M2Mqtt.Session;
+//using uPLibrary.Networking.M2Mqtt.Session;
 using uPLibrary.Networking.M2Mqtt.Utility;
 
 
@@ -20,6 +20,7 @@ namespace HG.iot.mqtt.clients
 		IBrokerConnection _connection = null;
 		ConnectionOptions _connectionOptions = null;
         uPLibrary.Networking.M2Mqtt.MqttClient _platform = null;
+       
 
 		public string ClientId { get { return _connectionOptions.ClientId; } }
 
@@ -31,11 +32,11 @@ namespace HG.iot.mqtt.clients
 		public bool Connect (ConnectionOptions options)
 		{
 			_connectionOptions = options;
-			_platform = new uPLibrary.Networking.M2Mqtt.MqttClient(_connectionOptions.Host);	//TODO: port and SSL not supported
-			_platform.ProtocolVersion = (uPLibrary.Networking.M2Mqtt.MqttProtocolVersion)options.ProtocolVersion;
+            _platform = new uPLibrary.Networking.M2Mqtt.MqttClient(_connectionOptions.Host);	//TODO: port and SSL not supported
+			//_platform.ProtocolVersion = (uPLibrary.Networking.M2Mqtt.MqttProtocolVersion)options.ProtocolVersion;
 
-			_platform.ConnectionClosed += _platform_ConnectionClosed;
-			_platform.MqttMsgPublished += _platform_MqttMsgPublished;
+			_platform.MqttMsgDisconnected += _platform_ConnectionClosed;
+			//_platform.MqttMsgPublished += _platform_MqttMsgPublished;
 			_platform.MqttMsgPublishReceived += _platform_MqttMsgPublishReceived;
 			_platform.MqttMsgSubscribed += _platform_MqttMsgSubscribed;
 			_platform.MqttMsgUnsubscribed += _platform_MqttMsgUnsubscribed;
@@ -95,12 +96,12 @@ namespace HG.iot.mqtt.clients
 			return wrappedMessage;
 		}
 
-		void _platform_MqttMsgPublished (object sender, uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishedEventArgs e)
+		/*void _platform_MqttMsgPublished (object sender, uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishedEventArgs e)
 		{
 			OutboundMessage wm = _outstandingMessages[e.MessageId.ToString()];
 			_outstandingMessages.Remove(wm.Id);
 
-			wm.WasDelivered = e.IsPublished;
+			wm.WasDelivered = e.;
 
 			if(wm.WasDelivered)
 			{
@@ -112,7 +113,7 @@ namespace HG.iot.mqtt.clients
 				if(wm.OnFailure!=null)
 					wm.OnFailure(wm);
 			}
-		}
+		}*/
 
 		void _platform_MqttMsgPublishReceived (object sender, uPLibrary.Networking.M2Mqtt.Messages.MqttMsgPublishEventArgs e)
 		{
@@ -134,9 +135,13 @@ namespace HG.iot.mqtt.clients
 
 			subscription.SetId(msgId.ToString());
 
-			_outstandingSubscriptions.Add(subscription.Id,subscription);
+            if (!_outstandingSubscriptions.ContainsKey(subscription.Id)) {
+                _outstandingSubscriptions.Add(subscription.Id, subscription);
 
-			return subscription;
+            }
+                            return subscription;
+            
+
 		}
 
 		public WrappedSubscription Unsubscribe (WrappedSubscription subscription)

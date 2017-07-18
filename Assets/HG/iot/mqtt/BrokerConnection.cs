@@ -29,7 +29,7 @@ namespace HG.iot.mqtt
 				}
 				catch (PlatformNotSupportedException pnsex)
 				{
-					Debug.LogError("Component implementing IMqttClient interface does not support the current platform.");
+					Debug.LogError(pnsex.ToString()+"Component implementing IMqttClient interface does not support the current platform.");
 				}
 			}
 		}
@@ -182,7 +182,7 @@ namespace HG.iot.mqtt
 		// dispatch inbound message to correct topics
 		public void onMessageArrived(InboundMessage message)
 		{
-			//TODO: ADD WILDCARD SUPPORT
+			//aTODO: ADD WILDCARD SUPPORT
 
 			foreach(var topic in _topics.Where(t => t.Filter.Equals(message.Topic)))
 				topic.Notify.onMqttMessageArrived(message.Message);

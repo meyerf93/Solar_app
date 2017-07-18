@@ -8,7 +8,8 @@ namespace HG.iot.mqtt
 	public abstract class Topic<TMessage> : MonoBehaviour, ITopic, IITopic
 		where TMessage : Message
 	{
-		private ITopic topic {
+        private int debugCounter = 0;
+        private ITopic topic {
 			get {
 				return this;
 			}
@@ -16,6 +17,7 @@ namespace HG.iot.mqtt
 
 		void Awake()
 		{
+            Debug.Log("debugger counter : " + ++debugCounter);
 			Statistics = new TopicStats();
 
 			_connection = BrokerConnection.Instance;
@@ -219,7 +221,7 @@ namespace HG.iot.mqtt
 			}
 			catch(ArgumentException aex)
 			{
-				Debug.LogErrorFormat("'{0}' message failed serialization from string '{1}'", this.MessageType.Name, message);
+				Debug.LogErrorFormat(aex.ToString()+"'{0}' message failed serialization from string '{1}'", this.MessageType.Name, message);
 			}
 
 			if(string.IsNullOrEmpty(payload) && !allowEmptyMessage)
@@ -289,7 +291,7 @@ namespace HG.iot.mqtt
 			catch(ArgumentException aex)
 			{
 				if(!allowEmptyMessage)
-					Debug.LogErrorFormat("'{0}' message failed deserialization from string '{1}'", this.MessageType.Name, message);
+					Debug.LogErrorFormat(aex.ToString()+"'{0}' message failed deserialization from string '{1}'", this.MessageType.Name, message);
 
 				msg = Activator.CreateInstance<TMessage>();
 				msg.JSONConversionFailed = true;

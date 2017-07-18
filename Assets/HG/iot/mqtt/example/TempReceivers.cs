@@ -11,12 +11,12 @@ namespace HG.iot.mqtt.example
         public string []id_to_parse;
         public Text text_value;
 
-        private List<float> temp_list = new List<float>();
-        
-		ITopic _cacheGlobalTopic = null;
+        private List<double> temp_list = new List<double>();
+
+        ITopic _cacheGlobalTopic = null;
 
 		// Topic.SimpleNotifications=TRUE
-		/*void onMqttReady(ITopic topic)
+		void onMqttReady(ITopic topic)
 		{
 			_cacheGlobalTopic = topic;
 
@@ -24,7 +24,7 @@ namespace HG.iot.mqtt.example
 			Debug.Log(string.Format("'{0}' topic's SimpleNotifications are set to TRUE",topic.Filter));
 
 			tests(topic);
-		}*/
+		}
 
 		// Topic.SimpleNotifications=FALSE
 		void onMqttReady_GlobalTopic(ITopic topic)
@@ -41,18 +41,34 @@ namespace HG.iot.mqtt.example
 
 		void tests(ITopic topic)
 		{
-			try
-			{
-				Debug.Log("Let's try subscribing to this topic without connecting to broker first....");
-				topic.Subscribe();
-			}
-			catch(OperationCanceledException ocex)
-			{
-				Debug.LogError("Performing actions that require an active connection will throw an 'OperationCancelledException'");
-			}
+            if (!topic.ConnectionManager.IsConnected)
+            {
+                topic.ConnectionManager.Connect();
+            }
+            if (!topic.IsSubscribed)
+            {
+                try
+                {
+                    Debug.Log("Let's try subscribing to this topic without connecting to broker first....");
+                    topic.Subscribe();
+                }
+                catch (OperationCanceledException ocex)
+                {
+                    Debug.LogError(ocex.ToString() + "Performing actions that require an active connection will throw an 'OperationCancelledException'");
+                    Debug.Log("bonjour monsieur MQTT !");
+                }
+            }
 
-			topic.ConnectionManager.Connect();
-		}
+            for(int j = 0; j < id_to_parse.Length; j++)
+            {
+                _cacheGlobalTopic.Send(
+                //{"cmd":"zwave1/:3260679919/:2/:/infos.1/:/1/:/1","mdl":"zwave1","value": 22.5}
+                new GlobalMessage { cmd = id_to_parse[j], mdl = "zwave1", value = 22.5 },
+                false,
+                QualityOfServiceEnum.ExactlyOnce);
+            }
+
+        }
 
 		void onMqttMessageDelivered_GlobalTopic(string messageId)
 		{
@@ -61,48 +77,49 @@ namespace HG.iot.mqtt.example
 
         void onMqttMessageArrived_GlobalTopic(GlobalMessage message)
         {
-            ProductionJson test_obj = new ProductionJson();
-            test_obj.data = 2.5;
-            test_obj.t = "time 19:00:35";
-            test_obj.t = "test id";
+            Debug.Log("message just arrived");
+            GlobalMessage receive_obj;
 
             for(int i = 0; i < id_to_parse.Length; i++)
             {
-                temp_list.Add(0.0F);
+                temp_list.Add(0.0);
             }
 
-            /*Debug.Log("Message arrived on GlobalTopic");
-            Debug.Log("Note that the message parameter in the arrival notification is strong typed to that of the topic's message");*/
+            Debug.Log("Message arrived on GlobalTopic");
+            Debug.Log("Note that the message parameter in the arrival notification is strong typed to that of the topic's message");
 
-            if (!message.JSONConversionFailed){ 
-                //Debug.Log(JsonUtility.ToJson(message));
+            if (!message.JSONConversionFailed)
+            {
+                Debug.Log(JsonUtility.ToJson(message));
                 string json = JsonUtility.ToJson(message);
-                
+
 
                 //parse intersting message
-                for(int i=0;i<id_to_parse.Length; i++)
+                for (int i = 0; i < id_to_parse.Length; i++)
                 {
                     if (json.Contains(id_to_parse[i]) == true)
                     {
-                        test_obj = JsonUtility.FromJson<ProductionJson>(json);
-                        temp_list[i] = (float)test_obj.data;
-                        Debug.Log("Value of json object : data : " + test_obj.data + ", t : " + test_obj.t + ", id : " + test_obj.id);
-
-                        float temp_value = 0.0f;
-                        print("temp value before addition : " + temp_value);
-                        for (int j = 0; j < id_to_parse.Length; j++)
-                        {
-                            temp_value += temp_list[i];
-                        }
-                        print("temp value : " + temp_value);
-                        text_value.text = temp_list.ToString();               
+                        receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                        temp_list[i] = receive_obj.value;
+                        Debug.Log("Value of json object : cmd : " + receive_obj.cmd + ", mdl : " + receive_obj.mdl + ", value : " + receive_obj.value);
                     }
                 }
             }
-                
-			else
-				Debug.LogWarning("message arrived, but failed JSON conversion");
 
+
+
+            else
+                Debug.LogWarning("message arrived, but failed JSON conversion");
+
+            double temp_value = 0.0;
+            print("temp value before addition : " + temp_value);
+            int j = 0;
+            for (; j < id_to_parse.Length; j++)
+            {
+                temp_value += temp_list[j];
+            }
+            print("temp value : " + temp_value);
+            text_value.text = (temp_value / id_to_parse.Length).ToString();            
         }
 
 		void onMqttSubscriptionSuccess_GlobalTopic(SubscriptionResponse response)
@@ -113,12 +130,6 @@ namespace HG.iot.mqtt.example
 				" 'Best effort' QOS does not get delivery verification from broker.  " +
 				"'Best effort' is however the quickest and dirtiest way to send a message.");
 			
-			_cacheGlobalTopic.Send(
-                //{"dttp": null, "data": 100, "t": "2017-05-15T06:47:42Z", "id": "knx1/:1.2.26/:/dim.7"}
-                new GlobalMessage { dttp = "this is text", data = "666", t = "2017-05-15T06:47:42Z",  id= "knx1/:1.2.26/:/dim.7" }, 
-
-                false, 
-				QualityOfServiceEnum.AtLeastOnce);
 		}
 
 		void onMqttSubscriptionFailure_GlobalTopic(SubscriptionResponse response)
