@@ -4,25 +4,25 @@ using UnityEngine.UI;
 public class RotationReaction: DelayedReaction
 {
     public GameObject Building;
-    public Slider Sliderval;
-    public float defaultRotation;
-    public Vector3 rotation;
+    public SimpleRotation rotation;
     public int multiplier;
-
-
-    private float Slidervalfloat;
+    public Vector3 axis;
 
     protected override void SpecificInit()
     {
-        Slidervalfloat = Sliderval.value;
-        Building.transform.rotation = Quaternion.AngleAxis(multiplier*defaultRotation, rotation);
+        float intensity = rotation.GetDirection().x;
+        Debug.Log("Vector for the rotation : " + intensity);
+
+        Building.transform.Rotate(axis, intensity * multiplier*Mathf.Deg2Rad);
     }
 
 
     protected override void ImmediateReaction ()
     {
-         Slidervalfloat = Sliderval.value;
-         Building.transform.rotation = Quaternion.AngleAxis(multiplier * Slidervalfloat, rotation);
+        float intensity = rotation.GetDirection().x;
+        Debug.Log("Vector for the rotation : " + intensity);
+
+        Building.transform.Rotate(axis, intensity * multiplier*Mathf.Deg2Rad);
 
     }
 }

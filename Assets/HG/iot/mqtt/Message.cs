@@ -19,18 +19,18 @@ namespace HG.iot.mqtt
 
 		public Message()
 		{
-			setTimestamp();
+			//setTimestamp();
 		}
 
-		private void setTimestamp()
+		/*private void setTimestamp()
 		{
 			if(timestamp!=0)
 				return;
 
 			var epoch = new DateTime(1970, 1, 1, 0, 0, 0, DateTimeKind.Utc);
 			timestamp = Convert.ToInt64((DateTime.UtcNow - epoch).TotalSeconds);
-		}
+		}*/
 
-		public long timestamp = 0;
+		//public long timestamp = 0;
 	}
 }

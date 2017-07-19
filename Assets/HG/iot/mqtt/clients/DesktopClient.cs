@@ -12,10 +12,7 @@ using uPLibrary.Networking.M2Mqtt.Utility;
 
 namespace HG.iot.mqtt.clients
 {
-
-	#if UNITY_STANDALONE || UNITY_EDITOR
-
-	public class DesktopClient: MonoBehaviour, IMqttClient
+    		public class DesktopClient: MonoBehaviour, IMqttClient
 	{
 		IBrokerConnection _connection = null;
 		ConnectionOptions _connectionOptions = null;
@@ -178,13 +175,4 @@ namespace HG.iot.mqtt.clients
 				sub.OnSuccess(sub);
 		}
 	}
-
-	#else
-
-	public class DesktopClient: MonoBehaviour
-	{
-
-	}
-
-	#endif
 }

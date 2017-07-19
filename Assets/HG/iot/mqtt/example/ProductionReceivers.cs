@@ -67,11 +67,13 @@ namespace HG.iot.mqtt.example
 
             for (int j = 0; j < id_to_parse.Length; j++)
             {
+
                 _cacheGlobalTopic.Send(
-                //{"cmd":"knx1/:1.1.8/:/power.1","mdl":"knx1","value": 1256.3}
-                new GlobalMessage { cmd = id_to_parse[j], mdl = "knx1", value = 765.4 },
+                //{"dttp": null, "data": 100, "t": "2017-05-15T06:47:42Z", "id": "knx1/:1.2.26/:/dim.7"}
+                new GlobalMessage { dttp = "this is text", data = 1234.5, t = "2017-05-15T06:47:42Z", id = id_to_parse[j]},
+
                 false,
-                QualityOfServiceEnum.ExactlyOnce);
+                QualityOfServiceEnum.AtLeastOnce);
             }
 
 
@@ -107,29 +109,29 @@ namespace HG.iot.mqtt.example
                     if (!battery_power_id.Contains("null") &&json.Contains(battery_power_id) == true)
                     {
                         receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        battery_power_val = receive_obj.value;
-                        Debug.Log("Import bat globabl Value of json object : cmd  : " + receive_obj.cmd + ", mdl : " + receive_obj.mdl + " value : " + receive_obj.value);
+                        battery_power_val = receive_obj.data;
+                        Debug.Log("Batt power value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
+
                     }
                     else if (!after_bat_consump_id.Contains("null") && json.Contains(after_bat_consump_id) == true)
                     {
                         receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        after_bat_consump_val = receive_obj.value;
-                        Debug.Log("After bat globabl Value of json object : cmd  : " + receive_obj.cmd + ", mdl : " + receive_obj.mdl + " value : " + receive_obj.value);
-
+                        after_bat_consump_val = receive_obj.data;
+                        Debug.Log("After bat power value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                     }
                     else if (json.Contains(id_to_parse[i]) == true)
                     {
                         receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        prod_list[i] = receive_obj.value;
-                        Debug.Log("Globabl Value of json object : cmd  : " + receive_obj.cmd + ", mdl : " + receive_obj.mdl + " value : " + receive_obj.value);
+                        prod_list[i] = receive_obj.data;
+                        Debug.Log("Global value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                     }
+
 
                 }
             }
 
             else
                 Debug.LogWarning("message arrived, but failed JSON conversion");
-
             prod_slider.value = 0.0f;
             int j = 0;
             for(; j < id_to_parse.Length; j++)

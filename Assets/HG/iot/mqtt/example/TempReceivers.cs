@@ -10,6 +10,8 @@ namespace HG.iot.mqtt.example
 	{
         public string []id_to_parse;
         public Text text_value;
+        public string prefix;
+        public string unit;
 
         private List<double> temp_list = new List<double>();
 
@@ -59,14 +61,18 @@ namespace HG.iot.mqtt.example
                 }
             }
 
-            for(int j = 0; j < id_to_parse.Length; j++)
+            for (int j = 0; j < id_to_parse.Length; j++)
             {
+
                 _cacheGlobalTopic.Send(
-                //{"cmd":"zwave1/:3260679919/:2/:/infos.1/:/1/:/1","mdl":"zwave1","value": 22.5}
-                new GlobalMessage { cmd = id_to_parse[j], mdl = "zwave1", value = 22.5 },
+                //{"dttp": null, "data": 22.5, "t": "2017-05-15T06:47:42Z", "id": "zwave1/:3260679919/:2/:/infos.1/:/1/:/1"}
+                new GlobalMessage { dttp = "this is text", data = 22.5, t = "2017-05-15T06:47:42Z", id = id_to_parse[j] },
+
                 false,
                 QualityOfServiceEnum.ExactlyOnce);
             }
+
+
 
         }
 
@@ -100,13 +106,11 @@ namespace HG.iot.mqtt.example
                     if (json.Contains(id_to_parse[i]) == true)
                     {
                         receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        temp_list[i] = receive_obj.value;
-                        Debug.Log("Value of json object : cmd : " + receive_obj.cmd + ", mdl : " + receive_obj.mdl + ", value : " + receive_obj.value);
+                        temp_list[i] = receive_obj.data;
+                        Debug.Log("Value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                     }
                 }
             }
-
-
 
             else
                 Debug.LogWarning("message arrived, but failed JSON conversion");
@@ -119,7 +123,7 @@ namespace HG.iot.mqtt.example
                 temp_value += temp_list[j];
             }
             print("temp value : " + temp_value);
-            text_value.text = (temp_value / id_to_parse.Length).ToString();            
+            text_value.text = prefix+ " " + (temp_value / id_to_parse.Length).ToString()+ " "+ unit;            
         }
 
 		void onMqttSubscriptionSuccess_GlobalTopic(SubscriptionResponse response)
