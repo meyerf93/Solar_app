@@ -7,7 +7,6 @@ public class ChangeLightBackground : MonoBehaviour {
 
     public Toggle toggleButton;
     public Image newBackground;
-    public Image oldBackground;
 
     private Slider lightSlider;
 
@@ -18,17 +17,11 @@ public class ChangeLightBackground : MonoBehaviour {
         {
             newBackground.gameObject.SetActive(true);
             newBackground.enabled = true;
-            oldBackground.gameObject.SetActive(false);
-            oldBackground.enabled = false;
-            toggleButton.targetGraphic = newBackground;
         }
         else
         {
             newBackground.gameObject.SetActive(false);
             newBackground.enabled = false;
-            oldBackground.gameObject.SetActive(true);
-            oldBackground.enabled = true;
-            toggleButton.targetGraphic = oldBackground;
         }
     }
 

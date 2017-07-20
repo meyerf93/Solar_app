@@ -8,7 +8,7 @@ namespace HG.iot.mqtt
 	public abstract class Topic<TMessage> : MonoBehaviour, ITopic, IITopic
 		where TMessage : Message
 	{
-        private int debugCounter = 0;
+        //private int debugCounter = 0;
         private ITopic topic {
 			get {
 				return this;
@@ -17,7 +17,7 @@ namespace HG.iot.mqtt
 
 		void Awake()
 		{
-            Debug.Log("debugger counter : " + ++debugCounter);
+            //Debug.Log("debugger counter : " + ++debugCounter);
 			Statistics = new TopicStats();
 
 			_connection = BrokerConnection.Instance;
@@ -30,6 +30,7 @@ namespace HG.iot.mqtt
 			else
 			{
 				Debug.Log("Found component implementing IMqttConnection interface.");
+                Debug.Log("name of the topic added : " + this.Filter);
 				_connection.AddTopic(this);
 			}
 		}
@@ -56,6 +57,7 @@ namespace HG.iot.mqtt
 
 		protected virtual void notifyReceivers(string methodName, object obj)
 		{
+            //Debug.Log("number of receivers for  topic :  ; " + Receivers.Count);
 			foreach(var go in Receivers)
 			{
 				if(SimpleNotifications)

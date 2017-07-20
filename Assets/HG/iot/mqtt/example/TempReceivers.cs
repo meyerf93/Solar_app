@@ -22,8 +22,8 @@ namespace HG.iot.mqtt.example
 		{
 			_cacheGlobalTopic = topic;
 
-			Debug.Log("onMqttReady invoked");
-			Debug.Log(string.Format("'{0}' topic's SimpleNotifications are set to TRUE",topic.Filter));
+			//Debug.Log("onMqttReady invoked");
+			//Debug.Log(string.Format("'{0}' topic's SimpleNotifications are set to TRUE",topic.Filter));
 
 			tests(topic);
 		}
@@ -33,10 +33,10 @@ namespace HG.iot.mqtt.example
 		{
 			_cacheGlobalTopic = topic;
 
-			Debug.Log("onMqttReady_GlobalTopic invoked");
-			Debug.Log(string.Format("'{0}' topic's SimpleNotifications are set to FALSE",topic.Filter));
-			Debug.Log("SimpleNotifications=FALSE give you the flexibility of receiving messages from various topics within the same receiver script");
-			Debug.Log("Every notification will be in the format '[notification-method]_[topic-filter]'");
+			//Debug.Log("onMqttReady_GlobalTopic invoked");
+			//Debug.Log(string.Format("'{0}' topic's SimpleNotifications are set to FALSE",topic.Filter));
+			//Debug.Log("SimpleNotifications=FALSE give you the flexibility of receiving messages from various topics within the same receiver script");
+			//Debug.Log("Every notification will be in the format '[notification-method]_[topic-filter]'");
 
 			tests(topic);
 		}
@@ -51,13 +51,13 @@ namespace HG.iot.mqtt.example
             {
                 try
                 {
-                    Debug.Log("Let's try subscribing to this topic without connecting to broker first....");
+                    //Debug.Log("Let's try subscribing to this topic without connecting to broker first....");
                     topic.Subscribe();
                 }
                 catch (OperationCanceledException ocex)
                 {
                     Debug.LogError(ocex.ToString() + "Performing actions that require an active connection will throw an 'OperationCancelledException'");
-                    Debug.Log("bonjour monsieur MQTT !");
+                    //Debug.Log("bonjour monsieur MQTT !");
                 }
             }
 
@@ -78,12 +78,12 @@ namespace HG.iot.mqtt.example
 
 		void onMqttMessageDelivered_GlobalTopic(string messageId)
 		{
-			Debug.Log("message delivered to broker");
+			//Debug.Log("message delivered to broker");
 		}
 
         void onMqttMessageArrived_GlobalTopic(GlobalMessage message)
         {
-            Debug.Log("message just arrived");
+            //Debug.Log("message just arrived");
             GlobalMessage receive_obj;
 
             for(int i = 0; i < id_to_parse.Length; i++)
@@ -91,12 +91,12 @@ namespace HG.iot.mqtt.example
                 temp_list.Add(0.0);
             }
 
-            Debug.Log("Message arrived on GlobalTopic");
-            Debug.Log("Note that the message parameter in the arrival notification is strong typed to that of the topic's message");
+            //Debug.Log("Message arrived on GlobalTopic");
+            //Debug.Log("Note that the message parameter in the arrival notification is strong typed to that of the topic's message");
 
             if (!message.JSONConversionFailed)
             {
-                Debug.Log(JsonUtility.ToJson(message));
+                //Debug.Log(JsonUtility.ToJson(message));
                 string json = JsonUtility.ToJson(message);
 
 
@@ -107,7 +107,7 @@ namespace HG.iot.mqtt.example
                     {
                         receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
                         temp_list[i] = receive_obj.data;
-                        Debug.Log("Value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
+                        //Debug.Log("Value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                     }
                 }
             }
@@ -128,47 +128,46 @@ namespace HG.iot.mqtt.example
 
 		void onMqttSubscriptionSuccess_GlobalTopic(SubscriptionResponse response)
 		{
-			Debug.Log("subscription successful");
+			//Debug.Log("subscription successful");
 
-			Debug.Log("Let's send a message with a QOS of 'at least once' or 'exactly once'. " +
+			/*Debug.Log("Let's send a message with a QOS of 'at least once' or 'exactly once'. " +
 				" 'Best effort' QOS does not get delivery verification from broker.  " +
-				"'Best effort' is however the quickest and dirtiest way to send a message.");
-			
+				"'Best effort' is however the quickest and dirtiest way to send a message.")*/;
 		}
 
 		void onMqttSubscriptionFailure_GlobalTopic(SubscriptionResponse response)
 		{
-			Debug.Log("subscription failed");
+			//Debug.Log("subscription failed");
 		}
 
 		void onMqttUnsubscriptionSuccess_GlobalTopic(SubscriptionResponse response)
 		{
-			Debug.Log("unsubscription successful");
+			//Debug.Log("unsubscription successful");
 		}
 
 		void onMqttUnsubscriptionFailure_GlobalTopic(SubscriptionResponse response)
 		{
-			Debug.Log("unsubscription failed");
+			//Debug.Log("unsubscription failed");
 		}
 
 		void onMqttConnectSuccess_GlobalTopic(ConnectionResult response)
 		{
-			Debug.Log("you are connected to broker");
+			//Debug.Log("you are connected to broker");
 		}
 
 		void onMqttConnectFailure_GlobalTopic(ConnectionResult response)
 		{
-			Debug.Log("connection to broker failed");
+			//Debug.Log("connection to broker failed");
 		}
 
 		void onMqttConnectLost_GlobalTopic(ConnectionResult response)
 		{
-			Debug.Log("connection to broker lost");
+			//Debug.Log("connection to broker lost");
 		}
 
 		void onMqttReconnect_GlobalTopic(ConnectionResult response)
 		{
-			Debug.Log("broker has reconnected");
+			//Debug.Log("broker has reconnected");
 		}
 	}
 }
