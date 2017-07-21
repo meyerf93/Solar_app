@@ -116,13 +116,13 @@ namespace HG.iot.mqtt.example
                 Debug.LogWarning("message arrived, but failed JSON conversion");
 
             double temp_value = 0.0;
-            print("temp value before addition : " + temp_value);
+            //print("temp value before addition : " + temp_value);
             int j = 0;
             for (; j < id_to_parse.Length; j++)
             {
                 temp_value += temp_list[j];
             }
-            print("temp value : " + temp_value);
+            //print("temp value : " + temp_value);
             text_value.text = prefix+ " " + (temp_value / id_to_parse.Length).ToString()+ " "+ unit;            
         }
 

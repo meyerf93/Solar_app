@@ -11,7 +11,7 @@ public class RotationReaction: DelayedReaction
     protected override void SpecificInit()
     {
         float intensity = rotation.GetDirection().x;
-        Debug.Log("Vector for the rotation : " + intensity);
+        //Debug.Log("Vector for the rotation : " + intensity);
 
         Building.transform.Rotate(axis, intensity * multiplier*Mathf.Deg2Rad);
     }
@@ -20,7 +20,7 @@ public class RotationReaction: DelayedReaction
     protected override void ImmediateReaction ()
     {
         float intensity = rotation.GetDirection().x;
-        Debug.Log("Vector for the rotation : " + intensity);
+        //Debug.Log("Vector for the rotation : " + intensity);
 
         Building.transform.Rotate(axis, intensity * multiplier*Mathf.Deg2Rad);
 

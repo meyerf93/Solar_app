@@ -138,7 +138,7 @@ namespace HG.iot.mqtt.example
             {
                 prod_slider.value += (float)prod_list[j];  
             }
-            print("power value : " + prod_slider.value);
+            //print("power value : " + prod_slider.value);
             if (battery_power_val >= 0.0) prod_slider.value += (float)battery_power_val;
             else prod_slider.value += (float)after_bat_consump_val; 
             text_value.text= prod_slider.value.ToString()+" W";
