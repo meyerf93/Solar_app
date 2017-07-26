@@ -123,7 +123,7 @@ namespace HG.iot.mqtt.example
                 temp_value += temp_list[j];
             }
             //print("temp value : " + temp_value);
-            text_value.text = prefix+ " " + (temp_value / id_to_parse.Length).ToString()+ " "+ unit;            
+            text_value.text = prefix+ " " + (temp_value / id_to_parse.Length).ToString("F1")+ " "+ unit;            
         }
 
 		void onMqttSubscriptionSuccess_GlobalTopic(SubscriptionResponse response)

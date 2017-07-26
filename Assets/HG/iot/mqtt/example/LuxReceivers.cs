@@ -10,7 +10,13 @@ namespace HG.iot.mqtt.example
     {
         public string[] id_to_parse;
         public double[] lux_list_activity;
-        public Text content;
+
+        public Queing_notification queuing;
+        private Notifications send_notif;
+
+        private bool mesage_receive = false;
+
+        //public Text content;
 
         private List<double> temp_list = new List<double>();
 
@@ -110,6 +116,7 @@ namespace HG.iot.mqtt.example
                         receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
                         temp_list[i] = receive_obj.data;
                         //Debug.Log("Value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
+                        mesage_receive = true;
                     }
                 }
             }
@@ -117,30 +124,36 @@ namespace HG.iot.mqtt.example
             else
                 Debug.LogWarning("message arrived, but failed JSON conversion");
 
-            double temp_value = 0.0;
-            //print("temp value before addition : " + temp_value);
-            int j = 0;
-            for (; j < id_to_parse.Length; j++)
+            if (mesage_receive)
             {
-                temp_value += temp_list[j];
-            }
-            //print("temp value after addition : " + temp_value);
-            temp_value /= id_to_parse.Length;
-            temp_list.Add(temp_value);
+                double temp_value = 0.0;
+                //print("temp value before addition : " + temp_value);
+                int j = 0;
+                for (; j < id_to_parse.Length; j++)
+                {
+                    temp_value += temp_list[j];
+                }
+                //print("temp value after addition : " + temp_value);
+                temp_value /= id_to_parse.Length;
+                temp_list.Add(temp_value);
 
-            for(int i = 0; i < lux_list_activity.Length; i++)
-            {
-                //Debug.Log("temp value : " + temp_value + " ; mqtt value : " + lux_list_activity[i]);
-                if(temp_value <= lux_list_activity[i])
+                for (int i = 0; i < lux_list_activity.Length; i++)
                 {
-                    content.text = "Activity number " + (i+1) + " " + lux_list_activity[i] + " detected";
-                    i = lux_list_activity.Length;
-                }
-                else if (temp_value > lux_list_activity[lux_list_activity.Length - 1])
-                {
-                    content.text = "You consume some much that you have kill the earth !";
+                    //Debug.Log("temp value : " + temp_value + " ; mqtt value : " + lux_list_activity[i]);
+                    if (temp_value <= lux_list_activity[i])
+                    {
+                        send_notif = new Notifications("Tips_light");
+                        queuing.sendNotification(send_notif);
+                        Debug.Log("Activity number " + (i + 1) + " " + lux_list_activity[i] + " detected");
+                        i = lux_list_activity.Length;
+                    }
+                    else if (temp_value > lux_list_activity[lux_list_activity.Length - 1])
+                    {
+                        //content.text = "You consume some much that you have kill the earth !";
+                    }
                 }
             }
+
         }
 
         void onMqttSubscriptionSuccess_GlobalTopic(SubscriptionResponse response)
