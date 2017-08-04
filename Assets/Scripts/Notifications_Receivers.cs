@@ -7,7 +7,7 @@ public class Notifications_Receivers : MonoBehaviour {
     public Queing_notification notif;
 
     private Notifications test;
-    private int send_one = 9;
+    private int send_one = 13;
 
     // Use this for initialization
     void Start () {
@@ -35,7 +35,7 @@ public class Notifications_Receivers : MonoBehaviour {
             notif.sendNotification(test);
             send_one--;
 
-            test = new Notifications("Tips_consump_down");
+            test = new Notifications("Tips_consu_down");
             notif.sendNotification(test);
             send_one--;
 
@@ -56,7 +56,21 @@ public class Notifications_Receivers : MonoBehaviour {
             notif.sendNotification(test);
             send_one--;
 
+            test = new Notifications("Tips_unplug");
+            notif.sendNotification(test);
+            send_one--;
 
+            test = new Notifications("Tips_speed-");
+            notif.sendNotification(test);
+            send_one--;
+
+            test = new Notifications("Tips_plug");
+            notif.sendNotification(test);
+            send_one--;
+
+            test = new Notifications("Tips_speed+");
+            notif.sendNotification(test);
+            send_one--;
         }
     }
 }
