@@ -15,8 +15,6 @@ namespace HG.iot.mqtt.example
         public Sprite mid_sprite;
         public Sprite high_sprite;
 
-
-
         private List<int> light_mean = new List<int>();
 
         public int low_threshould;
@@ -26,6 +24,18 @@ namespace HG.iot.mqtt.example
         private bool image_is_zero = false;
 
         ITopic _cacheGlobalTopic = null;
+
+        void Start()
+        {
+            //Debug.Log("number of id too parse : " + id_to_parse.Length);
+            for (int i = 0; i < id_to_parse.Length; i++)
+            {
+                light_mean.Add(0);
+            }
+            //Debug.Log("count light_mean : " + light_mean.Count + " id : " + id_to_parse[0]);
+        }
+
+        
 
         // Topic.SimpleNotifications=TRUE
         void onMqttReady(ITopic topic)
@@ -79,6 +89,7 @@ namespace HG.iot.mqtt.example
 
                 false,
                 QualityOfServiceEnum.ExactlyOnce);
+                //Debug.Log("test the topic and send a message j : " + j);
             }
         }
 
@@ -93,14 +104,7 @@ namespace HG.iot.mqtt.example
             GlobalMessage receive_obj;
 
             //Debug.Log("Message arrived on GlobalTopic");
-            //Debug.Log("Note that the message parameter in the arrival notification is strong typed to that of the topic's message");
-
-            for (int i = 0; i < id_to_parse.Length; i++)
-            {
-                light_mean.Add(0);
-            }
-            Debug.Log("count light_mean : " + light_mean.Count+ "id : "+id_to_parse[0]);
-
+            //Debug.Log("Note that the message parameter in the arrival notification is strong typed to that of the topic's message")
 
             if (!message.JSONConversionFailed)
             {
@@ -115,61 +119,63 @@ namespace HG.iot.mqtt.example
                         receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
                         light_mean[j] = (int)receive_obj.data;
                         //Debug.Log("Value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
-                    }
-                }
 
-                float mean = 0.0f;
-                Debug.Log("count light_mean  2 : " + light_mean.Count);
-                for (int i = 0; i< light_mean.Count; i++)
-                {
-                    //Debug.Log("value of mean calcul : " + mean);
-                    mean += light_mean[i];
-                }
-                mean /= light_mean.Count;
+                        float mean = 0.0f;
+                        //Debug.Log("count light_mean  value : " + light_mean.Count);
+                        for (int i = 0; i < light_mean.Count; i++)
+                        {
+                            //Debug.Log("value of mean calcul : " + mean);
+                            mean += light_mean[i];
+                        }
+                        mean = mean / light_mean.Count;
 
-                if (mean >= hight_threshould)
-                {
-                    //Debug.Log("high : "+ mean);
-                    image_modified = true;
-                    image_is_zero = false;
-                    newSprite = high_sprite;
-                }
-                else if (low_threshould <= mean && mean <= hight_threshould)
-                {
-                    //Debug.Log("mid : " + mean);
-                    image_modified = true;
-                    image_is_zero = false;
-                    newSprite = mid_sprite;
-                }
+                        if (mean == 0)
+                        {
+                            //Debug.Log("zero : " + mean);
+                            image_is_zero = true;
+                            image_modified = false;
+                        }
+                        else if (mean <= low_threshould)
+                        {
+                            //Debug.Log("low : " + mean);
+                            image_modified = true;
+                            image_is_zero = false;
+                            newSprite = low_sprite;
+                        }
+                        else if (low_threshould <= mean && mean <= hight_threshould)
+                        {
+                            //Debug.Log("mid : " + mean);
+                            image_modified = true;
+                            image_is_zero = false;
+                            newSprite = mid_sprite;
+                        }
+                        else if (mean >= hight_threshould)
+                        {
+                            //Debug.Log("high : " + mean);
+                            image_modified = true;
+                            image_is_zero = false;
+                            newSprite = high_sprite;
+                        }
 
-                else if (mean <= low_threshould)
-                {
-                    //Debug.Log("low : " + mean);
-                    image_modified = true;
-                    image_is_zero = false;
-                    newSprite = low_sprite;
-                }
-                else if (mean == 0)
-                {
-                    //Debug.Log("zero : " + mean);
-                    image_is_zero = true;
-                    image_modified = false;
-                }
-                if (image_is_zero)
-                {
-                    for (int i = 0; i < list_image.Length; i++)
-                    {
-                        Color oldColor = list_image[i].color;
-                        list_image[i].color = new Color(oldColor.r, oldColor.g, oldColor.b, 0.0f);
-                    }
-                }
-                else if (image_modified)
-                {
-                    for (int i = 0; i < list_image.Length; i++)
-                    {
-                        list_image[i].sprite = newSprite;
-                        Color oldColor = list_image[i].color;
-                        list_image[i].color = new Color(oldColor.r, oldColor.g, oldColor.b, 100.0f);
+                        if (image_is_zero)
+                        {
+                            for (int i = 0; i < list_image.Length; i++)
+                            {
+                                Color oldColor = list_image[i].color;
+                                list_image[i].color = new Color(100.0f, 100.0f, 100.0f, 0.0f);
+                            }
+                        }
+                        else if (image_modified)
+                        {
+                            //Debug.Log("change image detected");
+                            for (int i = 0; i < list_image.Length; i++)
+                            {
+                                //Debug.Log("sprite before : " + list_image[i].sprite);
+                                list_image[i].sprite = newSprite;
+                                //Debug.Log("sprite after : " + list_image[i].sprite);
+                                list_image[i].color = new Color(100.0f, 100.0f, 100.0f, 100.0f);
+                            }
+                        }
                     }
                 }
             }

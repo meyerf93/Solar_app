@@ -42,6 +42,7 @@ public class SimpleRotation : MonoBehaviour, IPointerDownHandler, IDragHandler, 
         {
             Vector2 currentPosition = data.position;
             Vector2 directionRaw;
+            Debug.Log("origin value : " + origin.x + " ; current position : " + currentPosition.x);
             if (currentPosition.x >= 0)
                 directionRaw.x = currentPosition.x - origin.x;
             else directionRaw.x = origin.x - currentPosition.x;

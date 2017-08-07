@@ -24,7 +24,7 @@ public class SaveScene : MonoBehaviour {
         {
             if (!File.Exists(Application.persistentDataPath + "/" + sceneFilPath[i]+".json"))
             {
-                //Debug.Log("create persistent file from ressource file : " + sceneFilPath[i]);
+                Debug.Log("create persistent file from ressource file : " + sceneFilPath[i]);
                 TextAsset file = Resources.Load(sceneFilPath[i]) as TextAsset;
                 string content = file.ToString();
                 //Debug.Log("Content of the file resource and future persistent file : " + content);
@@ -42,7 +42,7 @@ public class SaveScene : MonoBehaviour {
             if(sceneToggles[i].isOn)
             {
                 string filePath = Application.persistentDataPath +"/"+ sceneFilPath[i]+".json";
-                //Debug.Log("this is the path to search file : " + filePath);
+                Debug.Log("this is the path to search file : " + filePath);
 
                 if (File.Exists(filePath))
                 {
