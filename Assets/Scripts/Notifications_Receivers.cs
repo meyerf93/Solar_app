@@ -6,7 +6,7 @@ public class Notifications_Receivers : MonoBehaviour {
 
     public Queing_notification notif;
 
-    private Notifications test;
+    private Notifications test = null;
     private int send_one = 13;
 
     // Use this for initialization

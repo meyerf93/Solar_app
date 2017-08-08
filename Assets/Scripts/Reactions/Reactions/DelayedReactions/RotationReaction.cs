@@ -12,17 +12,14 @@ public class RotationReaction: DelayedReaction
     {
         float intensity = rotation.GetDirection().x;
         //Debug.Log("Vector for the rotation : " + intensity);
-
-        Building.transform.Rotate(axis, intensity * multiplier*Mathf.Deg2Rad);
+        Building.transform.Rotate(axis, intensity * Time.deltaTime * multiplier);
     }
-
 
     protected override void ImmediateReaction ()
     {
         float intensity = rotation.GetDirection().x;
         //Debug.Log("Vector for the rotation : " + intensity);
 
-        Building.transform.Rotate(axis, intensity * multiplier*Mathf.Deg2Rad);
-
+        Building.transform.Rotate(axis, intensity* Time.deltaTime * multiplier);
     }
 }

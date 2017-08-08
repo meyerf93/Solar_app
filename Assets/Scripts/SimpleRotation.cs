@@ -42,13 +42,13 @@ public class SimpleRotation : MonoBehaviour, IPointerDownHandler, IDragHandler, 
         {
             Vector2 currentPosition = data.position;
             Vector2 directionRaw;
-            Debug.Log("origin value : " + origin.x + " ; current position : " + currentPosition.x);
+            //Debug.Log("origin value : " + origin.x + " ; current position : " + currentPosition.x);
             if (currentPosition.x >= 0)
                 directionRaw.x = currentPosition.x - origin.x;
             else directionRaw.x = origin.x - currentPosition.x;
             direction.x = directionRaw.x / leng_max * max_rotate;
             direction.y = 0;
-            Debug.Log("direction of rotation zone : " + direction);
+            //Debug.Log("direction of rotation zone : " + direction);
             bousole_reaction.React();
             building_reaction.React();
         }
