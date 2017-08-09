@@ -42,14 +42,14 @@ public class SaveScene : MonoBehaviour {
             if(sceneToggles[i].isOn)
             {
                 string filePath = Application.persistentDataPath +"/"+ sceneFilPath[i]+".json";
-                Debug.Log("this is the path to search file : " + filePath);
+                //Debug.Log("this is the path to search file : " + filePath);
 
                 if (File.Exists(filePath))
                 {
                     string dataAsJson = File.ReadAllText(filePath);
-                    Debug.Log("print the json parsed : " + dataAsJson);
+                    //Debug.Log("print the json parsed : " + dataAsJson);
                     sceneData = JsonUtility.FromJson<SceneData>(dataAsJson);
-                    Debug.Log("sceneDataLeng : " + sceneData.intensity.Length);
+                    //Debug.Log("sceneDataLeng : " + sceneData.intensity.Length);
 
                     for (int j = 0; j < tempToggleList.Length; j++)
                     {

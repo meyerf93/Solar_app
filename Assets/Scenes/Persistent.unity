@@ -30739,7 +30739,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: -514.4678}
+  m_AnchoredPosition: {x: 0.69999695, y: -514.46765}
   m_SizeDelta: {x: 312.5, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578853134
@@ -36540,7 +36540,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: -587.4678}
+  m_AnchoredPosition: {x: 0.69999695, y: -587.46765}
   m_SizeDelta: {x: 312.5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &682487656
@@ -37184,7 +37184,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: 511.53226}
+  m_AnchoredPosition: {x: 0.69999695, y: 511.5323}
   m_SizeDelta: {x: 312.5, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695764039
@@ -38134,7 +38134,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: -956.46765}
+  m_AnchoredPosition: {x: 0.69999695, y: -956.4678}
   m_SizeDelta: {x: 312.5, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &710388967
@@ -39207,6 +39207,8 @@ MonoBehaviour:
   - {fileID: 2025302605}
   - {fileID: 1484862172}
   - {fileID: 382035257}
+  - {fileID: 1615209487}
+  - {fileID: 871594183}
   subscriptionTimeout: 15
   filter: new.statement
   subscribeOnConnect: 1
@@ -45798,7 +45800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &871594184
 Transform:
   m_ObjectHideFlags: 0
@@ -45823,15 +45825,24 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5d434bd1efde4594a8d89f7405633ae1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse:
+  notif: {fileID: 986041019}
+  id_lux:
   - knx1/:1.1.30/:/lux.1
-  - knx1/:1.1.30/:/lux.1
-  - knx1/:1.1.30/:/lux.1
-  lux_list_activity:
-  - 123
-  - 567
-  - 1234
-  queuing: {fileID: 986041019}
+  - knx1/:1.1.30/:/lux.2
+  - knx1/:1.1.30/:/lux.3
+  id_light:
+  - knx1/:1.2.26/:/dim.1
+  - knx1/:1.2.26/:/dim.2
+  - knx1/:1.2.26/:/dim.3
+  - knx1/:1.2.26/:/dim.4
+  - knx1/:1.2.26/:/dim.5
+  - knx1/:1.2.26/:/dim.6
+  - knx1/:1.2.29/:/dim.1
+  - knx1/:1.2.29/:/dim.2
+  - knx1/:1.2.29/:/dim.3
+  - knx1/:1.2.29/:/dim.4
+  lux_threshold: 60000
+  time_wait_lux: 10
 --- !u!1 &873848664
 GameObject:
   m_ObjectHideFlags: 0
@@ -52228,6 +52239,48 @@ Transform:
   m_Father: {fileID: 611554304}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1000802633
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1000802634}
+  - component: {fileID: 1000802635}
+  m_Layer: 0
+  m_Name: CarTips
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1000802634
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1000802633}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1182508866}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1000802635
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1000802633}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 44d1e9f7d0909f743a2c514bb1845439, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notif: {fileID: 986041019}
+  id_state: keba1/:192.168.2.106/:/plug
 --- !u!1 &1001979001
 GameObject:
   m_ObjectHideFlags: 0
@@ -60831,6 +60884,7 @@ Transform:
   m_Children:
   - {fileID: 1948972856}
   - {fileID: 64543290}
+  - {fileID: 1000802634}
   m_Father: {fileID: 11230771}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -60849,7 +60903,7 @@ MonoBehaviour:
   Receivers:
   - {fileID: 1948972855}
   - {fileID: 64543289}
-  - {fileID: 1484862172}
+  - {fileID: 1000802633}
   subscriptionTimeout: 15
   filter: new.statement
   subscribeOnConnect: 1
@@ -77161,7 +77215,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notif: {fileID: 986041019}
-  id_state: keba1/:192.168.2.106/:/plug
   id_current: keba1/:192.168.2.106/:/curr_user
   max_current_ma: 16000
   threshould_low: 33
@@ -83542,6 +83595,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1615209488}
+  - component: {fileID: 1615209489}
   m_Layer: 0
   m_Name: ElecManageTips
   m_TagString: Untagged
@@ -83562,6 +83616,38 @@ Transform:
   m_Father: {fileID: 1373735975}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1615209489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1615209487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e22a9b49956e66047a5e7069f0e27136, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  notif: {fileID: 986041019}
+  id_produce:
+  - knx1/:1.1.8/:/power.1
+  - knx1/:1.1.9/:/power.1
+  - knx1/:1.1.10/:/power.1
+  id_consume:
+  - knx1/:1.1.11/:/power.1
+  - knx1/:1.1.12/:/power.1
+  - knx1/:1.1.13/:/power.1
+  - knx1/:1.1.14/:/power.1
+  - knx1/:1.1.15/:/power.1
+  - knx1/:1.1.16/:/power.1
+  id_before_bat: knx1/:1.1.17/:/power.1
+  id_after_bat: knx1/:1.1.18/:/power.1
+  prod_max: 6500
+  threshold_prod_low: 33
+  threshold_prod_high: 66
+  time_wait_prod_more: 2
+  time_wait_prod_less: 2
+  time_wait_conso_more: 2
+  time_wait_conso_less: 2
 --- !u!1 &1617396382
 GameObject:
   m_ObjectHideFlags: 0

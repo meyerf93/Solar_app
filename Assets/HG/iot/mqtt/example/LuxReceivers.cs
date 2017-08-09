@@ -8,23 +8,28 @@ namespace HG.iot.mqtt.example
 {
     public class LuxReceivers : MonoBehaviour
     {
-        public string[] id_to_parse;
-        public double[] lux_list_activity;
+        public Queing_notification notif;
 
-        public Queing_notification queuing;
-        private Notifications send_notif;
+        public string[] id_lux;
+        public string[] id_light;
 
-        private bool mesage_receive = false;
+        private Notifications test = null;
 
-        //public Text content;
+        public double lux_threshold;
 
-        private List<double> temp_list = new List<double>();
+        private TimeSpan old_time_lux;
+        public int time_wait_lux;
+        private bool flag_lux = false;
+
+        private bool light_is_on = false;
+        private bool right_message = false;
+
+        private List<double> lux_list = new List<double>();
+        private List<bool> light_list = new List<bool>();
+        private double mean_luxe = 0;
 
         ITopic _cacheGlobalTopic = null;
-        public List<Double> getLuxValue()
-        {
-            return temp_list;
-        }
+
         // Topic.SimpleNotifications=TRUE
         void onMqttReady(ITopic topic)
         {
@@ -69,13 +74,11 @@ namespace HG.iot.mqtt.example
                 }
             }
 
-            for (int j = 0; j < id_to_parse.Length; j++)
+            for (int j = 0; j < id_lux.Length; j++)
             {
-
                 _cacheGlobalTopic.Send(
                 //{"dttp": null, "data": 22.5, "t": "2017-05-15T06:47:42Z", "id": "zwave1/:3260679919/:2/:/infos.1/:/1/:/1"}
-                new GlobalMessage { dttp = "", data = 22.5, t = "2017-05-15T06:47:42Z", id = id_to_parse[j] },
-
+                new GlobalMessage { dttp = "", data = 22.5, t = "2017-05-15T06:47:42Z", id = id_lux[j] },
                 false,
                 QualityOfServiceEnum.ExactlyOnce);
             }
@@ -94,29 +97,36 @@ namespace HG.iot.mqtt.example
             //Debug.Log("message just arrived");
             GlobalMessage receive_obj;
 
-            for (int i = 0; i < id_to_parse.Length; i++)
-            {
-                temp_list.Add(0.0);
-            }
-
             //Debug.Log("Message arrived on GlobalTopic");
             //Debug.Log("Note that the message parameter in the arrival notification is strong typed to that of the topic's message");
 
             if (!message.JSONConversionFailed)
             {
+                right_message = false;
                 //Debug.Log(JsonUtility.ToJson(message));
                 string json = JsonUtility.ToJson(message);
 
-
-                //parse intersting message
-                for (int i = 0; i < id_to_parse.Length; i++)
+                for (int i = 0; i < id_lux.Length; i++)
                 {
-                    if (json.Contains(id_to_parse[i]) == true)
+                    if (lux_list.Count < id_lux.Length) lux_list.Add(0.0F);
+                    if (json.Contains(id_lux[i]) == true)
                     {
                         receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        temp_list[i] = receive_obj.data;
+                        lux_list[i] = receive_obj.data;
                         //Debug.Log("Value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
-                        mesage_receive = true;
+                        right_message = true;
+                    }
+                }
+
+                for (int i = 0; i < id_light.Length; i++)
+                {
+                    if (light_list.Count < id_light.Length) light_list.Add(false);
+                    if (json.Contains(id_light[i]) == true)
+                    {
+                        receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                        if (receive_obj.data > 0) light_list[i] = true;
+                        //Debug.Log("Value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
+                        right_message = true;
                     }
                 }
             }
@@ -124,34 +134,29 @@ namespace HG.iot.mqtt.example
             else
                 Debug.LogWarning("message arrived, but failed JSON conversion");
 
-            if (mesage_receive)
+            if (right_message)
             {
-                double temp_value = 0.0;
-                //print("temp value before addition : " + temp_value);
-                int j = 0;
-                for (; j < id_to_parse.Length; j++)
-                {
-                    temp_value += temp_list[j];
-                }
-                //print("temp value after addition : " + temp_value);
-                temp_value /= id_to_parse.Length;
-                temp_list.Add(temp_value);
+                for (int j = 0; j < id_lux.Length; j++) mean_luxe += lux_list[j];
+                mean_luxe /= lux_list.Count;
 
-                for (int i = 0; i < lux_list_activity.Length; i++)
+                light_is_on = false;
+                for (int j = 0; j < id_light.Length; j++) if (light_list[j]) light_is_on = true;
+
+                if (mean_luxe >= lux_threshold && light_is_on)
                 {
-                    //Debug.Log("temp value : " + temp_value + " ; mqtt value : " + lux_list_activity[i]);
-                    if (temp_value <= lux_list_activity[i])
+                    Debug.Log("old time " + old_time_lux + " ; actual time " + DateTime.Now.TimeOfDay+ " time wait : " + time_wait_lux);
+                    if ((DateTime.Now.TimeOfDay - old_time_lux).Seconds > time_wait_lux || flag_lux == false)
                     {
-                        send_notif = new Notifications("Tips_light");
-                        queuing.sendNotification(send_notif);
-                        Debug.Log("Activity number " + (i + 1) + " " + lux_list_activity[i] + " detected");
-                        i = lux_list_activity.Length;
-                    }
-                    else if (temp_value > lux_list_activity[lux_list_activity.Length - 1])
-                    {
-                        //content.text = "You consume some much that you have kill the earth !";
+                        Debug.Log("Send notification");
+                        Debug.Log("old time " + old_time_lux + " ; actual time " + DateTime.Now.TimeOfDay + " time wait : " + time_wait_lux);
+
+                        old_time_lux = DateTime.Now.TimeOfDay;
+                        flag_lux = true;
+                        test = new Notifications("Tips_light");
+                        notif.sendNotification(test);
                     }
                 }
+                else flag_lux = false;
             }
 
         }

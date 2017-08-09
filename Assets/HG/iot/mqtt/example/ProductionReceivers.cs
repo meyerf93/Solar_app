@@ -16,8 +16,9 @@ namespace HG.iot.mqtt.example
         public string after_bat_consump_id;
 
         private List<double> prod_list = new List<double>();
-        private double battery_power_val;
-        private double after_bat_consump_val;
+        private double value_before_bat;
+        private double value_after_bat;
+        private double value_battery;
 
         ITopic _cacheGlobalTopic = null;
 
@@ -109,14 +110,14 @@ namespace HG.iot.mqtt.example
                     if (!battery_power_id.Contains("null") &&json.Contains(battery_power_id) == true)
                     {
                         receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        battery_power_val = receive_obj.data;
+                        value_before_bat = receive_obj.data;
                         //Debug.Log("Batt power value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
 
                     }
                     else if (!after_bat_consump_id.Contains("null") && json.Contains(after_bat_consump_id) == true)
                     {
                         receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        after_bat_consump_val = receive_obj.data;
+                        value_after_bat = receive_obj.data;
                         //Debug.Log("After bat power value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                     }
                     else if (json.Contains(id_to_parse[i]) == true)
@@ -125,13 +126,12 @@ namespace HG.iot.mqtt.example
                         prod_list[i] = receive_obj.data;
                         //Debug.Log("Global value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                     }
-
-
                 }
             }
 
             else
                 Debug.LogWarning("message arrived, but failed JSON conversion");
+
             prod_slider.value = 0.0f;
             int j = 0;
             for(; j < id_to_parse.Length; j++)
@@ -139,8 +139,27 @@ namespace HG.iot.mqtt.example
                 prod_slider.value += (float)prod_list[j];  
             }
             //print("power value : " + prod_slider.value);
-            if (battery_power_val >= 0.0) prod_slider.value += (float)battery_power_val;
-            else prod_slider.value += (float)after_bat_consump_val; 
+
+            if (value_before_bat > 0)
+            {
+                if (value_after_bat > 0) // +         -         +
+                    value_battery = value_before_bat - value_after_bat;
+                else
+                    value_battery = value_before_bat;
+                // +
+            }
+            else
+            {
+                if (value_after_bat > 0) // -       +         +
+                    value_battery = value_before_bat + value_after_bat;
+                else
+                    value_battery = value_before_bat;
+                // -
+            }
+
+            if (value_after_bat > 0) prod_slider.value += (float)value_after_bat;
+            if (value_battery > 0) prod_slider.value += (float)value_battery;
+
             text_value.text= prod_slider.value.ToString()+" W";
         }
 
