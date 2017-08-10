@@ -490,7 +490,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 0.33900002}
-  m_AnchoredPosition: {x: 1488.6282, y: -1188.5979}
+  m_AnchoredPosition: {x: 1488.6282, y: -1188.5978}
   m_SizeDelta: {x: 213.34387, y: 486.80405}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &632
@@ -7192,11 +7192,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5ae4b9b754626d849bc1349efb71681a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bousole_reaction: {fileID: 1479709057}
   building_reaction: {fileID: 1903139589}
-  smoothing: 1
+  bousole_reaction: {fileID: 1479709057}
   leng_max: 1736
   max_rotate: 360
+  speed: 10
+  thresholdY: 0
 --- !u!114 &103055276
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11329,7 +11330,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.5, y: -25}
+  m_AnchoredPosition: {x: 851.49994, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201168580
@@ -13812,7 +13813,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.95697, y: 205}
+  m_AnchoredPosition: {x: 10.95697, y: 205.00003}
   m_SizeDelta: {x: 1343.9, y: 73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &237183338
@@ -20676,7 +20677,7 @@ MonoBehaviour:
   delay: 0
   Building: {fileID: 1479709053}
   rotation: {fileID: 103055275}
-  multiplier: 5
+  multiplier: 1
   axis: {x: 0, y: 0, z: 1}
 --- !u!1 &392365982
 GameObject:
@@ -22781,7 +22782,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: -807.46765}
+  m_AnchoredPosition: {x: 0.69999695, y: -807.4678}
   m_SizeDelta: {x: 312.5, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &432789114
@@ -30739,7 +30740,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: -514.46765}
+  m_AnchoredPosition: {x: 0.69999695, y: -514.4678}
   m_SizeDelta: {x: 312.5, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578853134
@@ -36410,7 +36411,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.5, y: -25}
+  m_AnchoredPosition: {x: 851.50006, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &678229638
@@ -36540,7 +36541,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: -587.46765}
+  m_AnchoredPosition: {x: 0.69999695, y: -587.4678}
   m_SizeDelta: {x: 312.5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &682487656
@@ -37184,7 +37185,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: 511.5323}
+  m_AnchoredPosition: {x: 0.69999695, y: 511.53226}
   m_SizeDelta: {x: 312.5, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695764039
@@ -41407,7 +41408,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.5, y: -25}
+  m_AnchoredPosition: {x: 851.49994, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &780462079
@@ -46329,21 +46330,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'blablablablabla
-
-    basd
-
-    sadsa
-
-    dsa
-
-    dsa
-
-    ds
-
-    sa
-
-    dsa'
+  m_Text: "Dans l'avenir les voitures \xE9lectrique pourront \xEAtre consid\xE9rer
+    comme des batteries. \nC'est \xE0 dire que l'on pourra charger la voiture mais
+    \xE9galement la d\xE9charger pour profiter de l'\xE9nergie qu'une voiture peu
+    stocker pour la charger avec l'\xE9nergie solaire mais \xE9galement en prendre
+    lors que cel\xE0 est vraiment n\xE9cessaire."
 --- !u!222 &879110364
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61929,7 +61920,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.5, y: -25}
+  m_AnchoredPosition: {x: 851.50006, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1207332101
@@ -62391,7 +62382,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.5, y: -25}
+  m_AnchoredPosition: {x: 851.49994, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1221657047
@@ -67232,7 +67223,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.2, y: -25}
+  m_AnchoredPosition: {x: 851.2001, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1299369158
@@ -68576,7 +68567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.007888087, y: 0.441}
   m_AnchorMax: {x: 0.99500006, y: 0.609}
-  m_AnchoredPosition: {x: -1.9742432, y: 145.92056}
+  m_AnchoredPosition: {x: -1.9742432, y: 145.92058}
   m_SizeDelta: {x: 17.619873, y: 23.42241}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1318829980
@@ -73734,7 +73725,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: -882.4678}
+  m_AnchoredPosition: {x: 0.69999695, y: -882.46765}
   m_SizeDelta: {x: 312.5, y: 9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1419946057
@@ -77514,7 +77505,7 @@ MonoBehaviour:
   delay: 0
   Building: {fileID: 611554303}
   rotation: {fileID: 103055275}
-  multiplier: 5
+  multiplier: 1
   axis: {x: 0, y: -1, z: 0}
 --- !u!1 &1491593789
 GameObject:
@@ -83080,7 +83071,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.3, y: -25}
+  m_AnchoredPosition: {x: 851.30005, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1601792618
@@ -88813,7 +88804,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.3, y: -25}
+  m_AnchoredPosition: {x: 851.30005, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714420196
@@ -91348,7 +91339,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.3, y: -25}
+  m_AnchoredPosition: {x: 851.2999, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763228588
@@ -94685,21 +94676,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'blablablablabla
-
-    basd
-
-    sadsa
-
-    dsa
-
-    dsa
-
-    ds
-
-    sa
-
-    dsa'
+  m_Text: "Le challenge avec la recharge intelleligente des voitures c'est qu'il est
+    tr\xE8s difficile de pr\xE9dire le moment ou le voiture doit \xEAtre charger.\nL'autre
+    d\xE9fi c'est qu'il faut que l'utilisateur puisse avoir une r\xE9serve d'\xE9nergie
+    suffisante pour r\xE9aliser un trajet.\n"
 --- !u!222 &1830474916
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -101264,7 +101244,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1190, y: -23}
+  m_AnchoredPosition: {x: 1189.9999, y: -23}
   m_SizeDelta: {x: 145, y: 39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1950555612
@@ -105516,7 +105496,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1190, y: -23}
+  m_AnchoredPosition: {x: 1190.0001, y: -23}
   m_SizeDelta: {x: 145, y: 39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021465210
@@ -107755,7 +107735,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.3, y: -25}
+  m_AnchoredPosition: {x: 851.2999, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2058483159
@@ -109657,7 +109637,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1190, y: -23}
+  m_AnchoredPosition: {x: 1190.0001, y: -23}
   m_SizeDelta: {x: 145, y: 39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2100515297

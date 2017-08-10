@@ -3,13 +3,17 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
+using System;
 
-public class SimpleRotation : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler {
-    public ReactionCollection bousole_reaction;
+public class SimpleRotation : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+{ 
     public ReactionCollection building_reaction;
-    public float smoothing;
+    public ReactionCollection bousole_reaction;
+
     public float leng_max;
     public float max_rotate;
+    public float speed;
+    public float thresholdY;
 
     private Vector2 origin;
     private Vector2 direction;
@@ -18,54 +22,72 @@ public class SimpleRotation : MonoBehaviour, IPointerDownHandler, IDragHandler, 
     private bool touched;
     private int pointerID;
 
-
-
-    private void Awake()
+    public Vector2 GetDirection()
     {
-        direction = Vector2.zero;
-        touched = false;
+        //smoothDirection = Vector2.MoveTowards(smoothDirection, direction, smoothing);
+        return direction; //smoothDirection;
     }
 
-    public void OnPointerDown (PointerEventData data)
-    {   //set iour start point
+
+    public void OnBeginDrag(PointerEventData eventData)
+    {
         if (!touched)
         {
+            origin = eventData.pressPosition;
+            pointerID = eventData.pointerId;
             touched = true;
-            pointerID = data.pointerId;
-            origin = data.position;
+            //Debug.Log("origin of click : " + origin);
         }
     }
 
-    public void OnDrag(PointerEventData data)
-    {   //compare the difference betwen our start and current pointer pos
-        if(data.pointerId == pointerID)
+    public void OnDrag(PointerEventData eventData)
+    {
+        if(eventData.pointerId == pointerID)
         {
-            Vector2 currentPosition = data.position;
-            Vector2 directionRaw;
-            //Debug.Log("origin value : " + origin.x + " ; current position : " + currentPosition.x);
-            if (currentPosition.x >= 0)
-                directionRaw.x = currentPosition.x - origin.x;
-            else directionRaw.x = origin.x - currentPosition.x;
-            direction.x = directionRaw.x / leng_max * max_rotate;
-            direction.y = 0;
-            //Debug.Log("direction of rotation zone : " + direction);
+            if(eventData.delta.y > thresholdY)
+            {
+                direction.x = (eventData.delta.x / leng_max * max_rotate) * speed;
+                direction.y = 0;
+            }
+            else
+            {
+                direction.x = (eventData.delta.x / leng_max * max_rotate) * speed;
+                direction.y = 0;
+            }
+
             bousole_reaction.React();
             building_reaction.React();
         }
     }
 
-    public void OnPointerUp(PointerEventData data)
-    {   // Reset Everything
-        if(data.pointerId == pointerID)
+    public void OnEndDrag(PointerEventData eventData)
+    {
+        if(eventData.pointerId == pointerID)
         {
-            direction = Vector2.zero;
             touched = false;
+            origin = eventData.position;
+            pointerID = 0;
+            direction = Vector2.zero;
+            //Debug.Log("Release position : " + origin);
         }
     }
 
-    public Vector2 GetDirection()
+    /*
+    public void OnDrag(PointerEventData eventData)
     {
-        smoothDirection = Vector2.MoveTowards(smoothDirection, direction, smoothing);
-        return smoothDirection;
-    }
+        Vector2 currentPosition = eventData.position;
+        Vector2 directionRaw;
+      
+
+        if (currentPosition.x >= 0)
+            directionRaw.x = currentPosition.x - origin.x;
+        else directionRaw.x = origin.x - currentPosition.x;
+
+        direction.x = directionRaw.x / leng_max * max_rotate;
+        direction.y = 0;
+
+        Debug.Log("direction of rotation zone : " + direction);
+        bousole_reaction.React();
+        building_reaction.React();
+    }*/
 }
