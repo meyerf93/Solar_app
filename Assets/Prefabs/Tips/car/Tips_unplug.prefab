@@ -295,8 +295,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "La voiture viens de finir de se charger ou vien d'\xEAtre d\xE9brancher,\nla
-    place est libre pour recharger une autre voiture."
+  m_Text: 'The car battery is full or the car has been disconnected.
+
+    The car loading station is free and a new can be plugged.'
 --- !u!114 &114317955918276078
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -356,7 +357,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "La voiture viens de se d\xE9connecter du NeighborHub."
+  m_Text: The car has been disconnected from the NeighborHub
 --- !u!114 &114434757726504766
 MonoBehaviour:
   m_ObjectHideFlags: 1

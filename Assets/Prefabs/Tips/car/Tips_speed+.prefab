@@ -228,7 +228,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: il semblerais que la voiture se recharge rapidement
+  m_Text: It seems that the car is charging at high speed
 --- !u!114 &114227385734994190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -354,8 +354,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Le Neighborhub a d\xE9tecter que c'\xE9tait le bon moment pour recharger
-    la voiture, \nelle devrais \xEAtre compl\xE9tement recharger d'ici quelque heures."
+  m_Text: 'The NeighboHub detected that is a good time to charge.
+
+    The car should be fully charged in few hours'
 --- !u!114 &114535793360973464
 MonoBehaviour:
   m_ObjectHideFlags: 1

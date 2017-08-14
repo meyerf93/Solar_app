@@ -399,8 +399,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Il faudrais faire attention de ne pas augmenter votre consomaiton,\nsi
-    possible il serait m\xEAme int\xE9ressant de la r\xE9duire"
+  m_Text: 'You would better to not increase your consumption,
+
+    if possible, it would be interesting to reduce it.'
 --- !u!114 &114531462749721604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -493,9 +494,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Il semblerait que vous consommer beaucoup
+  m_Text: 'It seems that you consume a lot
 
-    cependant votre production est suffisante'
+    wheras your production is sufficient'
 --- !u!114 &114939235936991186
 MonoBehaviour:
   m_ObjectHideFlags: 1

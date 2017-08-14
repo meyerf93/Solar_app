@@ -493,8 +493,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "C'est le moment de profiter d'utiliser votre \xE9lectricit\xE9,\npar exemple
-    vous pouvez faire votre vaiselle ou encore laver votre linge."
+  m_Text: 'It''s time to use your own electricity.
+
+    Did you start the dish washer or the washing machine ?'
 --- !u!114 &114640842685048544
 MonoBehaviour:
   m_ObjectHideFlags: 1

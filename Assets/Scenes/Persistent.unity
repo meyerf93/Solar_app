@@ -195,7 +195,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reactions:
-  - {fileID: 814985977}
+  - {fileID: 4807386}
 --- !u!1 &125
 GameObject:
   m_ObjectHideFlags: 0
@@ -246,7 +246,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reactions:
-  - {fileID: 920189289}
+  - {fileID: 749357896}
 --- !u!1 &141
 GameObject:
   m_ObjectHideFlags: 0
@@ -297,7 +297,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reactions:
-  - {fileID: 1804728632}
+  - {fileID: 625019691}
 --- !u!1 &165
 GameObject:
   m_ObjectHideFlags: 0
@@ -1138,6 +1138,20 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1819802}
+--- !u!114 &4807386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a931d1c243b462c46bad5f7d2aae5949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  animator: {fileID: 754384076}
+  trigger: How_button_clicked
 --- !u!1 &5820641
 GameObject:
   m_ObjectHideFlags: 0
@@ -1801,7 +1815,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _defaultConnectionOptions:
     Port: 1883
-    Host: 128.179.177.45
+    Host: 160.98.117.55
     RandomClientId: 1
     Path: /mqtt
     AutoReconnect: 1
@@ -1833,7 +1847,7 @@ Transform:
   - {fileID: 1182508866}
   - {fileID: 1949236939}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &12201652
 GameObject:
@@ -2489,7 +2503,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 79268401}
-        m_MethodName: switch_home
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2530,6 +2544,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 754384076}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Electricity_off_clicked
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -8290,7 +8315,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1289879705}
-        m_MethodName: switch_electric
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -8320,6 +8345,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 754384076}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Electricity_clicked
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -8827,7 +8863,7 @@ RectTransform:
   - {fileID: 452116552}
   - {fileID: 1959503202}
   m_Father: {fileID: 754384080}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -9815,8 +9851,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "la technologie leds permet de produire beaucoup de lumi\xE8re en ayant
-    que peu de perte d'\xE9lectricit\xE9.\nElle poss\xE8de une durr\xE9e de vie \xE9lev\xE9"
+  m_Text: 'The Led technology produce a lot of ligh at high efficiency.
+
+    The life time is very high and the lighning switching is fast.'
 --- !u!222 &148025204
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -10553,7 +10590,7 @@ RectTransform:
   m_Children:
   - {fileID: 1162419384}
   m_Father: {fileID: 754384080}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -13266,7 +13303,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: -660.46765}
+  m_AnchoredPosition: {x: 0.69999695, y: -660.4678}
   m_SizeDelta: {x: 312.5, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &225934365
@@ -15150,21 +15187,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 264219909}
   m_Mesh: {fileID: 4300132, guid: cb95236262934e4418f804be711b98b6, type: 3}
---- !u!114 &264857829
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e49f9b230c60264580b1181493d3c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 0
-  Building: {fileID: 611554303}
-  defaultRotation: 105
-  rotation: {x: 0, y: 1, z: 0}
 --- !u!1 &265368904
 GameObject:
   m_ObjectHideFlags: 0
@@ -21336,7 +21358,7 @@ RectTransform:
   m_Children:
   - {fileID: 1631960734}
   m_Father: {fileID: 754384080}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -22897,7 +22919,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: -807.4678}
+  m_AnchoredPosition: {x: 0.69999695, y: -807.46765}
   m_SizeDelta: {x: 312.5, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &432789114
@@ -23281,7 +23303,7 @@ RectTransform:
   m_Father: {fileID: 1341676944}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.66969794}
+  m_AnchorMin: {x: 0, y: 0.6696979}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -23335,9 +23357,9 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
       - m_Target: {fileID: 1341676941}
-        m_MethodName: switch_light
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -23346,7 +23368,18 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 1
+        m_CallState: 2
+      - m_Target: {fileID: 754384076}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Light_clicked
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!114 &442337274
@@ -24722,7 +24755,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 1
       - m_Target: {fileID: 1289879705}
-        m_MethodName: switch_home
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -24752,6 +24785,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 754384076}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Light_off_clicked
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -25098,6 +25142,20 @@ MonoBehaviour:
   delay: 0
   gameObject: {fileID: 1240745653}
   activeState: 1
+--- !u!114 &475883240
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a931d1c243b462c46bad5f7d2aae5949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  animator: {fileID: 754384076}
+  trigger: Home_button_clicked
 --- !u!1 &476571403
 GameObject:
   m_ObjectHideFlags: 0
@@ -25509,7 +25567,7 @@ RectTransform:
   - {fileID: 1276602530}
   - {fileID: 388617622}
   m_Father: {fileID: 754384080}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -26245,21 +26303,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 500263600}
---- !u!114 &500434220
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e49f9b230c60264580b1181493d3c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 0
-  Building: {fileID: 611554303}
-  defaultRotation: 130
-  rotation: {x: 0, y: 1, z: 0}
 --- !u!1 &502211801
 GameObject:
   m_ObjectHideFlags: 0
@@ -27544,7 +27587,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 79268401}
-        m_MethodName: switch_car
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -27585,6 +27628,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 754384076}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Car_clicked
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -29280,7 +29334,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1341676941}
-        m_MethodName: switch_car
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -29288,6 +29342,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 754384076}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: car_clicked
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -30903,7 +30968,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: -514.46765}
+  m_AnchoredPosition: {x: 0.69999695, y: -514.4678}
   m_SizeDelta: {x: 312.5, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &578853134
@@ -32427,8 +32492,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 611554303}
   m_LocalRotation: {x: 0, y: 0.30070576, z: 0, w: 0.953717}
-  m_LocalPosition: {x: 800, y: 30, z: 1895}
-  m_LocalScale: {x: 120, y: 120, z: 120}
+  m_LocalPosition: {x: -224, y: -738, z: 1895}
+  m_LocalScale: {x: 120.00002, y: 120, z: 120.00002}
   m_Children:
   - {fileID: 1903139588}
   - {fileID: 1000756766}
@@ -32443,8 +32508,8 @@ Transform:
   - {fileID: 1390959756}
   - {fileID: 36115341}
   - {fileID: 1520301957}
-  m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_Father: {fileID: 754384080}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 35, z: 0}
 --- !u!1 &612185850
 GameObject:
@@ -32833,7 +32898,6 @@ MonoBehaviour:
   - {fileID: 124199980}
   - {fileID: 574528306}
   - {fileID: 1451837340}
-  - {fileID: 2128478807}
 --- !u!1 &621790127
 GameObject:
   m_ObjectHideFlags: 0
@@ -33149,6 +33213,20 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &625019691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a931d1c243b462c46bad5f7d2aae5949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  animator: {fileID: 754384076}
+  trigger: Control_button_clicked
 --- !u!1 &625619123
 GameObject:
   m_ObjectHideFlags: 0
@@ -36752,7 +36830,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: -587.46765}
+  m_AnchoredPosition: {x: 0.69999695, y: -587.4678}
   m_SizeDelta: {x: 312.5, y: 5}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &682487656
@@ -37105,7 +37183,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 754384080}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -37408,7 +37486,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: 511.5323}
+  m_AnchoredPosition: {x: 0.69999695, y: 511.53226}
   m_SizeDelta: {x: 312.5, y: 140}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &695764039
@@ -40223,6 +40301,20 @@ MonoBehaviour:
   - {fileID: 960158778}
   - {fileID: 170572816}
   - {fileID: 1857580353}
+--- !u!114 &749357896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a931d1c243b462c46bad5f7d2aae5949, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  animator: {fileID: 754384076}
+  trigger: Visit_boutton_clicked
 --- !u!1 &750835162
 GameObject:
   m_ObjectHideFlags: 0
@@ -40566,6 +40658,7 @@ GameObject:
   - component: {fileID: 754384079}
   - component: {fileID: 754384078}
   - component: {fileID: 754384077}
+  - component: {fileID: 754384076}
   m_Layer: 5
   m_Name: Persistent_canvas
   m_TagString: Untagged
@@ -40573,6 +40666,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!95 &754384076
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 754384075}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 4cd8bfec8d1413749976e8dcd8896066, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &754384077
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40644,6 +40754,7 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
+  - {fileID: 611554304}
   - {fileID: 479101782}
   - {fileID: 2105141595}
   - {fileID: 125288543}
@@ -40657,7 +40768,7 @@ RectTransform:
   - {fileID: 799646688}
   - {fileID: 2010635838}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -42277,7 +42388,6 @@ MonoBehaviour:
   - {fileID: 1249446632}
   - {fileID: 616558533}
   - {fileID: 853440258}
-  - {fileID: 264857829}
 --- !u!1 &795691050
 GameObject:
   m_ObjectHideFlags: 0
@@ -42608,7 +42718,7 @@ RectTransform:
   - {fileID: 667636720}
   - {fileID: 435082141}
   m_Father: {fileID: 754384080}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -43376,22 +43486,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 0
---- !u!114 &814985977
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a58c0b02cb4997f4b8488b36adcc2226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Main_menu: {fileID: 885972765}
-  secondaryMenu:
-  - {fileID: 479101781}
-  - {fileID: 2105141594}
-  - {fileID: 125288542}
 --- !u!1 &816101452
 GameObject:
   m_ObjectHideFlags: 0
@@ -46977,7 +47071,7 @@ RectTransform:
   - {fileID: 1399628457}
   - {fileID: 404060140}
   m_Father: {fileID: 754384080}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -48582,7 +48676,6 @@ MonoBehaviour:
   - {fileID: 124199980}
   - {fileID: 574528306}
   - {fileID: 1451837340}
-  - {fileID: 2040513533}
 --- !u!1 &916893588
 GameObject:
   m_ObjectHideFlags: 0
@@ -48801,22 +48894,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 920053399}
---- !u!114 &920189289
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a58c0b02cb4997f4b8488b36adcc2226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Main_menu: {fileID: 2105141594}
-  secondaryMenu:
-  - {fileID: 479101781}
-  - {fileID: 885972765}
-  - {fileID: 125288542}
 --- !u!1 &924302772
 GameObject:
   m_ObjectHideFlags: 0
@@ -49712,7 +49789,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fluorescent tubes
+  m_Text: Fluorescent Lamps
 --- !u!222 &954153024
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50411,7 +50488,7 @@ RectTransform:
   m_Children:
   - {fileID: 2044538795}
   m_Father: {fileID: 754384080}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -51650,7 +51727,7 @@ RectTransform:
   - {fileID: 1939179336}
   - {fileID: 500263601}
   m_Father: {fileID: 754384080}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -53658,7 +53735,7 @@ RectTransform:
   m_Father: {fileID: 1341676944}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.33769792}
+  m_AnchorMin: {x: 0, y: 0.3376979}
   m_AnchorMax: {x: 1, y: 0.665}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -53714,7 +53791,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1341676941}
-        m_MethodName: switch_electric
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -53722,6 +53799,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 754384076}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Electricity_clicked
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -57763,8 +57851,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "La lumi\xE8re \xE0 une couleur, en ayant la possibilit\xE9 de changer cette
-    chaleur cel\xE0 permet d'augmenter notre bien \xEAtre et notre productivit\xE9"
+  m_Text: 'The light has a color which is kined with heat.
+
+    Changing the color allows a better wellness ( white  yellowr = warm) or a better
+    productivity (clod = blue),'
 --- !u!222 &1103640223
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -63219,7 +63309,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1332349458}
-        m_MethodName: switch_home
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -63249,6 +63339,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 754384076}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Car_off_clicked
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -64433,7 +64534,6 @@ MonoBehaviour:
   - {fileID: 1962238273}
   - {fileID: 793057398}
   - {fileID: 383335144}
-  - {fileID: 500434220}
 --- !u!1 &1255706188
 GameObject:
   m_ObjectHideFlags: 0
@@ -65347,8 +65447,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Les lampe incandescent produise que peu de lumi\xE8re avec l'\xE9lectricit\xE9,
-    la majeur partie de l'\xE9lectricit\xE9 consommer est transformer en chaleur"
+  m_Text: 'Efficiency is low and consumption is high.
+
+    Mos of consummed electricity is converted to heat. Life time is short.'
 --- !u!222 &1267371879
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -70043,7 +70144,7 @@ RectTransform:
   m_AnchorMin: {x: 0.8470001, y: 0}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: -0.000061035156, y: 0}
+  m_SizeDelta: {x: -0.00012207, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1343397616
 GameObject:
@@ -81519,7 +81620,7 @@ RectTransform:
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0.3331406}
-  m_AnchorMax: {x: 1, y: 0.33769792}
+  m_AnchorMax: {x: 1, y: 0.3376979}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -83821,9 +83922,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "le fais de pouvoir adapter l'intensit\xE9 des lampes permet d'avoir la
-    lumi\xE8re qui est n\xE9cessaire pour l'activit\xE9 donn\xE9, On utilise juste
-    la lumi\xE8re et donc l'\xE9lectricit\xE9 qu'il nous faut"
+  m_Text: Adjusting intensitiy of lamps allows sufficient lighting conditions to be
+    obtainded for a given activity. To Reduce consumption , you'd better use only
+    necessary light.
 --- !u!222 &1607582895
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -88994,7 +89095,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1332349458}
-        m_MethodName: switch_light
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -89024,6 +89125,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 754384076}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Light_clicked
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -90808,7 +90920,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1332349458}
-        m_MethodName: switch_electric
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -90838,6 +90950,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 754384076}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Electricity_clicked
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -92613,7 +92736,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 79268401}
-        m_MethodName: switch_light
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -92654,6 +92777,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 754384076}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Light_clicked
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -93709,22 +93843,6 @@ Transform:
   m_Father: {fileID: 1520301957}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1804728632
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a58c0b02cb4997f4b8488b36adcc2226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Main_menu: {fileID: 125288542}
-  secondaryMenu:
-  - {fileID: 479101781}
-  - {fileID: 2105141594}
-  - {fileID: 885972765}
 --- !u!1 &1804865625
 GameObject:
   m_ObjectHideFlags: 0
@@ -97270,9 +97388,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Les tube fluo produise une bonne quanti\xE9 de lumi\xE8re avec peu de perte
-    d'\xE9lectricit\xE9,\nleurs principals d\xE9savantage c'est qu'il faut un petit
-    moment pour qu'elles s'allument"
+  m_Text: 'Fluorescent Lamps produce light with low consumption.
+
+    The life time is high but the lighting switching can be slow.'
 --- !u!222 &1876486486
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -98644,7 +98762,7 @@ MonoBehaviour:
           m_BoolArgument: 0
         m_CallState: 2
       - m_Target: {fileID: 1289879705}
-        m_MethodName: switch_car
+        m_MethodName: 
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -98674,6 +98792,17 @@ MonoBehaviour:
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 754384076}
+        m_MethodName: SetTrigger
+        m_Mode: 5
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: Car_clicked
           m_BoolArgument: 0
         m_CallState: 2
     m_TypeName: UnityEngine.UI.Button+ButtonClickedEvent, UnityEngine.UI, Version=1.0.0.0,
@@ -102694,7 +102823,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 754384080}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -105194,7 +105323,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 754384080}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
@@ -105312,7 +105441,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   reactions:
-  - {fileID: 2128848092}
+  - {fileID: 475883240}
 --- !u!1 &2010800409
 GameObject:
   m_ObjectHideFlags: 0
@@ -107045,21 +107174,6 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2040293362}
---- !u!114 &2040513533
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e49f9b230c60264580b1181493d3c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 0
-  Building: {fileID: 611554303}
-  defaultRotation: 0
-  rotation: {x: 0, y: -1, z: 0}
 --- !u!1 &2041141368
 GameObject:
   m_ObjectHideFlags: 0
@@ -107717,7 +107831,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Incandescent light bulb
+  m_Text: Incandescent bulb
 --- !u!222 &2051045725
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -110248,7 +110362,7 @@ RectTransform:
   - {fileID: 103055274}
   - {fileID: 1479709054}
   m_Father: {fileID: 754384080}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
@@ -111293,21 +111407,6 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2126750104}
---- !u!114 &2128478807
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1e49f9b230c60264580b1181493d3c69, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  delay: 0
-  Building: {fileID: 611554303}
-  defaultRotation: 35
-  rotation: {x: 0, y: 1, z: 0}
 --- !u!1 &2128763634
 GameObject:
   m_ObjectHideFlags: 0
@@ -111343,22 +111442,6 @@ RectTransform:
   m_AnchoredPosition: {x: 342.5, y: -257}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2128848092
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a58c0b02cb4997f4b8488b36adcc2226, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Main_menu: {fileID: 479101781}
-  secondaryMenu:
-  - {fileID: 2105141594}
-  - {fileID: 885972765}
-  - {fileID: 125288542}
 --- !u!1 &2129412170
 GameObject:
   m_ObjectHideFlags: 0
@@ -111537,7 +111620,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0.69999695, y: -734.46765}
+  m_AnchoredPosition: {x: 0.69999695, y: -734.4678}
   m_SizeDelta: {x: 312.5, y: 7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2134209277

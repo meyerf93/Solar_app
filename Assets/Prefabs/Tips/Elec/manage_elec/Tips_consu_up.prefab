@@ -339,8 +339,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Se serait int\xE9ressant, si possible, de r\xE9duire votre consomation,\nce
-    n'est pas le bon moment pour faire votre machine \xE0 laver."
+  m_Text: 'It would be interesting, if possible, to reduce your consumption.
+
+    It''s not the right time to start your washing machine.'
 --- !u!114 &114409118739620032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -460,9 +461,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Il semblerait que vous consommer beaucoup
-
-    alors que la votre production est faible'
+  m_Text: It seems that you consume a lot whereas your production is low
 --- !u!114 &114890034289560080
 MonoBehaviour:
   m_ObjectHideFlags: 1

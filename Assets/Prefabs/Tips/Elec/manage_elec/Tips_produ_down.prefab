@@ -312,7 +312,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Il semblerait que le Neighborhub \nne produise que peu d'\xE9nergie"
+  m_Text: 'It seems that the NeighborHub
+
+    is not producing a lot fo electricity'
 --- !u!114 &114486524423434220
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -405,8 +407,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Il faudrais \xE9viter de consomer trop d'\xE9nergie,\nessayer de ne pas
-    trop augmenter votre consomation"
+  m_Text: 'You''d better no consume to much.
+
+    Try to not increase your consumption.'
 --- !u!114 &114617592923886622
 MonoBehaviour:
   m_ObjectHideFlags: 1

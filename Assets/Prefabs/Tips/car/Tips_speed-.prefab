@@ -313,7 +313,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Il semblerais que la voiture se charge pas ou que faiblement.
+  m_Text: It seems that the car is no charging or is charging slowly
 --- !u!114 &114156302351748694
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -346,9 +346,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Le Neighborhub a d\xE9tecter que ce n'est pas forc\xE9ment le bon moment
-    pour recharger la voiture,\nla voiture ne sera pas recharger compl\xE9tement lorsque
-    vous la prendez."
+  m_Text: 'The NeighbotHub detected that it is not the right time to charge.
+
+    The car won''t be fully charged when you will use it.'
 --- !u!114 &114354431534955954
 MonoBehaviour:
   m_ObjectHideFlags: 1

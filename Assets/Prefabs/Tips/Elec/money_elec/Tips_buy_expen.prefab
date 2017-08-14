@@ -325,8 +325,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Essayer de r\xE9duire, si possible, de r\xE9duire votre consomation,\ncela
-    permettra de r\xE9duire votre facutre \xE0 la fin du mois."
+  m_Text: Try to reduce your consumption to save money.
 --- !u!114 &114259918786226340
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -465,7 +464,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "It seems that you \nbuy electricity for expensive price !"
+  m_Text: "It seems that you \nbuy electricity at an expensive price"
 --- !u!114 &114460644930447096
 MonoBehaviour:
   m_ObjectHideFlags: 1
