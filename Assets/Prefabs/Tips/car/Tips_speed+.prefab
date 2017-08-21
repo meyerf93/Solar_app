@@ -228,7 +228,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: It seems that the car is charging at high speed
+  m_Text: It seems that the car is charging quickly.
 --- !u!114 &114227385734994190
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -354,9 +354,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The NeighboHub detected that is a good time to charge.
+  m_Text: 'The NeighboHub detected that it is a good time to charge.
 
-    The car should be fully charged in few hours'
+    The car should be fully charged in a few hours.'
 --- !u!114 &114535793360973464
 MonoBehaviour:
   m_ObjectHideFlags: 1

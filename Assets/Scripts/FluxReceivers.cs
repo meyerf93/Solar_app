@@ -19,10 +19,9 @@ namespace HG.iot.mqtt.example
 
         public Sprite sprite_positive;
         public Sprite sprite_negative;
+
         public Image arrow;
 
-        public Color color_positive;
-        public Color color_negative;
         public Text text_value;
         private float temp_val;
 
@@ -173,12 +172,10 @@ namespace HG.iot.mqtt.example
 
             if (temp_val >= 0)
             {
-                text_value.color = color_positive;
                 arrow.sprite = sprite_positive;
             }
             else
             {
-                text_value.color = color_negative;
                 arrow.sprite = sprite_negative;
             }
             temp_val = Math.Abs(temp_val);

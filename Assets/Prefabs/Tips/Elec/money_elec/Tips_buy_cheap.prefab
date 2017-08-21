@@ -325,9 +325,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'It seems that you
+  m_Text: 'It seems that you are buying
 
-    buy electricity for few cents !'
+    electricity for a low price!'
 --- !u!114 &114327097361537678
 MonoBehaviour:
   m_ObjectHideFlags: 1

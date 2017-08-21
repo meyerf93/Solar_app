@@ -434,7 +434,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The car just connected to the Neighborhub
+  m_Text: The car just connected to the Neighborhub.
 --- !u!114 &114509848717413590
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -581,7 +581,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The car loading station is now busy,
+  m_Text: 'The car loading station is now busy.
 
     The car will be charged when the NeighborHub will poroduce enough energy.'
 --- !u!114 &114929827603376298

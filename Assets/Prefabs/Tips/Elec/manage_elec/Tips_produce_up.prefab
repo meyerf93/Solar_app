@@ -229,7 +229,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: It seems that the NeighborHub is producing a lot of energy
+  m_Text: It seems that the NeighborHub is producing a lot of energy.
 --- !u!114 &114161016367710516
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -554,9 +554,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'It''s a good time to start the dish washer or the washing machine.
+  m_Text: 'It''s a good time to start the dishwasher or the washing machine.
 
-    But it''s not a reason to waste energy.'
+    But that''s not a reason to waste energy.'
 --- !u!222 &222047345959272586
 CanvasRenderer:
   m_ObjectHideFlags: 1
