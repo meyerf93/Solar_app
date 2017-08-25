@@ -16,7 +16,6 @@ public class SimpleRotation : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
     public float thresholdY;
 
     private Vector2 direction;
-    private Vector2 smoothDirection;
 
     private bool touched;
     private int pointerID;
@@ -26,7 +25,6 @@ public class SimpleRotation : MonoBehaviour, IBeginDragHandler, IDragHandler, IE
         //smoothDirection = Vector2.MoveTowards(smoothDirection, direction, smoothing);
         return direction; //smoothDirection;
     }
-
 
     public void OnBeginDrag(PointerEventData eventData)
     {

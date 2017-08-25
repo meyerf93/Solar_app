@@ -160,7 +160,7 @@ namespace HG.iot.mqtt.example
             if (value_after_bat > 0) prod_slider.value += (float)value_after_bat;
             if (value_battery > 0) prod_slider.value += (float)value_battery;
 
-            text_value.text= prod_slider.value.ToString()+" W";
+            text_value.text= prod_slider.value.ToString("F1")+" W";
         }
 
         void onMqttSubscriptionSuccess_GlobalTopic(SubscriptionResponse response)
