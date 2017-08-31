@@ -19,7 +19,7 @@ public class RotationAnimationReaction : DelayedReaction
     protected override void ImmediateReaction()
     {
         direction = rotation.GetDirection();
-        Debug.Log("new flaot for the rotation animation : " + direction.x);
+        //Debug.Log("new flaot for the rotation animation : " + direction.x);
         animator.SetFloat(trigger_direction_rotation,direction.x);
     }
 }

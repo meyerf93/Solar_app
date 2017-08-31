@@ -325,7 +325,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "It seems that you are selling \nyour electricity for a good price!"
+  m_Text: "It seems that you are selling \nelectricity at a high price.\nIt seems
+    that you are buying\nelectricity at a high price."
 --- !u!114 &114123739646799086
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -698,8 +699,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Essayer de r\xE9duire votre consomation, cel\xE0 permettra\nau quartier
-    de consommer votre \xE9nergie"
+  m_Text: "Try to reduce your electricity consumption, this will allow \nyour own
+    produced energy to be consumed by the neighborhood."
 --- !u!114 &114987649574723092
 MonoBehaviour:
   m_ObjectHideFlags: 1

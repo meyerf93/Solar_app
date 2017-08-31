@@ -327,7 +327,9 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'It seems that you are buying
 
-    electricity for a low price!'
+    your electricity for a low price!
+
+'
 --- !u!114 &114327097361537678
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -493,8 +495,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "C'est le moment de profiter d'utiliser votre \xE9lectricit\xE9,\npar exemple
-    vous pouvez faire votre vaiselle ou encore laver votre linge."
+  m_Text: "It's time to use electricity for the grid. \nWhy not doing the washing
+    machine or pressing the start button on your dish washer ?"
 --- !u!114 &114406392495168978
 MonoBehaviour:
   m_ObjectHideFlags: 1

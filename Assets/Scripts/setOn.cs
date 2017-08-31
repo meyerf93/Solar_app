@@ -7,7 +7,8 @@ using HG.iot.mqtt.example;
 public class setOn : MonoBehaviour
 { 
     public Toggle toggleButton;
-    public LightReceivers command;
+    public LightReceivers receive;
+    public LightSenders command;
     private Slider lightSlider;
     private float oldValue;
 
@@ -57,6 +58,6 @@ public class setOn : MonoBehaviour
 
     public void BlockSlider(bool value)
     {
-        command.BlockSlider(value);
+        receive.BlockSlider(value);
     }
 }
