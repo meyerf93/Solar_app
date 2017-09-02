@@ -1844,8 +1844,8 @@ Transform:
   m_LocalPosition: {x: 1031.9807, y: 843.8699, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 1983489792}
   - {fileID: 282044109}
+  - {fileID: 1983489792}
   - {fileID: 728405500}
   - {fileID: 1182508866}
   - {fileID: 1949236939}
@@ -3268,7 +3268,7 @@ MonoBehaviour:
   - {fileID: 1715140320}
   - {fileID: 355878815}
   - {fileID: 1032967766}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -4881,7 +4881,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: keba1/:/192.168.2.106/:/plug
   text_value: {fileID: 1272322926}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &65740568
 GameObject:
   m_ObjectHideFlags: 0
@@ -5476,7 +5476,7 @@ MonoBehaviour:
   - knx1/:1.2.26/:/dim.6
   list_image:
   - {fileID: 1607462802}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: bf78c76f2be82e94296bbc4430b20c61, type: 3}
   mid_sprite: {fileID: 21300000, guid: 6be15dcbba1eff542800ff2a28b70298, type: 3}
   high_sprite: {fileID: 21300000, guid: c4dca1488e2cfce42b319aa914056dd1, type: 3}
@@ -5818,7 +5818,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.6
   slider_value: {fileID: 483553812}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &73594964
 GameObject:
   m_ObjectHideFlags: 0
@@ -6528,7 +6528,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.8
   slider_value: {fileID: 476571405}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &87651572
 GameObject:
   m_ObjectHideFlags: 0
@@ -6579,7 +6579,7 @@ MonoBehaviour:
   - {fileID: 313195660}
   - {fileID: 2091669277}
   - {fileID: 811131537}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: bf78c76f2be82e94296bbc4430b20c61, type: 3}
   mid_sprite: {fileID: 21300000, guid: 6be15dcbba1eff542800ff2a28b70298, type: 3}
   high_sprite: {fileID: 21300000, guid: c4dca1488e2cfce42b319aa914056dd1, type: 3}
@@ -8888,7 +8888,7 @@ MonoBehaviour:
   id_to_parse: knx1/:1.1.13/:/energy.1
   text_value: {fileID: 1381705075}
   InKWH: 1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &126531707
 GameObject:
   m_ObjectHideFlags: 0
@@ -10206,6 +10206,48 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 155429739}
+--- !u!1 &157251461
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 157251462}
+  - component: {fileID: 157251463}
+  m_Layer: 0
+  m_Name: AutomaticMode
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &157251462
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157251461}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1571986458}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &157251463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 157251461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2480d1c47353d16468a07a41069c7894, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id_to_parse: car1/:1/automatic.1
+  debug_mode_on: 1
 --- !u!1 &157952641
 GameObject:
   m_ObjectHideFlags: 0
@@ -10623,7 +10665,7 @@ MonoBehaviour:
   text_value: {fileID: 1162419385}
   prefix: Skin
   unit: "\xB0C"
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &175561422
 GameObject:
   m_ObjectHideFlags: 0
@@ -10666,7 +10708,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.7
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &180209085
 GameObject:
   m_ObjectHideFlags: 0
@@ -11478,7 +11520,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.5, y: -25}
+  m_AnchoredPosition: {x: 851.49994, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &201168580
@@ -11494,8 +11536,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 981265097}
   Unit: kWh
-  slide: {fileID: 201168581}
   virgule_number: 
+  divider: 0
 --- !u!114 &201168581
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12140,7 +12182,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.2
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &208123245
 GameObject:
   m_ObjectHideFlags: 0
@@ -13949,6 +13991,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 233592351}
+  - component: {fileID: 233592352}
   m_Layer: 5
   m_Name: time_zone
   m_TagString: Untagged
@@ -13976,6 +14019,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &233592352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 233592350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 609798568bc6999448e2d73ec044f10c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  slide: {fileID: 1929956545}
+  max_voltage: 230
+  max_kwh: 24
+  current_divider: 1000
+  text_to_change: {fileID: 1939778120}
 --- !u!114 &235234130
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14022,7 +14081,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 10.95697, y: 205.00003}
+  m_AnchoredPosition: {x: 10.95697, y: 205}
   m_SizeDelta: {x: 1343.9, y: 73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &237183338
@@ -14111,7 +14170,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.29956, y: -25}
+  m_AnchoredPosition: {x: 851.2996, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &238389011
@@ -14252,8 +14311,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 2121448661}
   Unit: kW
-  slide: {fileID: 238389011}
   virgule_number: 
+  divider: 0
 --- !u!1 &239149279
 GameObject:
   m_ObjectHideFlags: 0
@@ -14658,7 +14717,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 8000.00 W
+  m_Text: Infinity W
 --- !u!222 &246903535
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -15392,7 +15451,7 @@ MonoBehaviour:
   - knx1/:1.2.26/:/dim.9
   list_image:
   - {fileID: 1720283721}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -15985,9 +16044,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1886464656}
   m_Father: {fileID: 11230771}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &282044110
 MonoBehaviour:
@@ -16001,9 +16061,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SimpleNotifications: 0
-  Receivers: []
+  Receivers:
+  - {fileID: 1886464655}
   subscriptionTimeout: 15
-  filter: device.command.request.all.values
+  filter: device.command.request.value
   subscribeOnConnect: 1
   allowEmptyMessage: 0
   requestedQualityOfService: 2
@@ -16123,7 +16184,7 @@ MonoBehaviour:
   - knx1/:1.1.9/:/power.1
   - knx1/:1.1.8/:/power.1
   prod_slider: {fileID: 591747658}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &285880160
 GameObject:
   m_ObjectHideFlags: 0
@@ -16346,7 +16407,7 @@ MonoBehaviour:
   prod_slider: {fileID: 435082142}
   text_value: {fileID: 696631693}
   max_value: 10.8
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &291730513
 GameObject:
   m_ObjectHideFlags: 0
@@ -17190,6 +17251,49 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 310035928}
+--- !u!1 &310837396
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 310837397}
+  - component: {fileID: 310837398}
+  m_Layer: 0
+  m_Name: ChargePower
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &310837397
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 310837396}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 661752823}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &310837398
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 310837396}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id_to_parse: keba1/:192.168.2.106/:/curr_user
+  mdl: keba1
+  debug_mode_on: 1
 --- !u!1 &310962214
 GameObject:
   m_ObjectHideFlags: 0
@@ -17563,7 +17667,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.5
   slider_value: {fileID: 336370649}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &316153937
 GameObject:
   m_ObjectHideFlags: 0
@@ -18729,7 +18833,7 @@ MonoBehaviour:
   - knx1/:1.1.15/:/power.1
   - knx1/:1.1.16/:/power.1
   prod_slider: {fileID: 875528070}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &337916492
 GameObject:
   m_ObjectHideFlags: 0
@@ -19763,8 +19867,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 1638488628}
   Unit: kWh
-  slide: {fileID: 356722736}
   virgule_number: 
+  divider: 0
 --- !u!114 &356722736
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20153,7 +20257,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25.00 kWh
+  m_Text: Infinity kWh
 --- !u!222 &364195111
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -20358,7 +20462,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.1
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!114 &370473669
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20794,7 +20898,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notif: {fileID: 986041019}
   id_to_parse: knx1/:1.1.7/:/power.1
-  debug_mode_on: 0
+  debug_mode_on: 1
   time_wait_min_buy: 2
   time_wait_min_sell: 2
   good_sell_begin: 13
@@ -20851,7 +20955,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.1
   slider_value: {fileID: 821735941}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!114 &383335144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21650,7 +21754,7 @@ MonoBehaviour:
   text_value: {fileID: 1631960735}
   prefix: Core
   unit: "\xB0C"
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &395859741
 GameObject:
   m_ObjectHideFlags: 0
@@ -22383,7 +22487,7 @@ MonoBehaviour:
   - {fileID: 1637888165}
   - {fileID: 504624745}
   - {fileID: 1065261809}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: bf78c76f2be82e94296bbc4430b20c61, type: 3}
   mid_sprite: {fileID: 21300000, guid: 6be15dcbba1eff542800ff2a28b70298, type: 3}
   high_sprite: {fileID: 21300000, guid: c4dca1488e2cfce42b319aa914056dd1, type: 3}
@@ -22862,7 +22966,7 @@ MonoBehaviour:
   id_to_parse: keba1/:192.168.2.106/:/e_pres
   text_value: {fileID: 1214461192}
   InKWH: 0
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &426855167
 GameObject:
   m_ObjectHideFlags: 0
@@ -23547,7 +23651,7 @@ MonoBehaviour:
   prod_slider: {fileID: 435082142}
   text_value: {fileID: 118869724}
   max_value: 10.8
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!114 &437386734
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24564,7 +24668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse:
   - knx1/:1.1.13/:/power.1
-  debug_mode_on: 0
+  debug_mode_on: 1
   id_before_charger: null
   id_after_charger: null
   sprite_positive: {fileID: 21300000, guid: 7c0e1b9b2f68cab4392862fd0f9b68ea, type: 3}
@@ -30560,7 +30664,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.1.25/:/power.1
   prod_slider: {fileID: 1832746556}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &567546192
 GameObject:
   m_ObjectHideFlags: 0
@@ -31917,7 +32021,7 @@ MonoBehaviour:
   - opti/:/next_prediction
   prod_slider: {fileID: 590565325}
   text_value: {fileID: 1913782651}
-  debug_mode_on: 0
+  debug_mode_on: 1
   battery_power_id: null
   after_bat_consump_id: null
 --- !u!114 &590565325
@@ -32099,8 +32203,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 1774361719}
   Unit: kW
-  slide: {fileID: 591747658}
   virgule_number: 
+  divider: 0
 --- !u!114 &591747658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32246,7 +32350,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.6
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &593220774
 GameObject:
   m_ObjectHideFlags: 0
@@ -35071,8 +35175,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 1339285397}
   Unit: W
-  slide: {fileID: 643400666}
   virgule_number: 
+  divider: 0
 --- !u!114 &643400666
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36322,6 +36426,36 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 661017494}
+--- !u!1 &661752822
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 661752823}
+  m_Layer: 0
+  m_Name: CarParameters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &661752823
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 661752822}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1930469522}
+  - {fileID: 310837397}
+  m_Father: {fileID: 1983489792}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &662462782
 GameObject:
   m_ObjectHideFlags: 0
@@ -36712,7 +36846,7 @@ MonoBehaviour:
   - knx1/:1.1.16/:/power.1
   prod_slider: {fileID: 667636721}
   text_value: {fileID: 1464662975}
-  debug_mode_on: 0
+  debug_mode_on: 1
   battery_power_id: knx1/:1.1.17/:/power.1
   after_bat_consump_id: knx1/:1.1.18/:/power.1
 --- !u!1 &667714589
@@ -37182,7 +37316,7 @@ MonoBehaviour:
   - knx1/:1.1.16/:/power.1
   prod_slider: {fileID: 643400666}
   text_value: {fileID: 1339285397}
-  debug_mode_on: 0
+  debug_mode_on: 1
   battery_power_id: knx1/:1.1.17/:/power.1
   after_bat_consump_id: knx1/:1.1.18/:/power.1
 --- !u!1 &678229636
@@ -37218,7 +37352,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.5, y: -25}
+  m_AnchoredPosition: {x: 851.50006, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &678229638
@@ -37234,8 +37368,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 1708741054}
   Unit: kWh
-  slide: {fileID: 678229639}
   virgule_number: 
+  divider: 0
 --- !u!114 &678229639
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38713,7 +38847,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.5
   slider_value: {fileID: 1585380524}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &705830067
 GameObject:
   m_ObjectHideFlags: 0
@@ -38792,7 +38926,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.9
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!114 &707532219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39981,6 +40115,7 @@ Transform:
   - {fileID: 960650416}
   - {fileID: 415986005}
   - {fileID: 1373735975}
+  - {fileID: 1571986458}
   m_Father: {fileID: 11230771}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -40067,6 +40202,7 @@ MonoBehaviour:
   - {fileID: 871594183}
   - {fileID: 284524151}
   - {fileID: 288244458}
+  - {fileID: 157251461}
   subscriptionTimeout: 15
   filter: new.statement
   subscribeOnConnect: 1
@@ -40991,8 +41127,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 2100515297}
   Unit: kWh
-  slide: {fileID: 751263398}
   virgule_number: 
+  divider: 0
 --- !u!114 &751263398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42252,7 +42388,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.5, y: -25}
+  m_AnchoredPosition: {x: 851.49994, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &780462079
@@ -42268,8 +42404,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 364195110}
   Unit: kWh
-  slide: {fileID: 780462080}
   virgule_number: 
+  divider: 0
 --- !u!114 &780462080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43161,7 +43297,7 @@ MonoBehaviour:
   id_to_parse:
   - knx1/:1.1.13/:/power.1
   prod_slider: {fileID: 1763228588}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &798202709
 GameObject:
   m_ObjectHideFlags: 0
@@ -46653,7 +46789,7 @@ MonoBehaviour:
   - knx1/:1.2.29/:/dim.2
   - knx1/:1.2.29/:/dim.3
   - knx1/:1.2.29/:/dim.4
-  debug_mode_on: 0
+  debug_mode_on: 1
   lux_threshold: 60000
   time_wait_lux: 10
 --- !u!1 &873848664
@@ -46773,7 +46909,7 @@ MonoBehaviour:
   id_to_parse:
   - knx1/:1.1.19/:/power.1
   prod_slider: {fileID: 1601792618}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &875528067
 GameObject:
   m_ObjectHideFlags: 0
@@ -46827,8 +46963,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 1038381249}
   Unit: kW
-  slide: {fileID: 875528070}
   virgule_number: 
+  divider: 0
 --- !u!114 &875528070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -47339,7 +47475,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 13 A
+  m_Text: 16 A
 --- !u!222 &879966324
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47733,7 +47869,7 @@ MonoBehaviour:
   - knx1/:1.2.29/:/dim.6
   list_image:
   - {fileID: 831021158}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -48597,8 +48733,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 1583053513}
   Unit: kWh
-  slide: {fileID: 899020316}
   virgule_number: 
+  divider: 0
 --- !u!1 &900047427
 GameObject:
   m_ObjectHideFlags: 0
@@ -49583,7 +49719,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.8
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &928212895
 GameObject:
   m_ObjectHideFlags: 0
@@ -49661,7 +49797,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.5
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &931222331
 GameObject:
   m_ObjectHideFlags: 0
@@ -49772,7 +49908,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.8
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &938570810
 GameObject:
   m_ObjectHideFlags: 0
@@ -51242,7 +51378,7 @@ MonoBehaviour:
   text_value: {fileID: 2044538796}
   prefix: Out
   unit: "\xB0C"
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &966285137
 GameObject:
   m_ObjectHideFlags: 0
@@ -52284,7 +52420,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25.00 kWh
+  m_Text: Infinity kWh
 --- !u!222 &981265098
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -53262,7 +53398,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notif: {fileID: 986041019}
-  debug_mode_on: 0
+  debug_mode_on: 1
   id_state: keba1/:192.168.2.106/:/plug
 --- !u!1 &1001979001
 GameObject:
@@ -53374,7 +53510,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.7
   slider_value: {fileID: 1649195115}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1003440357
 GameObject:
   m_ObjectHideFlags: 0
@@ -54316,7 +54452,7 @@ MonoBehaviour:
   - {fileID: 167441972}
   - {fileID: 942762452}
   - {fileID: 1693372171}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -54860,7 +54996,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.5
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1032967764
 GameObject:
   m_ObjectHideFlags: 0
@@ -55346,7 +55482,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse:
   - knx1/:1.1.7/:/power.1
-  debug_mode_on: 0
+  debug_mode_on: 1
   id_before_charger: null
   id_after_charger: null
   sprite_positive: {fileID: 21300000, guid: cce2c128875dce64ba1a769e1dcf3aec, type: 3}
@@ -55395,7 +55531,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.9
   slider_value: {fileID: 2140225083}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1040823403
 GameObject:
   m_ObjectHideFlags: 0
@@ -57630,8 +57766,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 1950555612}
   Unit: kWh
-  slide: {fileID: 1076326665}
   virgule_number: 
+  divider: 0
 --- !u!114 &1076326665
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59871,7 +60007,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.8
   slider_value: {fileID: 1108648348}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1126442518
 GameObject:
   m_ObjectHideFlags: 0
@@ -62283,7 +62419,7 @@ MonoBehaviour:
   - {fileID: 1605455224}
   - {fileID: 2023552857}
   - {fileID: 1259121430}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -62624,9 +62760,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse:
   - knx1/:1.1.25/:/power.1
-  - knx1/1:1.1.26/:/power.1
+  - knx1/:1.1.26/:/power.1
   prod_slider: {fileID: 2058483159}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1198077714
 GameObject:
   m_ObjectHideFlags: 0
@@ -63110,7 +63246,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.5, y: -25}
+  m_AnchoredPosition: {x: 851.50006, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1207332101
@@ -63126,8 +63262,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 1464492727}
   Unit: kWh
-  slide: {fileID: 1207332102}
   virgule_number: 
+  divider: 0
 --- !u!114 &1207332102
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63267,7 +63403,18 @@ MonoBehaviour:
   m_Value: 1
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 157251463}
+        m_MethodName: OnChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1211590104
@@ -63534,7 +63681,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.3
   slider_value: {fileID: 650316782}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1221657045
 GameObject:
   m_ObjectHideFlags: 0
@@ -63568,7 +63715,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.5, y: -25}
+  m_AnchoredPosition: {x: 851.49994, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1221657047
@@ -63584,8 +63731,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 1844378170}
   Unit: kWh
-  slide: {fileID: 1221657048}
   virgule_number: 
+  divider: 0
 --- !u!114 &1221657048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -63921,7 +64068,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse:
   - knx1/:1.1.17/:/power.1
-  debug_mode_on: 0
+  debug_mode_on: 1
   id_before_charger: null
   id_after_charger: null
   sprite_positive: {fileID: 21300000, guid: cce2c128875dce64ba1a769e1dcf3aec, type: 3}
@@ -64949,7 +65096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.2
   slider_value: {fileID: 734052317}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!114 &1249446632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -66026,7 +66173,7 @@ MonoBehaviour:
   id_to_parse:
   - knx1/:1.1.10/:/power.1
   prod_slider: {fileID: 1919927089}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1266833832
 GameObject:
   m_ObjectHideFlags: 0
@@ -67326,7 +67473,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.2
   slider_value: {fileID: 2054788281}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1284879562
 GameObject:
   m_ObjectHideFlags: 0
@@ -68547,7 +68694,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.2, y: -25}
+  m_AnchoredPosition: {x: 851.2001, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1299369158
@@ -69895,7 +70042,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.007888087, y: 0.441}
   m_AnchorMax: {x: 0.99500006, y: 0.609}
-  m_AnchoredPosition: {x: -1.9742432, y: 145.92061}
+  m_AnchoredPosition: {x: -1.9742432, y: 145.9206}
   m_SizeDelta: {x: 17.619873, y: 23.42241}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1318829980
@@ -70927,7 +71074,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 8000.00 W
+  m_Text: Infinity W
 --- !u!222 &1339285398
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -71259,7 +71406,7 @@ MonoBehaviour:
   list_image:
   - {fileID: 1089900184}
   - {fileID: 1854725210}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -72844,7 +72991,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.3
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!114 &1384199812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -73215,7 +73362,7 @@ MonoBehaviour:
   - {fileID: 1040990721}
   - {fileID: 1035177398}
   - {fileID: 834827130}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -76308,7 +76455,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.7
   slider_value: {fileID: 575237423}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1439986771
 GameObject:
   m_ObjectHideFlags: 0
@@ -76351,7 +76498,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.3
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1440467274
 GameObject:
   m_ObjectHideFlags: 0
@@ -77519,7 +77666,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25.00 kWh
+  m_Text: Infinity kWh
 --- !u!222 &1464492728
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -77688,7 +77835,7 @@ MonoBehaviour:
   - knx1/:1.1.10/:/power.1
   prod_slider: {fileID: 1468091258}
   text_value: {fileID: 1855932931}
-  debug_mode_on: 0
+  debug_mode_on: 1
   battery_power_id: null
   after_bat_consump_id: null
 --- !u!114 &1468091258
@@ -78024,7 +78171,7 @@ MonoBehaviour:
   - knx1/:1.2.29/:/dim.5
   list_image:
   - {fileID: 121706757}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -78586,7 +78733,7 @@ MonoBehaviour:
   - knx1/:1.1.12/:/power.1
   - knx1/:1.1.11/:/power.1
   prod_slider: {fileID: 1714420196}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1483439949
 GameObject:
   m_ObjectHideFlags: 0
@@ -78770,7 +78917,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notif: {fileID: 986041019}
-  debug_mode_on: 0
+  debug_mode_on: 1
   id_current: keba1/:192.168.2.106/:/curr_user
   max_current_ma: 16000
   threshould_low: 33
@@ -78895,7 +79042,7 @@ MonoBehaviour:
   - {fileID: 7528317}
   - {fileID: 1351865847}
   - {fileID: 1320844973}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: bf78c76f2be82e94296bbc4430b20c61, type: 3}
   mid_sprite: {fileID: 21300000, guid: 6be15dcbba1eff542800ff2a28b70298, type: 3}
   high_sprite: {fileID: 21300000, guid: c4dca1488e2cfce42b319aa914056dd1, type: 3}
@@ -79351,7 +79498,7 @@ MonoBehaviour:
   id_to_parse:
   - knx1/:1.1.9/:/power.1
   prod_slider: {fileID: 898131792}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1498199236
 GameObject:
   m_ObjectHideFlags: 0
@@ -80276,7 +80423,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25.00 kWh
+  m_Text: Infinity kWh
 --- !u!222 &1518675630
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -81271,7 +81418,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.7
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1540108528
 GameObject:
   m_ObjectHideFlags: 0
@@ -81907,7 +82054,7 @@ MonoBehaviour:
   id_to_parse:
   - knx1/:1.1.21/:/power.1
   prod_slider: {fileID: 1053808830}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1551318151
 GameObject:
   m_ObjectHideFlags: 0
@@ -82461,7 +82608,7 @@ MonoBehaviour:
   id_to_parse:
   - knx1/:1.1.8/:/power.1
   prod_slider: {fileID: 554736392}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1558761867
 GameObject:
   m_ObjectHideFlags: 0
@@ -83257,6 +83404,35 @@ MonoBehaviour:
   toggleButton: {fileID: 1571907317}
   receive: {fileID: 1282009409}
   command: {fileID: 207932392}
+--- !u!1 &1571986457
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1571986458}
+  m_Layer: 0
+  m_Name: carParameters
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1571986458
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1571986457}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 157251462}
+  m_Father: {fileID: 728405500}
+  m_RootOrder: 8
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1572928377
 GameObject:
   m_ObjectHideFlags: 0
@@ -83872,7 +84048,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30.00 kWh
+  m_Text: Infinity kWh
 --- !u!222 &1583053514
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -84494,7 +84670,7 @@ MonoBehaviour:
   - knx1/:1.1.8/:/power.1
   - knx1/:1.1.9/:/power.1
   - knx1/:1.1.10/:/power.1
-  debug_mode_on: 0
+  debug_mode_on: 1
   id_before_charger: null
   id_after_charger: null
   sprite_positive: {fileID: 21300000, guid: 7c0e1b9b2f68cab4392862fd0f9b68ea, type: 3}
@@ -84732,7 +84908,7 @@ MonoBehaviour:
   - {fileID: 1280575190}
   - {fileID: 1129481918}
   - {fileID: 1537014600}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: bf78c76f2be82e94296bbc4430b20c61, type: 3}
   mid_sprite: {fileID: 21300000, guid: 6be15dcbba1eff542800ff2a28b70298, type: 3}
   high_sprite: {fileID: 21300000, guid: c4dca1488e2cfce42b319aa914056dd1, type: 3}
@@ -84918,7 +85094,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.30005, y: -25}
+  m_AnchoredPosition: {x: 851.3, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1601792618
@@ -85704,8 +85880,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 246903534}
   Unit: W
-  slide: {fileID: 1623949535}
   virgule_number: 
+  divider: 0
 --- !u!114 &1623949535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -86447,7 +86623,7 @@ MonoBehaviour:
   - {fileID: 1835285382}
   - {fileID: 228665277}
   - {fileID: 201349268}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -86656,7 +86832,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30.00 kWh
+  m_Text: Infinity kWh
 --- !u!222 &1638488629
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -86743,7 +86919,18 @@ MonoBehaviour:
   m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1930469521}
+        m_MethodName: OnChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
 --- !u!1 &1643030515
@@ -87504,7 +87691,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.3
   slider_value: {fileID: 1508228775}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1655196619
 GameObject:
   m_ObjectHideFlags: 0
@@ -88822,7 +89009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.6
   slider_value: {fileID: 863373596}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1678691510
 GameObject:
   m_ObjectHideFlags: 0
@@ -89994,7 +90181,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.6
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1699362336
 GameObject:
   m_ObjectHideFlags: 0
@@ -90703,7 +90890,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25.00 kWh
+  m_Text: Infinity kWh
 --- !u!222 &1708741055
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -90795,7 +90982,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.30005, y: -25}
+  m_AnchoredPosition: {x: 851.3, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1714420196
@@ -91635,7 +91822,7 @@ MonoBehaviour:
   - {fileID: 637839116}
   - {fileID: 470949347}
   - {fileID: 1511350439}
-  debug_mode_on: 0
+  debug_mode_on: 1
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -91977,7 +92164,7 @@ MonoBehaviour:
   - knx1/:1.1.24/:/power.1
   - knx1/:1.1.27/:/power.1
   prod_slider: {fileID: 1299369158}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1733172745
 GameObject:
   m_ObjectHideFlags: 0
@@ -93364,7 +93551,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.3, y: -25}
+  m_AnchoredPosition: {x: 851.2999, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1763228588
@@ -94033,7 +94220,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 6.50 kW
+  m_Text: Infinity kW
 --- !u!222 &1774361720
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -94654,7 +94841,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse: []
-  debug_mode_on: 0
+  debug_mode_on: 1
   id_before_charger: knx1/:1.1.17/:/power.1
   id_after_charger: knx1/:1.1.18/:/power.1
   sprite_positive: {fileID: 21300000, guid: 7c0e1b9b2f68cab4392862fd0f9b68ea, type: 3}
@@ -97615,7 +97802,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25.00 kWh
+  m_Text: Infinity kWh
 --- !u!222 &1844378171
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -97664,7 +97851,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.4
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1849452798
 GameObject:
   m_ObjectHideFlags: 0
@@ -98576,7 +98763,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.9
   slider_value: {fileID: 1533922821}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1871248407
 GameObject:
   m_ObjectHideFlags: 0
@@ -98619,7 +98806,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.4
   slider_value: {fileID: 894027697}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1872489003
 GameObject:
   m_ObjectHideFlags: 0
@@ -98666,7 +98853,7 @@ MonoBehaviour:
   - knx1/:1.1.10/:/power.1
   prod_slider: {fileID: 1623949535}
   text_value: {fileID: 246903534}
-  debug_mode_on: 0
+  debug_mode_on: 1
   battery_power_id: null
   after_bat_consump_id: null
 --- !u!1 &1873530673
@@ -99559,6 +99746,102 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1885405515}
+--- !u!1 &1886464655
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1886464656}
+  - component: {fileID: 1886464657}
+  m_Layer: 0
+  m_Name: DefaultRequestAll
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1886464656
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1886464655}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 282044109}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1886464657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1886464655}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8467202041972f46a6ee46e6e23e5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id_parse_list:
+  - zwave1/:3260679919/:2/:/infos.1/:/1/:/1
+  - zwave1/:3260679919/:3/:/infos.1/:/1/:/1
+  - zwave1/:3260679919/:4/:/infos.1/:/1/:/1
+  - zwave1/:3260679919/:5/:/infos.1/:/1/:/1
+  - zwave1/:3260679919/:10/:/infos.1/:/1/:/1
+  - knx1/:1.1.30/:/temp.1
+  - opti/:/next_prediction
+  - knx1/:1.1.8/:/power.1
+  - knx1/:1.1.9/:/power.1
+  - knx1/:1.1.10/:/power.1
+  - knx1/:1.1.11/:/power.1
+  - knx1/:1.1.12/:/power.1
+  - knx1/:1.1.13/:/power.1
+  - knx1/:1.1.14/:/power.1
+  - knx1/:1.1.15/:/power.1
+  - knx1/:1.1.16/:/power.1
+  - knx1/:1.1.17/:/power.1
+  - knx1/:1.1.18/:/power.1
+  - xcom1/:101/:/config/:/3007
+  - knx1/:1.2.26/:/dim.1
+  - knx1/:1.2.26/:/dim.2
+  - knx1/:1.2.26/:/dim.3
+  - knx1/:1.2.26/:/dim.4
+  - knx1/:1.2.26/:/dim.5
+  - knx1/:1.2.26/:/dim.6
+  - knx1/:1.2.26/:/dim.7
+  - knx1/:1.2.26/:/dim.8
+  - knx1/:1.2.26/:/dim.9
+  - knx1/:1.2.29/:/dim.1
+  - knx1/:1.2.29/:/dim.2
+  - knx1/:1.2.29/:/dim.3
+  - knx1/:1.2.29/:/dim.4
+  - knx1/:1.2.29/:/dim.5
+  - knx1/:1.2.29/:/dim.6
+  - knx1/:1.2.29/:/dim.7
+  - knx1/:1.2.29/:/dim.8
+  - knx1/:1.2.29/:/dim.9
+  - keba1/:192.168.2.106/:/e_pres
+  - knx1/:1.1.13/:/energy.1
+  - knx1/:1.1.19/:/power.1
+  - knx1/:1.1.20/:/power.1
+  - knx1/:1.1.21/:/power.1
+  - knx1/:1.1.22/:/power.1
+  - knx1/:1.1.23/:/power.1
+  - knx1/:1.1.24/:/power.1
+  - knx1/:1.1.25/:/power.1
+  - knx1/:1.1.26/:/power.1
+  - knx1/:1.1.27/:/power.1
+  - knx1/:1.1.36/:/power.1
+  - knx1/:1.1.7/:/power.1
+  - knx1/:1.1.30/:/lux.1
+  - knx1/:1.1.30/:/lux.2
+  - knx1/:1.1.30/:/lux.3
+  - keba1/:192.168.2.106/:/curr_user
+  - keba1/:/192.168.2.106/:/plug
 --- !u!1 &1886981002
 GameObject:
   m_ObjectHideFlags: 0
@@ -101055,7 +101338,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.4
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!114 &1911083741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102237,8 +102520,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 879966323}
   Unit: A
-  slide: {fileID: 0}
   virgule_number: F0
+  divider: 1000
 --- !u!114 &1929956545
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -102279,9 +102562,9 @@ MonoBehaviour:
   m_HandleRect: {fileID: 1255751001}
   m_Direction: 2
   m_MinValue: 0
-  m_MaxValue: 13
+  m_MaxValue: 16000
   m_WholeNumbers: 0
-  m_Value: 13
+  m_Value: 16000
   m_OnValueChanged:
     m_PersistentCalls:
       m_Calls:
@@ -102296,8 +102579,73 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 310837398}
+        m_MethodName: OnChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 233592352}
+        m_MethodName: OnChange
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
     m_TypeName: UnityEngine.UI.Slider+SliderEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!1 &1930469520
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1930469522}
+  - component: {fileID: 1930469521}
+  m_Layer: 0
+  m_Name: ChargeLocked
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1930469521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1930469520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id_to_parse: keba1/:192.168.2.106/:/enable_user
+  mdl: keba1
+  debug_mode_on: 1
+--- !u!4 &1930469522
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1930469520}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 661752823}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1931375613
 GameObject:
   m_ObjectHideFlags: 0
@@ -103325,7 +103673,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.9
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1946189224
 GameObject:
   m_ObjectHideFlags: 0
@@ -103456,7 +103804,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: keba1/:/192.168.2.106/:/plug
   text_value: {fileID: 5820643}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1949236938
 GameObject:
   m_ObjectHideFlags: 0
@@ -103632,7 +103980,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1190, y: -23}
+  m_AnchoredPosition: {x: 1189.9999, y: -23}
   m_SizeDelta: {x: 145, y: 39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1950555612
@@ -103667,7 +104015,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 30.00 kWh
+  m_Text: Infinity kWh
 --- !u!222 &1950555613
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -104308,7 +104656,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.4
   slider_value: {fileID: 1695567471}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1970141278
 GameObject:
   m_ObjectHideFlags: 0
@@ -104748,7 +105096,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.1
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1976792271
 GameObject:
   m_ObjectHideFlags: 0
@@ -105069,8 +105417,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   text_value: {fileID: 1518675629}
   Unit: kWh
-  slide: {fileID: 1980847972}
   virgule_number: 
+  divider: 0
 --- !u!1 &1981103429
 GameObject:
   m_ObjectHideFlags: 0
@@ -105359,8 +105707,9 @@ Transform:
   m_Children:
   - {fileID: 2108673024}
   - {fileID: 2104536834}
+  - {fileID: 661752823}
   m_Father: {fileID: 11230771}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1983489793
 MonoBehaviour:
@@ -105393,6 +105742,8 @@ MonoBehaviour:
   - {fileID: 175561422}
   - {fileID: 925668121}
   - {fileID: 1945465809}
+  - {fileID: 1930469520}
+  - {fileID: 310837396}
   subscriptionTimeout: 15
   filter: device.command.set.value
   subscribeOnConnect: 1
@@ -108018,7 +108369,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1190, y: -23}
+  m_AnchoredPosition: {x: 1190.0001, y: -23}
   m_SizeDelta: {x: 145, y: 39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021465210
@@ -108238,7 +108589,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse:
   - knx1/:1.1.18/:/power.1
-  debug_mode_on: 0
+  debug_mode_on: 1
   id_before_charger: null
   id_after_charger: null
   sprite_positive: {fileID: 21300000, guid: cce2c128875dce64ba1a769e1dcf3aec, type: 3}
@@ -110241,7 +110592,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 851.3, y: -25}
+  m_AnchoredPosition: {x: 851.2999, y: -25}
   m_SizeDelta: {x: 490, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2058483159
@@ -111513,7 +111864,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.29/:/dim.2
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &2086882728
 GameObject:
   m_ObjectHideFlags: 0
@@ -112188,7 +112539,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 1190, y: -23}
+  m_AnchoredPosition: {x: 1190.0001, y: -23}
   m_SizeDelta: {x: 145, y: 39}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2100515297
@@ -112223,7 +112574,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 25.00 kWh
+  m_Text: Infinity kWh
 --- !u!222 &2100515298
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -113154,7 +113505,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 8.00 kW
+  m_Text: Infinity kW
 --- !u!222 &2121448662
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -113203,7 +113554,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/dim.1
   slider_value: {fileID: 44343195}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &2123306449
 GameObject:
   m_ObjectHideFlags: 0
@@ -113835,7 +114186,7 @@ MonoBehaviour:
   - knx1/:1.1.16/:/power.1
   - knx1/:1.1.18/:/power.1
   prod_slider: {fileID: 238389011}
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &2135469392
 GameObject:
   m_ObjectHideFlags: 0

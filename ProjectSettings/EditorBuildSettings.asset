@@ -9,14 +9,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Persistent.unity
     guid: 53fb4cda61d089e4280c475c4ee9f41c
   - enabled: 0
-    path: Assets/Scenes/home_scene.unity
+    path: 
     guid: 0d9578dab1d91684690eb840b669195b
   - enabled: 0
-    path: Assets/Scenes/how_scene.unity
+    path: 
     guid: 348a0d22305522244b1c997bf78aebc8
   - enabled: 0
-    path: Assets/Scenes/visit_scene.unity
+    path: 
     guid: 62fe4d1949bd58945a509258e91dbaaf
   - enabled: 0
-    path: Assets/Scenes/control_scene.unity
+    path: 
     guid: b8cbe5b5ebac53a46b5701319dcd8659

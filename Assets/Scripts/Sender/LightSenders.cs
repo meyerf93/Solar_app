@@ -69,20 +69,19 @@ namespace HG.iot.mqtt.example
             if (debug_mode_on)
             {
                 _cacheSetValueTopic.Send(
-                //{"dttp": null, "data": 22.5, "t": "2017-05-15T06:47:42Z", "id": "zwave1/:3260679919/:2/:/infos.1/:/1/:/1"}
-                new GlobalMessage { dttp = "this is text", data = 45, t = "2017-05-15T06:47:42Z", id = id_to_parse },
-
+                //{"cmd": "knx1/:1.1.26/:/dim.1","mdl"="knx1","value": 100.0}}
+                new SetValueMessage { cmd = "knx1/:1.1.26/:/dim.1", mdl = "knx1", value = 100.0 },
                 false,
                 QualityOfServiceEnum.ExactlyOnce);
             }
         }
 
-        void onMqttMessageDelivered_GlobalTopic(string messageId)
+        void onMqttMessageDelivered_SetValueTopic(string messageId)
         {
             //Debug.Log("message delivered to broker");
         }
 
-        void onMqttMessageArrived_GlobalTopic(GlobalMessage message)
+        void onMqttMessageArrived_SetValueTopic(SetValueMessage message)
         {
             //Debug.Log("message just arrived");
         
@@ -90,7 +89,7 @@ namespace HG.iot.mqtt.example
             //Debug.Log("Note that the message parameter in the arrival notification is strong typed to that of the topic's message");
         }
 
-        void onMqttSubscriptionSuccess_GlobalTopic(SubscriptionResponse response)
+        void onMqttSubscriptionSuccess_SetValueTopic(SubscriptionResponse response)
         {
             //Debug.Log("subscription successful");
 
@@ -100,37 +99,37 @@ namespace HG.iot.mqtt.example
 
         }
 
-        void onMqttSubscriptionFailure_GlobalTopic(SubscriptionResponse response)
+        void onMqttSubscriptionFailure_SetValueTopic(SubscriptionResponse response)
         {
             //Debug.Log("subscription failed");
         }
 
-        void onMqttUnsubscriptionSuccess_GlobalTopic(SubscriptionResponse response)
+        void onMqttUnsubscriptionSuccess_SetValueTopic(SubscriptionResponse response)
         {
             //Debug.Log("unsubscription successful");
         }
 
-        void onMqttUnsubscriptionFailure_GlobalTopic(SubscriptionResponse response)
+        void onMqttUnsubscriptionFailure_SetValueTopic(SubscriptionResponse response)
         {
             //Debug.Log("unsubscription failed");
         }
 
-        void onMqttConnectSuccess_GlobalTopic(ConnectionResult response)
+        void onMqttConnectSuccess_SetValueTopic(ConnectionResult response)
         {
             //Debug.Log("you are connected to broker");
         }
 
-        void onMqttConnectFailure_GlobalTopic(ConnectionResult response)
+        void onMqttConnectFailure_SetValueTopic(ConnectionResult response)
         {
             //Debug.Log("connection to broker failed");
         }
 
-        void onMqttConnectLost_GlobalTopic(ConnectionResult response)
+        void onMqttConnectLost_SetValueTopic(ConnectionResult response)
         {
             //Debug.Log("connection to broker lost");
         }
 
-        void onMqttReconnect_GlobalTopic(ConnectionResult response)
+        void onMqttReconnect_SetValueTopic(ConnectionResult response)
         {
             //Debug.Log("broker has reconnected");
         }

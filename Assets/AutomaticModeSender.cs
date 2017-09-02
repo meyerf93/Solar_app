@@ -1,24 +1,23 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using System;
-using UnityEngine.UI;
 
 namespace HG.iot.mqtt.example
 {
-    public class LightReceivers : MonoBehaviour
+
+    public class AutomaticModeSender : MonoBehaviour
     {
         public string id_to_parse;
-        public Slider slider_value;
-
         public bool debug_mode_on;
-
-        private bool blockSlider;
-        
-
-        public void BlockSlider(bool value)
+ 
+        public void OnChange(float value)
         {
-            blockSlider = value;
+            _cacheGlobalTopic.Send(
+            //{"dttp":"","data":1.0,"t":2017-05-15T06:47:42Z","id":"car1/:1/automatic.1"}
+            new GlobalMessage { dttp = "", data = value, t = System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ"), id = id_to_parse },
+                false,
+                QualityOfServiceEnum.AtLeastOnce);
         }
 
         ITopic _cacheGlobalTopic = null;
@@ -33,8 +32,8 @@ namespace HG.iot.mqtt.example
 
             tests(topic);
         }
-
         // Topic.SimpleNotifications=FALSE
+
         void onMqttReady_GlobalTopic(ITopic topic)
         {
             _cacheGlobalTopic = topic;
@@ -70,15 +69,14 @@ namespace HG.iot.mqtt.example
             if (debug_mode_on)
             {
                 _cacheGlobalTopic.Send(
-                //{"dttp": null, "data": 22.5, "t": "2017-05-15T06:47:42Z", "id": "zwave1/:3260679919/:2/:/infos.1/:/1/:/1"}
-                new GlobalMessage { dttp = "this is text", data = 45, t = "2017-05-15T06:47:42Z", id = id_to_parse },
-
-                false,
-                QualityOfServiceEnum.ExactlyOnce);
+                //{"dttp":"","data":1.0,"t":2017-05-15T06:47:42Z","id":"car1/:1/automatic.1"}
+                new GlobalMessage { dttp = "", data = 1.0, t = System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ"), id = id_to_parse },
+                    false,
+                    QualityOfServiceEnum.AtLeastOnce);
             }
         }
 
-        void onMqttMessageDelivered_GlobalTopic(string messageId)
+        void onMqttMessageDelivered_GlobalTopicc(string messageId)
         {
             //Debug.Log("message delivered to broker");
         }
@@ -86,30 +84,10 @@ namespace HG.iot.mqtt.example
         void onMqttMessageArrived_GlobalTopic(GlobalMessage message)
         {
             //Debug.Log("message just arrived");
-            GlobalMessage receive_obj;
 
             //Debug.Log("Message arrived on GlobalTopic");
             //Debug.Log("Note that the message parameter in the arrival notification is strong typed to that of the topic's message");
-            if (!blockSlider)
-            {
-                if (!message.JSONConversionFailed)
-                {
-                    //Debug.Log(JsonUtility.ToJson(message));
-                    string json = JsonUtility.ToJson(message);
-                    //Debug.Log(id_to_parse);
-                    //parse intersting message
-                    if (json.Contains(id_to_parse))
-                    {
-                        receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        slider_value.value = (float)receive_obj.data;
-                        //Debug.Log("Value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
-                    }
-                }
-
-                else
-                    Debug.LogWarning("message arrived, but failed JSON conversion");
-            }
-        } 
+        }
 
         void onMqttSubscriptionSuccess_GlobalTopic(SubscriptionResponse response)
         {
@@ -156,4 +134,5 @@ namespace HG.iot.mqtt.example
             //Debug.Log("broker has reconnected");
         }
     }
+
 }

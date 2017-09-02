@@ -1,32 +1,20 @@
-﻿using UnityEngine;
-using System.Collections;
+﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine;
 using System;
-using UnityEngine.UI;
 
 namespace HG.iot.mqtt.example
 {
-    public class LightReceivers : MonoBehaviour
+    public class RequestSenders : MonoBehaviour
     {
-        public string id_to_parse;
-        public Slider slider_value;
+        public String[] id_parse_list;
 
-        public bool debug_mode_on;
-
-        private bool blockSlider;
-        
-
-        public void BlockSlider(bool value)
-        {
-            blockSlider = value;
-        }
-
-        ITopic _cacheGlobalTopic = null;
+        ITopic _cacheRequestTopic = null;
 
         // Topic.SimpleNotifications=TRUE
         void onMqttReady(ITopic topic)
         {
-            _cacheGlobalTopic = topic;
+            _cacheRequestTopic = topic;
 
             //Debug.Log("onMqttReady invoked");
             //Debug.Log(string.Format("'{0}' topic's SimpleNotifications are set to TRUE", topic.Filter));
@@ -35,9 +23,9 @@ namespace HG.iot.mqtt.example
         }
 
         // Topic.SimpleNotifications=FALSE
-        void onMqttReady_GlobalTopic(ITopic topic)
+        void onMqttReady_RequestTopic(ITopic topic)
         {
-            _cacheGlobalTopic = topic;
+            _cacheRequestTopic = topic;
 
             //Debug.Log("onMqttReady_GlobalTopic invoked");
             //Debug.Log(string.Format("'{0}' topic's SimpleNotifications are set to FALSE", topic.Filter));
@@ -67,51 +55,30 @@ namespace HG.iot.mqtt.example
                 }
             }
 
-            if (debug_mode_on)
+            for (int i= 0; i< id_parse_list.Length; i++)
             {
-                _cacheGlobalTopic.Send(
-                //{"dttp": null, "data": 22.5, "t": "2017-05-15T06:47:42Z", "id": "zwave1/:3260679919/:2/:/infos.1/:/1/:/1"}
-                new GlobalMessage { dttp = "this is text", data = 45, t = "2017-05-15T06:47:42Z", id = id_to_parse },
-
+                _cacheRequestTopic.Send(
+                new RequestMessage { cmd = id_parse_list[i], mdl = id_parse_list[i].Split('/')[0] },
                 false,
                 QualityOfServiceEnum.ExactlyOnce);
             }
+            
         }
 
-        void onMqttMessageDelivered_GlobalTopic(string messageId)
+        void onMqttMessageDelivered_RequestTopic(string messageId)
         {
             //Debug.Log("message delivered to broker");
         }
 
-        void onMqttMessageArrived_GlobalTopic(GlobalMessage message)
+        void onMqttMessageArrived_RequestTopic(RequestMessage message)
         {
             //Debug.Log("message just arrived");
-            GlobalMessage receive_obj;
 
             //Debug.Log("Message arrived on GlobalTopic");
             //Debug.Log("Note that the message parameter in the arrival notification is strong typed to that of the topic's message");
-            if (!blockSlider)
-            {
-                if (!message.JSONConversionFailed)
-                {
-                    //Debug.Log(JsonUtility.ToJson(message));
-                    string json = JsonUtility.ToJson(message);
-                    //Debug.Log(id_to_parse);
-                    //parse intersting message
-                    if (json.Contains(id_to_parse))
-                    {
-                        receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        slider_value.value = (float)receive_obj.data;
-                        //Debug.Log("Value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
-                    }
-                }
+        }
 
-                else
-                    Debug.LogWarning("message arrived, but failed JSON conversion");
-            }
-        } 
-
-        void onMqttSubscriptionSuccess_GlobalTopic(SubscriptionResponse response)
+        void onMqttSubscriptionSuccess_RequestTopic(SubscriptionResponse response)
         {
             //Debug.Log("subscription successful");
 
@@ -121,39 +88,40 @@ namespace HG.iot.mqtt.example
 
         }
 
-        void onMqttSubscriptionFailure_GlobalTopic(SubscriptionResponse response)
+        void onMqttSubscriptionFailure_RequestTopic(SubscriptionResponse response)
         {
             //Debug.Log("subscription failed");
         }
 
-        void onMqttUnsubscriptionSuccess_GlobalTopic(SubscriptionResponse response)
+        void onMqttUnsubscriptionSuccess_RequestTopic(SubscriptionResponse response)
         {
             //Debug.Log("unsubscription successful");
         }
 
-        void onMqttUnsubscriptionFailure_GlobalTopic(SubscriptionResponse response)
+        void onMqttUnsubscriptionFailure_RequestTopic(SubscriptionResponse response)
         {
             //Debug.Log("unsubscription failed");
         }
 
-        void onMqttConnectSuccess_GlobalTopic(ConnectionResult response)
+        void onMqttConnectSuccess_RequestTopic(ConnectionResult response)
         {
             //Debug.Log("you are connected to broker");
         }
 
-        void onMqttConnectFailure_GlobalTopic(ConnectionResult response)
+        void onMqttConnectFailure_RequestTopic(ConnectionResult response)
         {
             //Debug.Log("connection to broker failed");
         }
 
-        void onMqttConnectLost_GlobalTopic(ConnectionResult response)
+        void onMqttConnectLost_RequestTopic(ConnectionResult response)
         {
             //Debug.Log("connection to broker lost");
         }
 
-        void onMqttReconnect_GlobalTopic(ConnectionResult response)
+        void onMqttReconnect_RequestTopic(ConnectionResult response)
         {
             //Debug.Log("broker has reconnected");
         }
     }
 }
+
