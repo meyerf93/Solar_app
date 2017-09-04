@@ -93,7 +93,7 @@ namespace HG.iot.mqtt.example
                 if (json.Contains(id_to_parse) == true)
                 {
                     receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                    prod_slider.value = (float)receive_obj.data;
+                    prod_slider.value = (float)receive_obj.data/1000;
                     //Debug.Log("Global value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                 }
              
