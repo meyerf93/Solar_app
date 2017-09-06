@@ -42,7 +42,7 @@ RenderSettings:
 --- !u!157 &3
 LightmapSettings:
   m_ObjectHideFlags: 0
-  serializedVersion: 9
+  serializedVersion: 11
   m_GIWorkflowMode: 1
   m_GISettings:
     serializedVersion: 2
@@ -54,7 +54,7 @@ LightmapSettings:
     m_EnableBakedLightmaps: 1
     m_EnableRealtimeLightmaps: 1
   m_LightmapEditorSettings:
-    serializedVersion: 8
+    serializedVersion: 9
     m_Resolution: 2
     m_BakeResolution: 40
     m_TextureWidth: 1024
@@ -71,7 +71,7 @@ LightmapSettings:
     m_FinalGatherFiltering: 1
     m_FinalGatherRayCount: 256
     m_ReflectionCompression: 2
-    m_MixedBakeMode: 3
+    m_MixedBakeMode: 2
     m_BakeBackend: 0
     m_PVRSampling: 1
     m_PVRDirectSampleCount: 32
@@ -88,7 +88,7 @@ LightmapSettings:
     m_PVRFilteringAtrousPositionSigma: 1
   m_LightingDataAsset: {fileID: 112000010, guid: 60e0d3b313e26b342a28e07d862d7159,
     type: 2}
-  m_ShadowMaskMode: 2
+  m_UseShadowmask: 1
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -659,7 +659,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Controls/
 
-    monitoring
+    Monitoring
 
 '
 --- !u!114 &670
@@ -1814,7 +1814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _defaultConnectionOptions:
     Port: 1883
-    Host: 128.179.178.79
+    Host: 128.179.179.230
     RandomClientId: 1
     Path: /mqtt
     AutoReconnect: 1
@@ -1987,13 +1987,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The energy is the use of electric power over perdiod of time.
-
-    The electrical battery stores electrical energy like a hydraulic dam store ernegy
-    with a quantity of water at a given height.
-
-    A power full electrical motor and  a bad usage will consume more ernergy and even
-    a big battery will be rapidly discharged.'
+  m_Text: "The energy represents the use of electric power over \na period of time.\nThe
+    electrical battery stores electrical energy like a hydraulic dam storing energy
+    with a quantity of water at a given height.\nA powerfull electrical motor or a
+    bad usage of your electrical \ncar will consume a lot of ernergy and will rapidly
+    discharge \nyour battery."
 --- !u!222 &12737693
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -2981,11 +2979,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Durant l'hiver, le soleil est plus bas sur l'horizon. Nous allons allors
-    fermer les portes de la skin du neigborhub.\nCel\xE0 va permettre d'avoir une
-    temp\xE9rature plus \xE9l\xE9ve\xE9 dans la partie non chauff\xE9 du batiment.
-    Cel\xE0 va \xE9galement nous permettre de produire plus plus durant la journ\xE9e,
-    ca les panneaux solaire recevrons plus de lumi\xE8res."
+  m_Text: "During winter, the sun is lower over the horizon. \nIt's better to close
+    the Extended Skin's folding doors.\nThis will allow to retain the heat gains in
+    the semi-exterior space during the day while \noptimizing the solar panels tilts
+    according \nto the sun's position."
 --- !u!222 &32017917
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3179,7 +3176,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: A hair dryer use 2 kW when you use it
+  m_Text: A hair dryer consumes 2 kW when you use it
 --- !u!222 &36062619
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -3754,7 +3751,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.047058824, g: 0.72156864, b: 0.8627451, a: 1}
+  m_Color: {r: 0.9686275, g: 0.6901961, b: 0.38431376, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -3774,7 +3771,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Controls and monitoring
+  m_Text: Controls and Monitoring
 --- !u!222 &46951254
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5098,7 +5095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.047058824, g: 0.72156864, b: 0.8627451, a: 1}
+  m_Color: {r: 0.94117653, g: 0.53333336, b: 0.48627454, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -7377,6 +7374,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &106428817
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8077,6 +8075,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &112926921
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9657,6 +9656,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!224 &146645863
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9885,8 +9885,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 369, y: 3.1999998}
-  m_SizeDelta: {x: 630, y: 175.9}
+  m_AnchoredPosition: {x: 369.04, y: 3.1999998}
+  m_SizeDelta: {x: 630.08, y: 175.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &148025203
 MonoBehaviour:
@@ -10001,6 +10001,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &151005980
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11990,7 +11991,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 200 W is the maximun that a man can provide
+  m_Text: 200 W is the maximun effort a man can provide
 --- !u!222 &203711730
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12091,6 +12092,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!224 &204033404
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12182,9 +12184,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Facade
+  m_Text: 'West
 
-    West
+    Facade
 
 '
 --- !u!222 &204136501
@@ -13063,7 +13065,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Solar panel production
+  m_Text: Effective production
 --- !u!222 &214608729
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13646,6 +13648,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &225934366
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14843,6 +14846,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &244227604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15082,6 +15086,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!224 &255462072
 RectTransform:
   m_ObjectHideFlags: 0
@@ -16115,9 +16120,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Facade
+  m_Text: 'East
 
-    East
+    Facade
 
 '
 --- !u!222 &272683151
@@ -16254,6 +16259,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &276871429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17218,10 +17224,10 @@ RectTransform:
   m_Father: {fileID: 1126442519}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 6, y: 0}
-  m_SizeDelta: {x: 348, y: 62}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &297541784
 MonoBehaviour:
@@ -17255,7 +17261,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Impact of the sun path
+  m_Text: Impact of the sun's path
 --- !u!222 &297541785
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22509,7 +22515,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Total consumption
+  m_Text: House consumption
 --- !u!222 &401265599
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22587,7 +22593,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Types of light
+  m_Text: Types of lighting
 --- !u!222 &401356713
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -22860,6 +22866,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &407837375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23306,6 +23313,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &416142532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23857,6 +23865,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &432789115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24582,7 +24591,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Water terchnical room
+  m_Text: Water technical room
 --- !u!222 &449774541
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -24989,8 +24998,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -565.3, y: 4.7}
-  m_SizeDelta: {x: 158, y: 48.9}
+  m_AnchoredPosition: {x: -421.5, y: 4.7}
+  m_SizeDelta: {x: 445.5, y: 48.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &457614953
 MonoBehaviour:
@@ -28791,6 +28800,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &526691569
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29347,6 +29357,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &530176841
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30673,7 +30684,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Numbers of cars connected : '
+  m_Text: 'Number of cars connected : '
 --- !u!222 &550853994
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32049,6 +32060,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &578853135
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32627,7 +32639,7 @@ GameObject:
   - component: {fileID: 590565325}
   - component: {fileID: 590565324}
   m_Layer: 5
-  m_Name: Prediction
+  m_Name: Production_forcast
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -35067,12 +35079,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Durant l'\xE9t\xE9, le soleil est lus haut sur l'horizon. Nous allons cette
-    fois ouvrire les portes de la skin du NeigborHub.\nCel\xE0 va permettre d'avoir
-    une ventilation naturelle pour \xE9viter de trop monter en temp\xE9rature. Cel\xE0
-    va \xE9galement permettrent de produire plus d'\xE9nergie.\nLe fais que les panneaux
-    solaire soif en fa\xE7ace va \xE9galement permettre de produire l'\xE9nergie que
-    l'on a besoin le matin et le soir. "
+  m_Text: 'During summer, the sun is higher in the sky.
+
+    It''s better to open the folding doors of the envelope.
+
+    This will allow to create natural ventilation in the Extended Skin as well as
+    producing more energy with optimized panels position.
+
+    Finally, having production on the South, West and East facade allows to produce
+    more during the morning and the evening.'
 --- !u!222 &635092056
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -38969,6 +38984,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &695764040
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -39879,7 +39895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.047058824, g: 0.72156864, b: 0.8627451, a: 1}
+  m_Color: {r: 0.2392157, g: 0.77647066, b: 0.89019614, a: 1}
   m_RaycastTarget: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
@@ -39965,6 +39981,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &710388968
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40380,6 +40397,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &716327664
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40572,7 +40590,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Total consumption
+  m_Text: House consumption
 --- !u!222 &718312433
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -40957,6 +40975,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &727769000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43354,7 +43373,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Challenges of inteligent car charge
+  m_Text: Challenges of intelligent car charge
 --- !u!222 &778151090
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -43636,6 +43655,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &786708705
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43964,8 +43984,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -360, y: -9}
-  m_SizeDelta: {x: 305, y: 50}
+  m_AnchoredPosition: {x: -322, y: -9}
+  m_SizeDelta: {x: 371.5, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &793832705
 MonoBehaviour:
@@ -43993,13 +44013,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 300
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'State of the car charger :'
+  m_Text: 'State of the charging station :'
 --- !u!222 &793832706
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44176,10 +44196,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "It's better to avoid to charging your\r car \nat a critical moment\r.\n\r\nThe
-    warning represents peaks\nof conusmption throughout the day.\r\n\r\nThe best moment
+  m_Text: "It's better to avoid charging your\r car \nat a critical moment\r.\n\r\nThe
+    warning represents peaks\nof consumption throughout the day.\r\n\r\nThe best moment
     to charge your car is\nwhen your energy production is higher\nthan your consumption
-    and also when\nthere is no peak of consumption."
+    and when\nthere is no peak of consumption."
 --- !u!222 &796365837
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44554,6 +44574,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &802011916
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44643,8 +44664,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 23.099998, y: 305.1}
-  m_SizeDelta: {x: 319.4, y: 57.9}
+  m_AnchoredPosition: {x: 12.5, y: 305.1}
+  m_SizeDelta: {x: 340.6, y: 57.9}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &802509576
 MonoBehaviour:
@@ -44678,7 +44699,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Charge power
+  m_Text: Charge intensity
 --- !u!222 &802509577
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45385,6 +45406,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &817791247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -46314,7 +46336,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Material
+  m_Text: Materials
 --- !u!222 &834385253
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48429,11 +48451,11 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'In the nea future, batteries of Electrical Vehicle will be considered as
-    additional electrical home storage capacity.
+  m_Text: 'In the near future, batteries of Electrical Vehicle will be considered
+    as additional electrical home storage capacity.
 
-    Also, energy provided by the photovoltaic installation can be temporary stored
-    and then re-injected into the hours to optimize it''s self consumption.'
+    Also, energy provided by the photovoltaic installation can be temporarily stored
+    and then re-injected into the house to optimize its self consumption.'
 --- !u!222 &879110364
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50073,6 +50095,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &908591831
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50233,8 +50256,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 237, y: 0}
-  m_SizeDelta: {x: 370, y: 62}
+  m_AnchoredPosition: {x: 313.8, y: 0}
+  m_SizeDelta: {x: 498.4, y: 62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &911965512
 MonoBehaviour:
@@ -51750,8 +51773,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -476, y: 1.4000001}
-  m_SizeDelta: {x: 340, y: 53}
+  m_AnchoredPosition: {x: -423, y: 1.4000001}
+  m_SizeDelta: {x: 445.9, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &954153023
 MonoBehaviour:
@@ -51785,7 +51808,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Fluorescent Lamps
+  m_Text: Fluorescent bulb
 --- !u!222 &954153024
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -52290,6 +52313,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &963890125
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53823,8 +53847,24 @@ MonoBehaviour:
   - {fileID: 1693892753213598, guid: 4777a15df8e509d42ac57cd9fa11ad94, type: 2}
   - {fileID: 1135568765260034, guid: 7ad6e465216cc8443b8ff3586d37c6db, type: 2}
   - {fileID: 1463322252967742, guid: 8d333193d8c05a448baec0a9d20f05b8, type: 2}
+  prefab_mini_list:
+  - {fileID: 1826294412697100, guid: 7e40f34ec35c3b146b5fe7a73419c55d, type: 2}
+  - {fileID: 1319291631792370, guid: ef15440a1b143bb469b39b7c313ae51d, type: 2}
+  - {fileID: 1204185101408622, guid: e5dc3a88f93ad6c499fa944bf2e1473e, type: 2}
+  - {fileID: 1776775026255910, guid: 47faec4f640984f4abd64d412e35e23a, type: 2}
+  - {fileID: 1282922587130582, guid: 145ad9356c6011d43bbc10df7cd6526a, type: 2}
+  - {fileID: 1970138018125216, guid: 8f47c0bf8f7b1bd479a338048e230b9e, type: 2}
+  - {fileID: 1297017932587078, guid: 9528cbb0f278d0448aba1db96c692fda, type: 2}
+  - {fileID: 1446085419691202, guid: 253bdfc98418792449af4ba3cf7f66a0, type: 2}
+  - {fileID: 1324261997182336, guid: b34631b6d808448448a31777030d852b, type: 2}
+  - {fileID: 1473174611937872, guid: 038a397519e264146b0ab4a0d08311e4, type: 2}
+  - {fileID: 1272158207729262, guid: 2c0e180a90505f449a9acb7826a90c63, type: 2}
+  - {fileID: 1106327303958634, guid: 645f13644e6bd664faa1a891d8b20ece, type: 2}
+  - {fileID: 1096373030205660, guid: 368ea4cd7d2a41f458f41abe8a5b0d91, type: 2}
+  List_tips: {fileID: 1700973468206214, guid: c0f1ec719c12ddc4e9884b1795543c54, type: 2}
   default_tips: {fileID: 1957864317613728, guid: dbeaa923ac7bde94c939c8cfd506ac05,
     type: 2}
+  Space_change: 295
   alarmButton: {fileID: 986041018}
   image: {fileID: 500263602}
   text_notif: {fileID: 1946189226}
@@ -54752,8 +54792,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: 0}
-  m_SizeDelta: {x: 370, y: 62}
+  m_AnchoredPosition: {x: -289.1, y: 0}
+  m_SizeDelta: {x: 448.3, y: 62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1003440359
 MonoBehaviour:
@@ -55119,6 +55159,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!224 &1007654565
 RectTransform:
   m_ObjectHideFlags: 0
@@ -56339,12 +56380,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The electrical vehicle charging time dpends on the loading station power
-    and the battery capacity. The chargin time depends on the electrical vehicle model
-    which has a variable battery capacity.
-
-    Loadfin station n towns are faster thanks to a higher power compared with home
-    loading stations.'
+  m_Text: "The electrical vehicle charging time depends on the given power of the
+    charging station and the battery capacity. \nCharging station in towns are faster
+    thanks to a higher power compared with home stations."
 --- !u!222 &1034621435
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -56560,7 +56598,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Private Space
+  m_Text: 'Private space
 
 '
 --- !u!222 &1037324896
@@ -58141,6 +58179,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &1067879758
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58588,8 +58627,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1090, y: -2}
-  m_SizeDelta: {x: 395, y: 103}
+  m_AnchoredPosition: {x: -1032.4993, y: -2}
+  m_SizeDelta: {x: 510, y: 103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1072932284
 MonoBehaviour:
@@ -58623,7 +58662,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Type of light
+  m_Text: Types of lighting
 --- !u!222 &1072932285
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -58700,9 +58739,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Facade
+  m_Text: 'South
 
-    South'
+    Facade'
 --- !u!222 &1075056639
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -59137,8 +59176,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 245.00006, y: 0}
-  m_SizeDelta: {x: 355, y: 62}
+  m_AnchoredPosition: {x: 277.6, y: 0}
+  m_SizeDelta: {x: 420.1, y: 62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1086806670
 MonoBehaviour:
@@ -59415,7 +59454,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Inteligent charge
+  m_Text: Intelligent charge
 --- !u!222 &1090203150
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -59652,7 +59691,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Production prediction
+  m_Text: Production forecast
 --- !u!222 &1095276374
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -59882,8 +59921,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: The light has a color which is associated with heat. Changing the color
-    allows for increased wellbeing ( white  yellow = warm) or better productivity
-    (cold = blue).
+    allows for increased wellbeing (warm light = white  yellow) or better productivity
+    (cold light = blue).
 --- !u!222 &1103640223
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -60866,7 +60905,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Activity & consumption
+  m_Text: Impact of activities
 --- !u!222 &1116307320
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -61285,8 +61324,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 247, y: 0}
-  m_SizeDelta: {x: 373, y: 62}
+  m_AnchoredPosition: {x: 260.6, y: 0}
+  m_SizeDelta: {x: 400.2, y: 62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1126442520
 MonoBehaviour:
@@ -62328,8 +62367,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -600.1, y: 5.3}
-  m_SizeDelta: {x: 89.4, y: 52}
+  m_AnchoredPosition: {x: -423.1, y: 5.3}
+  m_SizeDelta: {x: 443.5, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1156774912
 MonoBehaviour:
@@ -64692,8 +64731,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 196, y: -348.30005}
-  m_SizeDelta: {x: 275.3, y: 52.7}
+  m_AnchoredPosition: {x: 198.14, y: -348.30005}
+  m_SizeDelta: {x: 279.58, y: 52.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1211590106
 MonoBehaviour:
@@ -64766,7 +64805,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 727, y: 355}
+  m_AnchoredPosition: {x: 948, y: 355}
   m_SizeDelta: {x: 257, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214461192
@@ -65069,8 +65108,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -250, y: 0}
-  m_SizeDelta: {x: 370, y: 62}
+  m_AnchoredPosition: {x: -225.75009, y: 0}
+  m_SizeDelta: {x: 321.5, y: 62}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1225376299
 MonoBehaviour:
@@ -67754,8 +67793,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 161, y: -9}
-  m_SizeDelta: {x: 697, y: 50}
+  m_AnchoredPosition: {x: 241.5, y: -9}
+  m_SizeDelta: {x: 701.7, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1272322926
 MonoBehaviour:
@@ -68004,8 +68043,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -933, y: -2}
-  m_SizeDelta: {x: 715, y: 103}
+  m_AnchoredPosition: {x: -970.8, y: -2}
+  m_SizeDelta: {x: 639.5, y: 103}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1275631429
 MonoBehaviour:
@@ -68039,7 +68078,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Parameters of the car charger
+  m_Text: Parameters of car charger
 --- !u!222 &1275631430
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -68645,8 +68684,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 509.03003, y: 0.70000005}
-  m_SizeDelta: {x: 327.15, y: 169.6}
+  m_AnchoredPosition: {x: 509.03003, y: -5.4}
+  m_SizeDelta: {x: 327.1, y: 157.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1281255492
 MonoBehaviour:
@@ -68680,8 +68719,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u2022 Switzerland\u2019s average\n   water consumption is \n   about 35%
-    for the \n   toilets and 14% for \n   the washing machine."
+  m_Text: "\u2022 Switzerland\u2019s average\n   water use is 35% for \n   the toilets
+    and 14% for \n   the washing machine."
 --- !u!222 &1281255493
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -72796,8 +72835,8 @@ RectTransform:
   m_Father: {fileID: 465512449}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0.786}
-  m_AnchorMax: {x: 1, y: 1}
+  m_AnchorMin: {x: 0.0064440435, y: 0.786}
+  m_AnchorMax: {x: 0.99488825, y: 0.89900005}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
@@ -77271,7 +77310,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "The NeighbotHub can at is \nmaximun provide 6.5 kW"
+  m_Text: "The NeighbotHub is producing its \nmaximun power of 6.5 kW"
 --- !u!222 &1428884235
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -78096,6 +78135,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &1444133939
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -78255,7 +78295,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Challenge with intelligent \ncharge"
+  m_Text: "Challenges of intelligent \ncharge"
 --- !u!222 &1449436633
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -79813,7 +79853,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Total consumptions :'
+  m_Text: 'Total consumption :'
 --- !u!222 &1478884491
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -85116,6 +85156,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &1575149996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -85868,7 +85909,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Parameters of charger
+  m_Text: Parameters of car charger
 --- !u!222 &1585986408
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -86929,7 +86970,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: Adjusting intensitiy of lamps allows sufficient lighting conditions to be
     obtainded for a given activity. To reduce consumption , it's better to use only
-    necessary light.
+    necessary artificial light.
 --- !u!222 &1607582895
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -87765,9 +87806,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Facade
+  m_Text: 'North
 
-    North'
+    Facade'
 --- !u!222 &1632375719
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -91445,7 +91486,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: The car charger can at is maximun use 3.5 kw
+  m_Text: "Your car charger can provide\n a maximun power of 3.5 kW"
 --- !u!222 &1693810633
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -94373,8 +94414,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 300, y: 355}
-  m_SizeDelta: {x: 599, y: 50}
+  m_AnchoredPosition: {x: 348.5, y: 355}
+  m_SizeDelta: {x: 656, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1745798627
 MonoBehaviour:
@@ -94402,13 +94443,13 @@ MonoBehaviour:
     m_BestFit: 0
     m_MinSize: 0
     m_MaxSize: 40
-    m_Alignment: 4
+    m_Alignment: 3
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Last recharge of car charger  : '
+  m_Text: 'Recorded energy of last recharge  : '
 --- !u!222 &1745798628
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -97044,7 +97085,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Consult stat of car charger
+  m_Text: Consult state of car charger
 --- !u!222 &1801099005
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -98291,7 +98332,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Intesity
+  m_Text: Intensity
 --- !u!222 &1826299823
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -98428,8 +98469,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -577, y: -1.9000001}
-  m_SizeDelta: {x: 136.9, y: 52}
+  m_AnchoredPosition: {x: -421.9, y: -1.9000001}
+  m_SizeDelta: {x: 447.1, y: 52}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1829490918
 MonoBehaviour:
@@ -98618,8 +98659,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'The challenge of plug-in Electrical Vehicile (EV) charging is to optimize
-    the charging scheduling time in a smart grids.
+  m_Text: 'The challenge of plug-in Electrical Vehicle (EV) charging is to optimize
+    the charging scheduling time in a smart grid.
 
     Moreover, the end-user should have enough energy capacity for his daily travel
     needs.'
@@ -100784,7 +100825,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'Fluorescent bulbs have low consumption.
 
-    The life span is long but the light switches on slowly.'
+    The life span is long but the light switches on gradually.'
 --- !u!222 &1876486486
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -102499,12 +102540,15 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "La qualit\xE9 de la lumi\xE8re est \xE9galement lier au type d'activit\xE9
-    que l'on r\xE9alise durant notre journ\xE9e.\nIci nous avons pris l'exemple, d'un
-    enfant allant a l'\xE9cole. Il va \xEAtre pr\xE9f\xE9rable d'utiliser une lim\xE8re
-    froidre lorsque la personne doit se concentrer lors des cours.\nPar contre le
-    soir nous allons utiliser une lumi\xE8re chaude pour favoriser le repos et la
-    relaxation."
+  m_Text: 'The light quality is related to our type of activities throughout the day.
+
+    For example, it''s better to use cold light (blue) which help to concentrate during
+    school time .
+
+    On the other side, it''s preferable to use warm light during the evening for rest
+    and relaxation.
+
+'
 --- !u!222 &1902792052
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -104101,7 +104145,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Total consumption
+  m_Text: House consumption
 --- !u!222 &1924530406
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -104631,6 +104675,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &1935163350
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -105569,7 +105614,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1949236939
 Transform:
   m_ObjectHideFlags: 0
@@ -108076,6 +108121,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &1986157815
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109184,7 +109230,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Total consumption
+  m_Text: House consumption
 --- !u!222 &2007494603
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -110204,10 +110250,10 @@ RectTransform:
   m_Father: {fileID: 1351431678}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.0064440435, y: 0.77933866}
-  m_AnchorMax: {x: 1, y: 0.78236294}
-  m_AnchoredPosition: {x: 7.95166, y: -170.9364}
-  m_SizeDelta: {x: -14.903442, y: 2.358902}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: 0, y: 3.2993774}
+  m_SizeDelta: {x: 0, y: 6.598755}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2021769771
 MonoBehaviour:
@@ -111098,6 +111144,7 @@ MonoBehaviour:
   m_PreferredHeight: 54.2
   m_FlexibleWidth: 1
   m_FlexibleHeight: -1
+  m_LayoutPriority: 1
 --- !u!114 &2037972922
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -111992,7 +112039,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "\u2022 grardening lessons"
+  m_Text: "\u2022 gardening lessons"
 --- !u!222 &2053823801
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -113701,9 +113748,9 @@ MonoBehaviour:
     more water is available.
 
     The voltage is similar to the fall height, the bigger voltage, the more potential
-    enerfy is available.
+    energy is available.
 
-    High power is obtained with high voltage and high current'
+    High power is obtained with high voltage and high current.'
 --- !u!222 &2086882731
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -115151,8 +115198,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -386, y: -1}
-  m_SizeDelta: {x: 150, y: 53}
+  m_AnchoredPosition: {x: -387.8, y: -1}
+  m_SizeDelta: {x: 168.3, y: 53}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2120757011
 MonoBehaviour:
@@ -115346,8 +115393,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.007888087, y: 0.78437907}
   m_AnchorMax: {x: 1, y: 0.89800006}
-  m_AnchoredPosition: {x: 7.940796, y: -123.87215}
-  m_SizeDelta: {x: -14.881714, y: 88.62439}
+  m_AnchoredPosition: {x: -0.85943604, y: -39.546143}
+  m_SizeDelta: {x: 15.878662, y: 99.97558}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2123760544
 GameObject:
@@ -116147,7 +116194,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Free
+  m_Text: Custom
 --- !u!222 &2139147983
 CanvasRenderer:
   m_ObjectHideFlags: 0

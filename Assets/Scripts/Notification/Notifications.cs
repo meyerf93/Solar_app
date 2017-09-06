@@ -12,7 +12,6 @@ public class Notifications {
     {
         actualTime = DateTime.Now;
         prefab_key = key;
-
     }
 
     public string Prefab_key

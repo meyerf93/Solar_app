@@ -461,7 +461,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "It seems that you are consuming a\n lot but your production is low."
+  m_Text: "It seems that you are consuming a lot\n but your production is low."
 --- !u!114 &114890034289560080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -594,7 +594,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124.671875, y: 13}
+  m_AnchoredPosition: {x: -125, y: 13}
   m_SizeDelta: {x: 1385, y: 1042}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224311003118139966

@@ -332,7 +332,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: It seems that you don't receive any notifications
+  m_Text: It seems that you didn't receive any notifications.
 --- !u!114 &114888040215905500
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -352,7 +352,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: 63fb3fda44dcf13409139d5b41586e57, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2424fa4f8806be459ed87901c322e99, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1

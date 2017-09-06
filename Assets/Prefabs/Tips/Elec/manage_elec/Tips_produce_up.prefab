@@ -554,9 +554,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'It''s a good time to start the dishwasher or the washing machine.
+  m_Text: 'It''s a good time to start the dishwasher or start the washing machine.
 
-    But that''s not a reason to waste energy.'
+    However it''s not a reason to waste energy.'
 --- !u!222 &222047345959272586
 CanvasRenderer:
   m_ObjectHideFlags: 1
@@ -784,7 +784,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -124.671875, y: 13}
+  m_AnchoredPosition: {x: -125, y: 13}
   m_SizeDelta: {x: 1385, y: 1042}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!224 &224973988525984744
