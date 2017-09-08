@@ -1814,7 +1814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _defaultConnectionOptions:
     Port: 1883
-    Host: 128.179.179.230
+    Host: 128.179.183.106
     RandomClientId: 1
     Path: /mqtt
     AutoReconnect: 1
