@@ -15,7 +15,7 @@ namespace HG.iot.mqtt.example
         {
             _cacheGlobalTopic.Send(
             //{"dttp":"","data":1.0,"t":2017-05-15T06:47:42Z","id":"car1/:1/automatic.1"}
-            new GlobalMessage { dttp = "", data = value, t = System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ"), id = id_to_parse },
+            new GlobalMessage { data = value, t = System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ"), id = id_to_parse },
                 false,
                 QualityOfServiceEnum.AtLeastOnce);
         }
@@ -70,7 +70,7 @@ namespace HG.iot.mqtt.example
             {
                 _cacheGlobalTopic.Send(
                 //{"dttp":"","data":1.0,"t":2017-05-15T06:47:42Z","id":"car1/:1/automatic.1"}
-                new GlobalMessage { dttp = "", data = 1.0, t = System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ"), id = id_to_parse },
+                new GlobalMessage { data = 1.0, t = System.DateTime.Now.ToString("yyyy-MM-ddTHH:mm:ssZ"), id = id_to_parse },
                     false,
                     QualityOfServiceEnum.AtLeastOnce);
             }

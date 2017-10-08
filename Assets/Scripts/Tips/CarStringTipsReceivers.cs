@@ -19,6 +19,14 @@ namespace HG.iot.mqtt.example
 
         private string temp_state;
 
+        private TimeSpan old_time_plug;
+        public int time_wait_plug;
+        private bool flag_prod_plug = false;
+
+        private TimeSpan old_time_unplug;
+        public int time_wait_unplug;
+        private bool flag_prod_unplug= false;
+
         ITopic _cacheCarTopic = null;
 
         // Topic.SimpleNotifications=TRUE
@@ -68,13 +76,13 @@ namespace HG.iot.mqtt.example
             {
                 _cacheCarTopic.Send(
                 //{"dttp": null, "data": 100, "t": "2017-05-15T06:47:42Z", "id": "knx1/:1.2.26/:/dim.7"}
-                new CarMessage { dttp = "this is text", data = constPLUG_1, t = "2017-05-15T06:47:42Z", id = id_state },
+                new CarMessage {data = constPLUG_1, t = "2017-05-15T06:47:42Z", id = id_state },
                 false,
                 QualityOfServiceEnum.AtLeastOnce);
 
                 _cacheCarTopic.Send(
                 //{"dttp": null, "data": 100, "t": "2017-05-15T06:47:42Z", "id": "knx1/:1.2.26/:/dim.7"}
-                new CarMessage { dttp = "this is text", data = "Plugged on WallBox", t = "2017-05-15T06:47:42Z", id = id_state },
+                new CarMessage { data = "Plugged on WallBox", t = "2017-05-15T06:47:42Z", id = id_state },
                 false,
                 QualityOfServiceEnum.AtLeastOnce);
             }
@@ -88,7 +96,7 @@ namespace HG.iot.mqtt.example
         void onMqttMessageArrived_CarTopic(CarMessage message)
         {
             //debug.Log("message just arrived");
-            CarMessage receive_obj;
+            //CarMessage receive_obj;
 
 
             //debug.Log("Message arrived on CarMessage");
@@ -97,29 +105,43 @@ namespace HG.iot.mqtt.example
             if (!message.JSONConversionFailed)
             {
                 //debug.Log(JsonUtility.ToJson(message));
-                string json = JsonUtility.ToJson(message);
+                //string json = JsonUtility.ToJson(message);
 
 
                 //parse intersting message
-                if (json.Contains(id_state) == true)
+                if (message.id.Contains(id_state) == true)
                 {
-                    receive_obj = JsonUtility.FromJson<CarMessage>(json);
-                    temp_state = receive_obj.data;
+                    //receive_obj = JsonUtility.FromJson<CarMessage>(json);
+                    temp_state = message.data;
                     //debug.Log("Global value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                     if (temp_state.Contains(constPLUG_1) || temp_state.Contains(constPLUG_2))
                     {
-                        test = new Notifications("Tips_plug");
-                        notif.sendNotification(test);
+                        if ((DateTime.Now.TimeOfDay - old_time_plug).Minutes > time_wait_plug || flag_prod_plug == false)
+                        {
+                            old_time_plug = DateTime.Now.TimeOfDay;
+                            flag_prod_plug = true;
+                            test = new Notifications("Tips_plug");
+                            notif.sendNotification(test);
+                        }
+                        flag_prod_plug = false;
                     }
                     else
                     {
+                        if ((DateTime.Now.TimeOfDay - old_time_unplug).Minutes > time_wait_unplug || flag_prod_unplug == false)
+                        {
+                            old_time_unplug = DateTime.Now.TimeOfDay;
+                            flag_prod_unplug = true;
+                            test = new Notifications("Tips_unplug");
+                            notif.sendNotification(test);
+                        }
+                        flag_prod_unplug = false;
                         test = new Notifications("Tips_unplug");
                         notif.sendNotification(test);
                     }
                 }
             }
-            else
-                Debug.LogWarning("message arrived, but failed JSON conversion");
+            //else
+              //  Debug.LogWarning("message arrived, but failed JSON conversion");
         }
 
         void onMqttSubscriptionFailure_CarTopic(SubscriptionResponse response)

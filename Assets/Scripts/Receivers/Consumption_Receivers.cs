@@ -68,7 +68,7 @@ namespace HG.iot.mqtt.example
 
                     _cacheGlobalTopic.Send(
                     //{"dttp": null, "data": 100, "t": "2017-05-15T06:47:42Z", "id": "knx1/:1.2.26/:/dim.7"}
-                    new GlobalMessage { dttp = "this is text", data = 543.1, t = "2017-05-15T06:47:42Z", id = id_to_parse[j] },
+                    new GlobalMessage { data = 543.1, t = "2017-05-15T06:47:42Z", id = id_to_parse[j] },
                     false,
                     QualityOfServiceEnum.AtLeastOnce);
                 }
@@ -83,8 +83,10 @@ namespace HG.iot.mqtt.example
         void onMqttMessageArrived_GlobalTopic(GlobalMessage message)
         {
             //Debug.Log("message just arrived");
-            GlobalMessage receive_obj;
+            //GlobalMessage receive_obj;
 
+            //Debug.Log("Global value of json object dttp : "+ message.dttp +"data : " + message.data + ", t : " + message.t + ", id : " + message.id);
+            
             for (int i = 0; i < id_to_parse.Length; i++)
             {
                 prod_list.Add(0.0F);
@@ -96,7 +98,7 @@ namespace HG.iot.mqtt.example
             if (!message.JSONConversionFailed)
             {
 
-                string json = JsonUtility.ToJson(message);
+                //string json = JsonUtility.ToJson(message);
                 //Debug.Log("try to parse json");
 
                 //parse intersting message
@@ -104,17 +106,17 @@ namespace HG.iot.mqtt.example
                 {
                     //Debug.Log("json message : " + json);
                     //Debug.Log("message that json must contain : " + id_to_parse[i]);
-                    if (json.Contains(id_to_parse[i]) == true)
+                    if (message.id.Contains(id_to_parse[i]) == true)
                     {
-                        receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        prod_list[i] = receive_obj.data;
+                        //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                        prod_list[i] = message.data;
                         //Debug.Log("Global value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                     }
                 }
             }
 
-            else
-                Debug.LogWarning("message arrived, but failed JSON conversion");
+            //else
+              //  Debug.LogWarning("message arrived, but failed JSON conversion");
             prod_slider.value = 0.0f;
             float temp_value = 0.0f;
             int j = 0;

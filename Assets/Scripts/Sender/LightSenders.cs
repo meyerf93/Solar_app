@@ -16,8 +16,8 @@ namespace HG.iot.mqtt.example
             _cacheSetValueTopic.Send(
             //{"cmd": "knx1/:1.1.26/:/dim.1","mdl"="knx1","value": 100.0}
             new SetValueMessage { cmd = id_to_parse, mdl = mdl, value = value },
-                false,
-                QualityOfServiceEnum.AtLeastOnce);
+            false,
+            QualityOfServiceEnum.AtLeastOnce);
         }
 
         ITopic _cacheSetValueTopic = null;

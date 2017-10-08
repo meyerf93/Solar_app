@@ -68,7 +68,7 @@ namespace HG.iot.mqtt.example
                 //debug.Log("try so send a message for the car");
                 _cacheGlobalTopic.Send(
                 //{"dttp": null, "data": 100, "t": "2017-05-15T06:47:42Z", "id": "knx1/:1.2.26/:/dim.7"}
-                new GlobalMessage { dttp = "this is text", data = 123.4, t = "2017-05-15T06:47:42Z", id = id_to_parse },
+                new GlobalMessage { data = 123.4, t = "2017-05-15T06:47:42Z", id = id_to_parse },
 
                 false,
                 QualityOfServiceEnum.AtLeastOnce);
@@ -83,7 +83,7 @@ namespace HG.iot.mqtt.example
         void onMqttMessageArrived_GlobalTopic(GlobalMessage message)
         {
             //debug.Log("message just arrived");
-            GlobalMessage receive_obj;
+            //GlobalMessage receive_obj;
 
 
             //debug.Log("Message arrived on CarMessage");
@@ -92,18 +92,18 @@ namespace HG.iot.mqtt.example
             if (!message.JSONConversionFailed)
             {
                 //debug.Log(JsonUtility.ToJson(message));
-                string json = JsonUtility.ToJson(message);
+                //string json = JsonUtility.ToJson(message);
 
 
                 //parse intersting message
-                if (json.Contains(id_to_parse) == true)
+                if (message.id.Contains(id_to_parse) == true)
                 {
-                    receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                    energyValue = receive_obj.data;
+                    //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                    energyValue = message.data;
                     //debug.Log("Global value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                 }
             }
-            else Debug.LogWarning("message arrived, but failed JSON conversion");
+            //else Debug.LogWarning("message arrived, but failed JSON conversion");
 
             if (!InKWH) energyValue /= 1000; 
             text_value.text = energyValue.ToString("F1") + " kWh";

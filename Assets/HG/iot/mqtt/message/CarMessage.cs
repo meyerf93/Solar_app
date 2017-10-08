@@ -8,7 +8,6 @@ namespace HG.iot.mqtt.example
     [Serializable]
     public class CarMessage : Message
     {
-        public string dttp;
         public string data;
         public string t;
         public string id;

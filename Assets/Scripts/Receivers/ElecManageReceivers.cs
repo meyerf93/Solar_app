@@ -108,7 +108,7 @@ namespace HG.iot.mqtt.example
         void onMqttMessageArrived_GlobalTopic(GlobalMessage message)
         {
             //debug.Log("message just arrived");
-            GlobalMessage receive_obj;
+            //GlobalMessage receive_obj;
 
             //debug.Log("Message arrived on CarMessage");
             //debug.Log("Note that the message parameter in the arrival notification is strong typed to that of the topic's message");
@@ -116,19 +116,19 @@ namespace HG.iot.mqtt.example
             if (!message.JSONConversionFailed)
             {
                 //debug.Log(JsonUtility.ToJson(message));
-                string json = JsonUtility.ToJson(message);
+                //string json = JsonUtility.ToJson(message);
 
-                if (json.Contains(id_after_bat))
+                if (message.id.Contains(id_after_bat))
                 {
-                    receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                    value_after_bat = receive_obj.data;
+                    //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                    value_after_bat = message.data;
                     right_message = true;
                     //Debug.Log("Global value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                 }
-                else if (json.Contains(id_before_bat))
+                else if (message.id.Contains(id_before_bat))
                 {
-                    receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                    value_before_bat = receive_obj.data;
+                    //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                    value_before_bat = message.data;
                     //Debug.Log("Global value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                     right_message = true;
                 }
@@ -137,10 +137,10 @@ namespace HG.iot.mqtt.example
                     for (int i = 0; i < id_consume.Length; i++)
                     {
                         if(conso_list.Count < id_consume.Length) conso_list.Add(0.0F);
-                        if (json.Contains(id_consume[i]))
+                        if (message.id.Contains(id_consume[i]))
                         {
-                            receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                            conso_list[i] = receive_obj.data;
+                            //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                            conso_list[i] = message.data;
                             //Debug.Log("Global value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                             right_message = true;
                         }
@@ -148,10 +148,10 @@ namespace HG.iot.mqtt.example
                     for (int i = 0; i < id_produce.Length; i++)
                     {
                         if(prod_list.Count < id_produce.Length) prod_list.Add(0.0f);
-                        if (json.Contains(id_produce[i]))
+                        if (message.id.Contains(id_produce[i]))
                         {
-                            receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                            prod_list[i] = receive_obj.data;
+                            //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                            prod_list[i] = message.data;
                             //Debug.Log("Global value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                             right_message = true;
                         }
@@ -242,12 +242,10 @@ namespace HG.iot.mqtt.example
                         }
                         flag_conso_more = false;
                     }
-
-                    right_message = false;
                 }
               
             }
-            else Debug.LogWarning("message arrived, but failed JSON conversion");
+            //else Debug.LogWarning("message arrived, but failed JSON conversion");
         }
 
         void onMqttSubscriptionSuccess_GlobalTopic(SubscriptionResponse response)

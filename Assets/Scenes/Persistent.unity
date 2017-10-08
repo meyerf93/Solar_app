@@ -1814,7 +1814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _defaultConnectionOptions:
     Port: 1883
-    Host: 128.179.183.106
+    Host: 192.168.2.2
     RandomClientId: 1
     Path: /mqtt
     AutoReconnect: 1
@@ -3350,12 +3350,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.26/:/dim.5
+  - knx1/:1.2.26/:/cdim.5
   list_image:
   - {fileID: 1715140320}
   - {fileID: 355878815}
   - {fileID: 1032967766}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -4968,7 +4968,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: keba1/:/192.168.2.106/:/plug
   text_value: {fileID: 1272322926}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &65740568
 GameObject:
   m_ObjectHideFlags: 0
@@ -5560,10 +5560,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.26/:/dim.6
+  - knx1/:1.2.26/:/cdim.6
   list_image:
   - {fileID: 1607462802}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: bf78c76f2be82e94296bbc4430b20c61, type: 3}
   mid_sprite: {fileID: 21300000, guid: 6be15dcbba1eff542800ff2a28b70298, type: 3}
   high_sprite: {fileID: 21300000, guid: c4dca1488e2cfce42b319aa914056dd1, type: 3}
@@ -5903,9 +5903,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.6
+  id_to_parse: knx1/:1.2.26/:/cdim.6
   slider_value: {fileID: 483553812}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &73594964
 GameObject:
   m_ObjectHideFlags: 0
@@ -6613,9 +6613,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.8
+  id_to_parse: knx1/:1.2.26/:/cdim.8
   slider_value: {fileID: 476571405}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &87651572
 GameObject:
   m_ObjectHideFlags: 0
@@ -6657,7 +6657,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.29/:/dim.1
+  - knx1/:1.2.29/:/sdim.1
   list_image:
   - {fileID: 240821035}
   - {fileID: 1263622247}
@@ -6666,7 +6666,7 @@ MonoBehaviour:
   - {fileID: 313195660}
   - {fileID: 2091669277}
   - {fileID: 811131537}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: bf78c76f2be82e94296bbc4430b20c61, type: 3}
   mid_sprite: {fileID: 21300000, guid: 6be15dcbba1eff542800ff2a28b70298, type: 3}
   high_sprite: {fileID: 21300000, guid: c4dca1488e2cfce42b319aa914056dd1, type: 3}
@@ -8977,7 +8977,7 @@ MonoBehaviour:
   id_to_parse: knx1/:1.1.13/:/energy.1
   text_value: {fileID: 1381705075}
   InKWH: 1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &126531707
 GameObject:
   m_ObjectHideFlags: 0
@@ -10352,7 +10352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse: car1/:1/automatic.1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &157952641
 GameObject:
   m_ObjectHideFlags: 0
@@ -10777,14 +10777,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - zwave1/:3260679919/:4/:/infos.1/:/1/:/1
-  - zwave1/:3260679919/:5/:/infos.1/:/1/:/1
   - zwave1/:3260679919/:8/:/infos.1/:/1/:/1
   - zwave1/:3260679919/:10/:/infos.1/:/1/:/1
   text_value: {fileID: 1162419385}
   prefix: Skin
   unit: "\xB0C"
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &175561422
 GameObject:
   m_ObjectHideFlags: 0
@@ -10825,9 +10823,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.7
+  id_to_parse: knx1/:1.2.29/:/sdim.7
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &180209085
 GameObject:
   m_ObjectHideFlags: 0
@@ -12372,9 +12370,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.2
+  id_to_parse: knx1/:1.2.26/:/cdim.2
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &208123245
 GameObject:
   m_ObjectHideFlags: 0
@@ -14788,6 +14786,47 @@ CanvasRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 241712043}
+--- !u!1 &243852156
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 243852157}
+  - component: {fileID: 243852158}
+  m_Layer: 0
+  m_Name: test
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &243852157
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243852156}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 282044109}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &243852158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 243852156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8467202041972f46a6ee46e6e23e5ef, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id_parse_list: []
 --- !u!1 &244227600
 GameObject:
   m_ObjectHideFlags: 0
@@ -15731,10 +15770,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.26/:/dim.9
+  - knx1/:1.2.26/:/cdim.9
   list_image:
   - {fileID: 1720283721}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -16459,6 +16498,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1886464656}
+  - {fileID: 243852157}
   m_Father: {fileID: 11230771}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -16473,7 +16513,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3f96920649f354cb04065a3b2039c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  SimpleNotifications: 0
+  SimpleNotifications: 1
   Receivers:
   - {fileID: 1886464655}
   subscriptionTimeout: 15
@@ -16597,7 +16637,7 @@ MonoBehaviour:
   - knx1/:1.1.9/:/power.1
   - knx1/:1.1.8/:/power.1
   prod_slider: {fileID: 591747658}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &285880160
 GameObject:
   m_ObjectHideFlags: 0
@@ -16820,7 +16860,7 @@ MonoBehaviour:
   prod_slider: {fileID: 435082142}
   text_value: {fileID: 696631693}
   max_value: 10.8
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &291730513
 GameObject:
   m_ObjectHideFlags: 0
@@ -17704,9 +17744,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: keba1/:192.168.2.106/:/curr_user
+  id_to_parse: keba1/:192.168.2.106/:/curr
   mdl: keba1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &310962214
 GameObject:
   m_ObjectHideFlags: 0
@@ -18078,9 +18118,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.5
+  id_to_parse: knx1/:1.2.26/:/cdim.5
   slider_value: {fileID: 336370649}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &316153937
 GameObject:
   m_ObjectHideFlags: 0
@@ -19245,8 +19285,9 @@ MonoBehaviour:
   - knx1/:1.1.14/:/power.1
   - knx1/:1.1.15/:/power.1
   - knx1/:1.1.16/:/power.1
+  - knx1/:1.1.18/:/power.1
   prod_slider: {fileID: 875528070}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &337916492
 GameObject:
   m_ObjectHideFlags: 0
@@ -20946,9 +20987,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.1
+  id_to_parse: knx1/:1.2.29/:/sdim.1
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!114 &370447909
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21398,9 +21439,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notif: {fileID: 986041019}
   id_to_parse: knx1/:1.1.7/:/power.1
-  debug_mode_on: 1
-  time_wait_min_buy: 2
-  time_wait_min_sell: 2
+  debug_mode_on: 0
+  time_wait_min_buy: 10
+  time_wait_min_sell: 10
   good_sell_begin: 13
   good_sell_end: 19
   bad_sell_begin_1: 0
@@ -21453,9 +21494,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.1
+  id_to_parse: knx1/:1.2.29/:/sdim.1
   slider_value: {fileID: 821735941}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!114 &383335144
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22249,12 +22290,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - zwave1/:3260679919/:2/:/infos.1/:/1/:/1
+  - zwave1/:3260679919/:9/:/infos.1/:/1/:/1
   - zwave1/:3260679919/:3/:/infos.1/:/1/:/1
   text_value: {fileID: 1631960735}
   prefix: Core
   unit: "\xB0C"
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &395859741
 GameObject:
   m_ObjectHideFlags: 0
@@ -22997,12 +23038,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.29/:/dim.3
+  - knx1/:1.2.29/:/sdim.3
   list_image:
   - {fileID: 1637888165}
   - {fileID: 504624745}
   - {fileID: 1065261809}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: bf78c76f2be82e94296bbc4430b20c61, type: 3}
   mid_sprite: {fileID: 21300000, guid: 6be15dcbba1eff542800ff2a28b70298, type: 3}
   high_sprite: {fileID: 21300000, guid: c4dca1488e2cfce42b319aa914056dd1, type: 3}
@@ -23482,7 +23523,7 @@ MonoBehaviour:
   id_to_parse: keba1/:192.168.2.106/:/e_pres
   text_value: {fileID: 1214461192}
   InKWH: 0
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &426855167
 GameObject:
   m_ObjectHideFlags: 0
@@ -24168,7 +24209,7 @@ MonoBehaviour:
   prod_slider: {fileID: 435082142}
   text_value: {fileID: 118869724}
   max_value: 10.8
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &436515463
 GameObject:
   m_ObjectHideFlags: 0
@@ -25259,7 +25300,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse:
   - knx1/:1.1.13/:/power.1
-  debug_mode_on: 1
+  debug_mode_on: 0
   id_before_charger: null
   id_after_charger: null
   sprite_positive: {fileID: 21300000, guid: 7c0e1b9b2f68cab4392862fd0f9b68ea, type: 3}
@@ -31324,7 +31365,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.1.25/:/power.1
   prod_slider: {fileID: 1434353379}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &567546192
 GameObject:
   m_ObjectHideFlags: 0
@@ -32679,10 +32720,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - opti/:/next_prediction
+  - opti/:/next_production
   prod_slider: {fileID: 590565325}
   text_value: {fileID: 1913782651}
-  debug_mode_on: 1
+  debug_mode_on: 0
+  receive_in_kw: 0
   battery_power_id: null
   after_bat_consump_id: null
 --- !u!114 &590565325
@@ -33009,9 +33051,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.6
+  id_to_parse: knx1/:1.2.26/:/cdim.6
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &593220774
 GameObject:
   m_ObjectHideFlags: 0
@@ -37675,7 +37717,8 @@ MonoBehaviour:
   - knx1/:1.1.16/:/power.1
   prod_slider: {fileID: 667636721}
   text_value: {fileID: 1464662975}
-  debug_mode_on: 1
+  debug_mode_on: 0
+  receive_in_kw: 0
   battery_power_id: knx1/:1.1.17/:/power.1
   after_bat_consump_id: knx1/:1.1.18/:/power.1
 --- !u!1 &667714589
@@ -38147,7 +38190,7 @@ MonoBehaviour:
   - knx1/:1.1.16/:/power.1
   - knx1/:1.1.18/:/power.1
   prod_slider: {fileID: 643400666}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &678229636
 GameObject:
   m_ObjectHideFlags: 0
@@ -39677,9 +39720,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.5
+  id_to_parse: knx1/:1.2.29/:/sdim.5
   slider_value: {fileID: 1585380524}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &705830067
 GameObject:
   m_ObjectHideFlags: 0
@@ -39756,9 +39799,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.9
+  id_to_parse: knx1/:1.2.26/:/cdim.9
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!114 &707532219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44323,7 +44366,7 @@ MonoBehaviour:
   id_to_parse:
   - knx1/:1.1.13/:/power.1
   prod_slider: {fileID: 1763228588}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &798202709
 GameObject:
   m_ObjectHideFlags: 0
@@ -47901,17 +47944,17 @@ MonoBehaviour:
   - knx1/:1.1.30/:/lux.2
   - knx1/:1.1.30/:/lux.3
   id_light:
-  - knx1/:1.2.26/:/dim.1
-  - knx1/:1.2.26/:/dim.2
-  - knx1/:1.2.26/:/dim.3
-  - knx1/:1.2.26/:/dim.4
-  - knx1/:1.2.26/:/dim.5
-  - knx1/:1.2.26/:/dim.6
-  - knx1/:1.2.29/:/dim.1
-  - knx1/:1.2.29/:/dim.2
-  - knx1/:1.2.29/:/dim.3
-  - knx1/:1.2.29/:/dim.4
-  debug_mode_on: 1
+  - knx1/:1.2.26/:/cdim.1
+  - knx1/:1.2.26/:/cdim.2
+  - knx1/:1.2.26/:/cdim.3
+  - knx1/:1.2.26/:/cdim.4
+  - knx1/:1.2.26/:/cdim.5
+  - knx1/:1.2.26/:/cdim.6
+  - knx1/:1.2.29/:/sdim.1
+  - knx1/:1.2.29/:/sdim.2
+  - knx1/:1.2.29/:/sdim.3
+  - knx1/:1.2.29/:/sdim.4
+  debug_mode_on: 0
   lux_threshold: 60000
   time_wait_lux: 10
 --- !u!1 &873848664
@@ -48031,7 +48074,7 @@ MonoBehaviour:
   id_to_parse:
   - knx1/:1.1.19/:/power.1
   prod_slider: {fileID: 1601792618}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &875528067
 GameObject:
   m_ObjectHideFlags: 0
@@ -48988,10 +49031,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.29/:/dim.6
+  - knx1/:1.2.29/:/sdim.6
   list_image:
   - {fileID: 831021158}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -50869,9 +50912,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.8
+  id_to_parse: knx1/:1.2.29/:/sdim.8
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &928212895
 GameObject:
   m_ObjectHideFlags: 0
@@ -50947,9 +50990,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.5
+  id_to_parse: knx1/:1.2.26/:/cdim.5
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &931222331
 GameObject:
   m_ObjectHideFlags: 0
@@ -51058,9 +51101,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.8
+  id_to_parse: knx1/:1.2.26/:/cdim.8
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &938570810
 GameObject:
   m_ObjectHideFlags: 0
@@ -52532,7 +52575,7 @@ MonoBehaviour:
   text_value: {fileID: 2044538796}
   prefix: Out
   unit: "\xB0C"
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &966285137
 GameObject:
   m_ObjectHideFlags: 0
@@ -52784,7 +52827,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.1.26/:/power.1
   prod_slider: {fileID: 1832746556}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &970999614
 GameObject:
   m_ObjectHideFlags: 0
@@ -54645,8 +54688,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notif: {fileID: 986041019}
-  debug_mode_on: 1
+  debug_mode_on: 0
   id_state: keba1/:192.168.2.106/:/plug
+  time_wait_plug: 10
+  time_wait_unplug: 10
 --- !u!1 &1001979001
 GameObject:
   m_ObjectHideFlags: 0
@@ -54755,9 +54800,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.7
+  id_to_parse: knx1/:1.2.29/:/sdim.7
   slider_value: {fileID: 1649195115}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1003440357
 GameObject:
   m_ObjectHideFlags: 0
@@ -55693,14 +55738,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.26/:/dim.1
-  - knx1/:1.2.26/:/dim.2
+  - knx1/:1.2.26/:/cdim.1
+  - knx1/:1.2.26/:/cdim.2
   list_image:
   - {fileID: 1158083341}
   - {fileID: 167441972}
   - {fileID: 942762452}
   - {fileID: 1693372171}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -56242,9 +56287,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.5
+  id_to_parse: knx1/:1.2.29/:/sdim.5
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1032967764
 GameObject:
   m_ObjectHideFlags: 0
@@ -56727,7 +56772,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse:
   - knx1/:1.1.7/:/power.1
-  debug_mode_on: 1
+  debug_mode_on: 0
   id_before_charger: null
   id_after_charger: null
   sprite_positive: {fileID: 21300000, guid: cce2c128875dce64ba1a769e1dcf3aec, type: 3}
@@ -56774,9 +56819,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.9
+  id_to_parse: knx1/:1.2.26/:/cdim.9
   slider_value: {fileID: 2140225083}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1040823403
 GameObject:
   m_ObjectHideFlags: 0
@@ -61287,9 +61332,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.8
+  id_to_parse: knx1/:1.2.29/:/sdim.8
   slider_value: {fileID: 1108648348}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1126442518
 GameObject:
   m_ObjectHideFlags: 0
@@ -63696,12 +63741,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.26/:/dim.8
+  - knx1/:1.2.26/:/cdim.8
   list_image:
   - {fileID: 1605455224}
   - {fileID: 2023552857}
   - {fileID: 1259121430}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -64044,7 +64089,7 @@ MonoBehaviour:
   - knx1/:1.1.25/:/power.1
   - knx1/:1.1.26/:/power.1
   prod_slider: {fileID: 2058483159}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1198077714
 GameObject:
   m_ObjectHideFlags: 0
@@ -64961,9 +65006,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.3
+  id_to_parse: knx1/:1.2.26/:/cdim.3
   slider_value: {fileID: 650316782}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1221657045
 GameObject:
   m_ObjectHideFlags: 0
@@ -65350,7 +65395,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse:
   - knx1/:1.1.17/:/power.1
-  debug_mode_on: 1
+  debug_mode_on: 0
   id_before_charger: null
   id_after_charger: null
   sprite_positive: {fileID: 21300000, guid: cce2c128875dce64ba1a769e1dcf3aec, type: 3}
@@ -66376,9 +66421,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.2
+  id_to_parse: knx1/:1.2.29/:/sdim.2
   slider_value: {fileID: 734052317}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!114 &1249446632
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -67469,7 +67514,7 @@ MonoBehaviour:
   id_to_parse:
   - knx1/:1.1.10/:/power.1
   prod_slider: {fileID: 1919927089}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1266833832
 GameObject:
   m_ObjectHideFlags: 0
@@ -68767,9 +68812,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.2
+  id_to_parse: knx1/:1.2.26/:/cdim.2
   slider_value: {fileID: 2054788281}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1284879562
 GameObject:
   m_ObjectHideFlags: 0
@@ -72727,11 +72772,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.26/:/dim.7
+  - knx1/:1.2.26/:/cdim.7
   list_image:
   - {fileID: 1089900184}
   - {fileID: 1854725210}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -74314,9 +74359,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.3
+  id_to_parse: knx1/:1.2.29/:/sdim.3
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!114 &1384199812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74681,13 +74726,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.26/:/dim.3
+  - knx1/:1.2.26/:/cdim.3
   list_image:
   - {fileID: 1735049734}
   - {fileID: 1040990721}
   - {fileID: 1035177398}
   - {fileID: 834827130}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -77887,9 +77932,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.7
+  id_to_parse: knx1/:1.2.26/:/cdim.7
   slider_value: {fileID: 575237423}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1439986771
 GameObject:
   m_ObjectHideFlags: 0
@@ -77930,9 +77975,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.3
+  id_to_parse: knx1/:1.2.26/:/cdim.3
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1440467274
 GameObject:
   m_ObjectHideFlags: 0
@@ -79270,7 +79315,8 @@ MonoBehaviour:
   - knx1/:1.1.10/:/power.1
   prod_slider: {fileID: 1468091258}
   text_value: {fileID: 1855932931}
-  debug_mode_on: 1
+  debug_mode_on: 0
+  receive_in_kw: 0
   battery_power_id: null
   after_bat_consump_id: null
 --- !u!114 &1468091258
@@ -79603,10 +79649,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.29/:/dim.5
+  - knx1/:1.2.29/:/sdim.5
   list_image:
   - {fileID: 121706757}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -80168,7 +80214,7 @@ MonoBehaviour:
   - knx1/:1.1.12/:/power.1
   - knx1/:1.1.11/:/power.1
   prod_slider: {fileID: 1714420196}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1483439949
 GameObject:
   m_ObjectHideFlags: 0
@@ -80352,11 +80398,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notif: {fileID: 986041019}
-  debug_mode_on: 1
-  id_current: keba1/:192.168.2.106/:/curr_user
+  debug_mode_on: 0
+  id_current: keba1/:192.168.2.106/:/curr
   max_current_ma: 16000
   threshould_low: 33
   threshould_hight: 66
+  time_wait_speed_plus: 10
+  time_wait_speed_minus: 10
 --- !u!1 &1485313850
 GameObject:
   m_ObjectHideFlags: 0
@@ -80469,15 +80517,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.29/:/dim.7
-  - knx1/:1.2.29/:/dim.8
-  - knx1/:1.2.29/:/dim.9
+  - knx1/:1.2.29/:/sdim.7
+  - knx1/:1.2.29/:/sdim.8
+  - knx1/:1.2.29/:/sdim.9
   list_image:
   - {fileID: 1655196621}
   - {fileID: 7528317}
   - {fileID: 1351865847}
   - {fileID: 1320844973}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: bf78c76f2be82e94296bbc4430b20c61, type: 3}
   mid_sprite: {fileID: 21300000, guid: 6be15dcbba1eff542800ff2a28b70298, type: 3}
   high_sprite: {fileID: 21300000, guid: c4dca1488e2cfce42b319aa914056dd1, type: 3}
@@ -80933,7 +80981,7 @@ MonoBehaviour:
   id_to_parse:
   - knx1/:1.1.9/:/power.1
   prod_slider: {fileID: 898131792}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1498199236
 GameObject:
   m_ObjectHideFlags: 0
@@ -82939,9 +82987,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.7
+  id_to_parse: knx1/:1.2.26/:/cdim.7
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1540108528
 GameObject:
   m_ObjectHideFlags: 0
@@ -83577,7 +83625,7 @@ MonoBehaviour:
   id_to_parse:
   - knx1/:1.1.21/:/power.1
   prod_slider: {fileID: 1053808830}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1551318151
 GameObject:
   m_ObjectHideFlags: 0
@@ -84131,7 +84179,7 @@ MonoBehaviour:
   id_to_parse:
   - knx1/:1.1.8/:/power.1
   prod_slider: {fileID: 554736392}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1558761867
 GameObject:
   m_ObjectHideFlags: 0
@@ -86194,7 +86242,7 @@ MonoBehaviour:
   - knx1/:1.1.8/:/power.1
   - knx1/:1.1.9/:/power.1
   - knx1/:1.1.10/:/power.1
-  debug_mode_on: 1
+  debug_mode_on: 0
   id_before_charger: null
   id_after_charger: null
   sprite_positive: {fileID: 21300000, guid: 7c0e1b9b2f68cab4392862fd0f9b68ea, type: 3}
@@ -86417,7 +86465,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.29/:/dim.4
+  - knx1/:1.2.29/:/sdim.4
   list_image:
   - {fileID: 1489297697}
   - {fileID: 351713106}
@@ -86432,7 +86480,7 @@ MonoBehaviour:
   - {fileID: 1280575190}
   - {fileID: 1129481918}
   - {fileID: 1537014600}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: bf78c76f2be82e94296bbc4430b20c61, type: 3}
   mid_sprite: {fileID: 21300000, guid: 6be15dcbba1eff542800ff2a28b70298, type: 3}
   high_sprite: {fileID: 21300000, guid: c4dca1488e2cfce42b319aa914056dd1, type: 3}
@@ -87171,13 +87219,13 @@ MonoBehaviour:
   - knx1/:1.1.16/:/power.1
   id_before_bat: knx1/:1.1.17/:/power.1
   id_after_bat: knx1/:1.1.18/:/power.1
-  prod_max: 6500
+  prod_max: 8000
   threshold_prod_low: 33
   threshold_prod_high: 66
-  time_wait_prod_more: 2
-  time_wait_prod_less: 2
-  time_wait_conso_more: 2
-  time_wait_conso_less: 2
+  time_wait_prod_more: 10
+  time_wait_prod_less: 10
+  time_wait_conso_more: 10
+  time_wait_conso_less: 10
 --- !u!1 &1617396382
 GameObject:
   m_ObjectHideFlags: 0
@@ -88139,13 +88187,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.29/:/dim.2
+  - knx1/:1.2.29/:/sdim.2
   list_image:
   - {fileID: 973773914}
   - {fileID: 1835285382}
   - {fileID: 228665277}
   - {fileID: 201349268}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -89279,9 +89327,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.3
+  id_to_parse: knx1/:1.2.29/:/sdim.3
   slider_value: {fileID: 1508228775}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1655196619
 GameObject:
   m_ObjectHideFlags: 0
@@ -90597,9 +90645,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.6
+  id_to_parse: knx1/:1.2.29/:/sdim.6
   slider_value: {fileID: 863373596}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1678691510
 GameObject:
   m_ObjectHideFlags: 0
@@ -91769,9 +91817,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.6
+  id_to_parse: knx1/:1.2.29/:/sdim.6
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1699362336
 GameObject:
   m_ObjectHideFlags: 0
@@ -93489,12 +93537,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse:
-  - knx1/:1.2.26/:/dim.4
+  - knx1/:1.2.26/:/cdim.4
   list_image:
   - {fileID: 637839116}
   - {fileID: 470949347}
   - {fileID: 1511350439}
-  debug_mode_on: 1
+  debug_mode_on: 0
   low_sprite: {fileID: 21300000, guid: c7762ba6332908944a1a40c06cc0186d, type: 3}
   mid_sprite: {fileID: 21300000, guid: e202959cc2ac71944888bd8ce2489281, type: 3}
   high_sprite: {fileID: 21300000, guid: 5c08aa5c418960744a7fc40afd9148e7, type: 3}
@@ -93834,7 +93882,7 @@ MonoBehaviour:
   - knx1/:1.1.24/:/power.1
   - knx1/:1.1.27/:/power.1
   prod_slider: {fileID: 1299369158}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1733172745
 GameObject:
   m_ObjectHideFlags: 0
@@ -96510,7 +96558,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_to_parse: []
-  debug_mode_on: 1
+  debug_mode_on: 0
   id_before_charger: knx1/:1.1.17/:/power.1
   id_after_charger: knx1/:1.1.18/:/power.1
   sprite_positive: {fileID: 21300000, guid: 7c0e1b9b2f68cab4392862fd0f9b68ea, type: 3}
@@ -99518,9 +99566,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.4
+  id_to_parse: knx1/:1.2.29/:/sdim.4
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1849452798
 GameObject:
   m_ObjectHideFlags: 0
@@ -100430,9 +100478,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.9
+  id_to_parse: knx1/:1.2.29/:/sdim.9
   slider_value: {fileID: 1533922821}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1871248407
 GameObject:
   m_ObjectHideFlags: 0
@@ -100473,9 +100521,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.4
+  id_to_parse: knx1/:1.2.26/:/cdim.4
   slider_value: {fileID: 894027697}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1872489003
 GameObject:
   m_ObjectHideFlags: 0
@@ -100521,7 +100569,7 @@ MonoBehaviour:
   - knx1/:1.1.9/:/power.1
   - knx1/:1.1.10/:/power.1
   prod_slider: {fileID: 1623949535}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1873530673
 GameObject:
   m_ObjectHideFlags: 0
@@ -101453,13 +101501,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   id_parse_list:
-  - zwave1/:3260679919/:2/:/infos.1/:/1/:/1
-  - zwave1/:3260679919/:3/:/infos.1/:/1/:/1
-  - zwave1/:3260679919/:4/:/infos.1/:/1/:/1
-  - zwave1/:3260679919/:5/:/infos.1/:/1/:/1
-  - zwave1/:3260679919/:10/:/infos.1/:/1/:/1
-  - knx1/:1.1.30/:/temp.1
-  - opti/:/next_prediction
+  - knx1/:1.1.7/:/power.1
   - knx1/:1.1.8/:/power.1
   - knx1/:1.1.9/:/power.1
   - knx1/:1.1.10/:/power.1
@@ -101471,27 +101513,6 @@ MonoBehaviour:
   - knx1/:1.1.16/:/power.1
   - knx1/:1.1.17/:/power.1
   - knx1/:1.1.18/:/power.1
-  - xcom1/:101/:/config/:/3007
-  - knx1/:1.2.26/:/dim.1
-  - knx1/:1.2.26/:/dim.2
-  - knx1/:1.2.26/:/dim.3
-  - knx1/:1.2.26/:/dim.4
-  - knx1/:1.2.26/:/dim.5
-  - knx1/:1.2.26/:/dim.6
-  - knx1/:1.2.26/:/dim.7
-  - knx1/:1.2.26/:/dim.8
-  - knx1/:1.2.26/:/dim.9
-  - knx1/:1.2.29/:/dim.1
-  - knx1/:1.2.29/:/dim.2
-  - knx1/:1.2.29/:/dim.3
-  - knx1/:1.2.29/:/dim.4
-  - knx1/:1.2.29/:/dim.5
-  - knx1/:1.2.29/:/dim.6
-  - knx1/:1.2.29/:/dim.7
-  - knx1/:1.2.29/:/dim.8
-  - knx1/:1.2.29/:/dim.9
-  - keba1/:192.168.2.106/:/e_pres
-  - knx1/:1.1.13/:/energy.1
   - knx1/:1.1.19/:/power.1
   - knx1/:1.1.20/:/power.1
   - knx1/:1.1.21/:/power.1
@@ -101502,12 +101523,39 @@ MonoBehaviour:
   - knx1/:1.1.26/:/power.1
   - knx1/:1.1.27/:/power.1
   - knx1/:1.1.36/:/power.1
-  - knx1/:1.1.7/:/power.1
+  - knx1/:1.1.13/:/energy.1
+  - knx1/:1.2.29/:/sdim.1
+  - knx1/:1.2.29/:/sdim.2
+  - knx1/:1.2.29/:/sdim.3
+  - knx1/:1.2.29/:/sdim.4
+  - knx1/:1.2.29/:/sdim.5
+  - knx1/:1.2.29/:/sdim.6
+  - knx1/:1.2.29/:/sdim.7
+  - knx1/:1.2.29/:/sdim.8
+  - knx1/:1.2.29/:/sdim.9
+  - knx1/:1.2.26/:/cdim.1
+  - knx1/:1.2.26/:/cdim.2
+  - knx1/:1.2.26/:/cdim.3
+  - knx1/:1.2.26/:/cdim.4
+  - knx1/:1.2.26/:/cdim.5
+  - knx1/:1.2.26/:/cdim.6
+  - knx1/:1.2.26/:/cdim.7
+  - knx1/:1.2.26/:/cdim.8
+  - knx1/:1.2.26/:/cdim.9
   - knx1/:1.1.30/:/lux.1
   - knx1/:1.1.30/:/lux.2
   - knx1/:1.1.30/:/lux.3
-  - keba1/:192.168.2.106/:/curr_user
-  - keba1/:/192.168.2.106/:/plug
+  - knx1/:1.1.30/:/temp.1
+  - keba1/:192.168.2.106/:/ena
+  - keba1/:192.168.2.106/:/plug
+  - keba1/:192.168.2.106/:/curr
+  - keba1/:192.168.2.106/:/e_pres
+  - zwave1/:3260679919/:3/:/infos.1/:/1/:/1
+  - zwave1/:3260679919/:4/:/infos.1/:/1/:/1
+  - zwave1/:3260679919/:5/:/infos.1/:/1/:/1
+  - zwave1/:3260679919/:8/:/infos.1/:/1/:/1
+  - zwave1/:3260679919/:9/:/infos.1/:/1/:/1
+  - zwave1/:3260679919/:10/:/infos.1/:/1/:/1
 --- !u!1 &1886981002
 GameObject:
   m_ObjectHideFlags: 0
@@ -103129,9 +103177,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.4
+  id_to_parse: knx1/:1.2.26/:/cdim.4
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!114 &1911083741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -104405,6 +104453,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1930469522}
   - component: {fileID: 1930469521}
+  - component: {fileID: 1930469523}
   m_Layer: 0
   m_Name: ChargeLocked
   m_TagString: Untagged
@@ -104423,9 +104472,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: keba1/:192.168.2.106/:/enable_user
+  id_to_parse: keba1/:192.168.2.106/:/ena
   mdl: keba1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!4 &1930469522
 Transform:
   m_ObjectHideFlags: 0
@@ -104439,6 +104488,17 @@ Transform:
   m_Father: {fileID: 661752823}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1930469523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1930469520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fd41fe000e5a7044d902bb265b7d3123, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1931375613
 GameObject:
   m_ObjectHideFlags: 0
@@ -105465,9 +105525,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.9
+  id_to_parse: knx1/:1.2.29/:/sdim.9
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1946189224
 GameObject:
   m_ObjectHideFlags: 0
@@ -105598,7 +105658,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: keba1/:/192.168.2.106/:/plug
   text_value: {fileID: 5820643}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1949236938
 GameObject:
   m_ObjectHideFlags: 0
@@ -105614,7 +105674,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1949236939
 Transform:
   m_ObjectHideFlags: 0
@@ -106448,9 +106508,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.4
+  id_to_parse: knx1/:1.2.29/:/sdim.4
   slider_value: {fileID: 1695567471}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1970141278
 GameObject:
   m_ObjectHideFlags: 0
@@ -106888,9 +106948,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.1
+  id_to_parse: knx1/:1.2.26/:/cdim.1
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &1976792271
 GameObject:
   m_ObjectHideFlags: 0
@@ -110398,7 +110458,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse:
   - knx1/:1.1.18/:/power.1
-  debug_mode_on: 1
+  debug_mode_on: 0
   id_before_charger: null
   id_after_charger: null
   sprite_positive: {fileID: 21300000, guid: cce2c128875dce64ba1a769e1dcf3aec, type: 3}
@@ -113672,9 +113732,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 00af2189866eed942822a826f8c7b6fd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.29/:/dim.2
+  id_to_parse: knx1/:1.2.29/:/sdim.2
   mdl: knx1
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &2086882728
 GameObject:
   m_ObjectHideFlags: 0
@@ -115356,9 +115416,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2eda39366a32fe4386303b471951bd5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id_to_parse: knx1/:1.2.26/:/dim.1
+  id_to_parse: knx1/:1.2.26/:/cdim.1
   slider_value: {fileID: 44343195}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &2123306449
 GameObject:
   m_ObjectHideFlags: 0
@@ -115990,7 +116050,7 @@ MonoBehaviour:
   - knx1/:1.1.16/:/power.1
   - knx1/:1.1.18/:/power.1
   prod_slider: {fileID: 238389011}
-  debug_mode_on: 1
+  debug_mode_on: 0
 --- !u!1 &2135469392
 GameObject:
   m_ObjectHideFlags: 0

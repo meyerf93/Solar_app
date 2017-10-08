@@ -22,6 +22,14 @@ namespace HG.iot.mqtt.example
         public double threshould_hight;
         private double temp_current;
 
+        private TimeSpan old_time_speed_plus;
+        public int time_wait_speed_plus ;
+        private bool flag_prod_speed_plus = false;
+
+        private TimeSpan old_time_speed_minus;
+        public int time_wait_speed_minus;
+        private bool flag_prod_speed_minus = false;
+
         ITopic _cacheGlobalTopic = null;
 
         // Topic.SimpleNotifications=TRUE
@@ -72,13 +80,13 @@ namespace HG.iot.mqtt.example
             {
                 _cacheGlobalTopic.Send(
                 //{"dttp": null, "data": 22.5, "t": "2017-05-15T06:47:42Z", "id": "zwave1/:3260679919/:2/:/infos.1/:/1/:/1"}
-                new GlobalMessage { dttp = "this is text", data = 22.5, t = "2017-05-15T06:47:42Z", id = id_current },
+                new GlobalMessage { data = 22.5, t = "2017-05-15T06:47:42Z", id = id_current },
                 false,
                 QualityOfServiceEnum.ExactlyOnce);
 
                 _cacheGlobalTopic.Send(
                 //{"dttp": null, "data": 22.5, "t": "2017-05-15T06:47:42Z", "id": "zwave1/:3260679919/:2/:/infos.1/:/1/:/1"}
-                new GlobalMessage { dttp = "this is text", data = 12000, t = "2017-05-15T06:47:42Z", id = id_current },
+                new GlobalMessage { data = 12000, t = "2017-05-15T06:47:42Z", id = id_current },
                 false,
                 QualityOfServiceEnum.ExactlyOnce);
             }
@@ -92,7 +100,7 @@ namespace HG.iot.mqtt.example
         void onMqttMessageArrived_GlobalTopic(GlobalMessage message)
         {
             //Debug.Log("message just arrived");
-            GlobalMessage receive_obj;
+            //GlobalMessage receive_obj;
 
 
             //Debug.Log("Message arrived on GlobalTopic");
@@ -101,31 +109,41 @@ namespace HG.iot.mqtt.example
             if (!message.JSONConversionFailed)
             {
                 //Debug.Log(JsonUtility.ToJson(message));
-                string json = JsonUtility.ToJson(message);
-
-
+                //string json = JsonUtility.ToJson(message);
+                
                 //parse intersting message
 
-                if (json.Contains(id_current) == true)
+                if (message.id.Contains(id_current) == true)
                 {
-                    receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                    temp_current = receive_obj.data;
+                    //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                    temp_current = message.data;
                     //Debug.Log("Value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                     if(temp_current >= max_current_ma / 100 * threshould_hight)
                     {
-
-                        test = new Notifications("Tips_speed+");
-                        notif.sendNotification(test);
+                        if ((DateTime.Now.TimeOfDay - old_time_speed_plus).Minutes > time_wait_speed_plus || flag_prod_speed_plus == false)
+                        {
+                            old_time_speed_plus = DateTime.Now.TimeOfDay;
+                            flag_prod_speed_plus = true;
+                            test = new Notifications("Tips_speed+");
+                            notif.sendNotification(test);
+                        }
+                        flag_prod_speed_plus = false;
                     }
                     else if (temp_current <= max_current_ma / 100 * threshould_low)
                     {
-                        test = new Notifications("Tips_speed-");
-                        notif.sendNotification(test);
+                        if ((DateTime.Now.TimeOfDay - old_time_speed_minus).Minutes > time_wait_speed_minus || flag_prod_speed_minus == false)
+                        {
+                            old_time_speed_minus = DateTime.Now.TimeOfDay;
+                            flag_prod_speed_minus = true;
+                            test = new Notifications("Tips_speed+");
+                            notif.sendNotification(test);
+                        }
+                        flag_prod_speed_minus = false;
                     }
                 }
             }
-            else
-                Debug.LogWarning("message arrived, but failed JSON conversion");
+            //else
+              //Debug.LogWarning("message arrived, but failed JSON conversion");
         }
 
         void onMqttSubscriptionSuccess_GlobalTopic(SubscriptionResponse response)

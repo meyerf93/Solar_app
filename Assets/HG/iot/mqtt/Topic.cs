@@ -268,7 +268,8 @@ namespace HG.iot.mqtt
 
 		public virtual void onMqttMessageArrived(string message)
 		{
-			if(!isSubscribed)
+            //print("message arrive : " + message);
+            if(!isSubscribed)
 			{
 				topic.Statistics.MessagesDropped += 1;
 				Debug.LogWarning(string.Format("Message arrived on topic '{0}' but was dropped because the topic is not subscribed.", topicType.Name));
@@ -281,15 +282,116 @@ namespace HG.iot.mqtt
 
 			try
 			{
-				msg = JsonUtility.FromJson<TMessage>(message);
+                //[{"dttp": {"uts": "W", "tag": "pw", "id": 1, "name": "Power"}, "data": 681.5899658203125, "t": "2017-10-04T15:04:55Z", "id": "knx1/:1.1.19/:/power.1"}]
+                //print("mqtt message receive : " + message+","+ String.IsNullOrEmpty(message)+","+message.Contains("null"));
 
-				if(msg==null)
-				{
-					msg = Activator.CreateInstance<TMessage>();
-					msg.JSONConversionFailed = true;
-					msg.ArrivedEmpty = true;
-				}
-			}
+                //print("pass the null test");
+                //print("test null, " + !message.Contains("null"));
+                if (message.Contains("[") || message.Contains("]") && !message.Contains("null"))
+                {
+                    if (message.Contains("zwave1"))
+                    {
+                                                // message
+                        //[{"dttp": null, "data": 24.8, "t": "2017-10-07T20:45:14Z", "id": "zwave1/:3260679919/:3/:/infos.1/:/1/:/1"}, 
+                        //{ "dttp": null, "data": 89, "t": "2017-10-07T20:45:16Z", "id": "zwave1/:3260679919/:3/:/infos.1/:/1/:/3"},
+                        //{ "dttp": null, "data": 0, "t": "2017-10-07T20:45:16Z", "id": "zwave1/:3260679919/:3/:/infos.1/:/1/:/27"}, 
+                        //{ "dttp": null, "data": 24, "t": "2017-10-07T20:45:15Z", "id": "zwave1/:3260679919/:3/:/infos.1/:/1/:/5"}]
+
+                        if (message.Contains("[") || message.Contains("]"))
+                        {
+                            message = message.Replace("[", "").Replace("]", "");
+                            message = message.Replace("{","").Replace("}","");
+                        }
+
+                        string[] temp_string_array = message.Split(new string[] { "," },StringSplitOptions.None);
+                        //print("message lengt number of split : "+temp_string_array.Length);
+
+
+                        for (int i = 0 ; i < temp_string_array.Length; i++)
+                        {
+                            if(i%4 == 0)
+                            {
+                                message = "{" + temp_string_array[i] + "," +
+                                              temp_string_array[i + 1] + "," +
+                                              temp_string_array[i + 2] + "," +
+                                              temp_string_array[i + 3] + "}";
+                                msg = JsonUtility.FromJson<TMessage>(message);
+                                if (msg == null)
+                                {
+                                    print("empty message : " + message);
+                                    msg = Activator.CreateInstance<TMessage>();
+                                    msg.JSONConversionFailed = true;
+                                    msg.ArrivedEmpty = true;
+                                }
+
+                                msg.OriginalMessage = message;
+                                notifyReceivers("onMqttMessageArrived", msg);
+                            }
+                            //print("message after filtring : " + temp_string_array[i]);                       
+                        }
+                        //print("message after recomposition : " + message);
+                    }
+                    else if(!message.Contains("[]"))
+                    {
+                        if (!message.Contains("xcom1"))
+                        {
+                            message = message.Replace("[", "").Replace("]", "");
+                        }
+
+                        msg = JsonUtility.FromJson<TMessage>(message);
+                        if (msg == null)
+                        {
+                            print("empty message : " + message);
+                            msg = Activator.CreateInstance<TMessage>();
+                            msg.JSONConversionFailed = true;
+                            msg.ArrivedEmpty = true;
+                        }
+
+                        msg.OriginalMessage = message;
+                        notifyReceivers("onMqttMessageArrived", msg);
+                    }
+
+                }
+                else if(!message.Contains("null"))
+                {
+                    //print("message : " + message);
+                    msg = JsonUtility.FromJson<TMessage>(message);
+                    if (msg == null)
+                    {
+                        print("empty message : " + message);
+                        msg = Activator.CreateInstance<TMessage>();
+                        msg.JSONConversionFailed = true;
+                        msg.ArrivedEmpty = true;
+                    }
+
+                    msg.OriginalMessage = message;
+                    notifyReceivers("onMqttMessageArrived", msg);
+                }
+                else if(message.Contains("null"))
+                {
+                    //print("message with null arrive : " + message);
+
+                    message = message.Replace("null", "\"\"");
+
+                    if (!message.Contains("xcom1"))
+                    {
+                        message = message.Replace("[", "").Replace("]", "");
+                    }
+
+                    msg = JsonUtility.FromJson<TMessage>(message);
+                    if (msg == null)
+                    {
+                        print("empty message : " + message);
+                        msg = Activator.CreateInstance<TMessage>();
+                        msg.JSONConversionFailed = true;
+                        msg.ArrivedEmpty = true;
+                    }
+
+                    msg.OriginalMessage = message;
+                    notifyReceivers("onMqttMessageArrived", msg);
+
+                }
+            }
 			catch(ArgumentException aex)
 			{
 				if(!allowEmptyMessage)
@@ -298,10 +400,6 @@ namespace HG.iot.mqtt
 				msg = Activator.CreateInstance<TMessage>();
 				msg.JSONConversionFailed = true;
 			}
-
-			msg.OriginalMessage = message;
-
-			notifyReceivers("onMqttMessageArrived",msg);
 		}
 
 		public virtual void onMqttSubscriptionSuccess(SubscriptionResponse response) 

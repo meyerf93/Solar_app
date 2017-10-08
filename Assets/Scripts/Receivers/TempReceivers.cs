@@ -67,7 +67,7 @@ namespace HG.iot.mqtt.example
 
                     _cacheGlobalTopic.Send(
                     //{"dttp": null, "data": 22.5, "t": "2017-05-15T06:47:42Z", "id": "zwave1/:3260679919/:2/:/infos.1/:/1/:/1"}
-                    new GlobalMessage { dttp = "this is text", data = 22.5, t = "2017-05-15T06:47:42Z", id = id_to_parse[j] },
+                    new GlobalMessage { data = 22.5, t = "2017-05-15T06:47:42Z", id = id_to_parse[j] },
 
                     false,
                     QualityOfServiceEnum.ExactlyOnce);
@@ -83,7 +83,7 @@ namespace HG.iot.mqtt.example
         void onMqttMessageArrived_GlobalTopic(GlobalMessage message)
         {
             //Debug.Log("message just arrived");
-            GlobalMessage receive_obj;
+            //GlobalMessage receive_obj;
 
             for(int i = 0; i < id_to_parse.Length; i++)
             {
@@ -95,24 +95,25 @@ namespace HG.iot.mqtt.example
 
             if (!message.JSONConversionFailed)
             {
-                //Debug.Log(JsonUtility.ToJson(message));
-                string json = JsonUtility.ToJson(message);
+                
+                //string json = JsonUtility.ToJson(message);
 
 
                 //parse intersting message
                 for (int i = 0; i < id_to_parse.Length; i++)
                 {
-                    if (json.Contains(id_to_parse[i]) == true)
+                    if (message.id.Contains(id_to_parse[i]) == true)
                     {
-                        receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        temp_list[i] = receive_obj.data;
-                        //Debug.Log("Value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
+                        //Debug.Log(JsonUtility.ToJson(message));
+                        //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                        temp_list[i] = message.data;
+                        //Debug.Log("Value of json object : data : " + message.data + ", t : " + message.t + ", id : " + message.id);
                     }
                 }
             }
 
-            else
-                Debug.LogWarning("message arrived, but failed JSON conversion");
+            //else
+               // Debug.LogWarning("message arrived, but failed JSON conversion");
 
             double temp_value = 0.0;
             //print("temp value before addition : " + temp_value);

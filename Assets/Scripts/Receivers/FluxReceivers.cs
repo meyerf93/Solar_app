@@ -82,7 +82,7 @@ namespace HG.iot.mqtt.example
 
                     _cacheGlobalTopic.Send(
                     //{"dttp": null, "data": 100, "t": "2017-05-15T06:47:42Z", "id": "knx1/:1.2.26/:/dim.7"}
-                    new GlobalMessage { dttp = "this is text", data = 123, t = "2017-05-15T06:47:42Z", id = id_to_parse[j] },
+                    new GlobalMessage {data = 123, t = "2017-05-15T06:47:42Z", id = id_to_parse[j] },
 
                     false,
                     QualityOfServiceEnum.AtLeastOnce);
@@ -98,7 +98,7 @@ namespace HG.iot.mqtt.example
         void onMqttMessageArrived_GlobalTopic(GlobalMessage message)
         {
             //Debug.Log("message just arrived");
-            GlobalMessage receive_obj;
+            //GlobalMessage receive_obj;
 
             for (int i = 0; i < id_to_parse.Length; i++)
             {
@@ -111,19 +111,19 @@ namespace HG.iot.mqtt.example
             if (!message.JSONConversionFailed)
             {
 
-                string json = JsonUtility.ToJson(message);
+                //string json = JsonUtility.ToJson(message);
 
-                if (!id_before_charger.Contains("null") && json.Contains(id_before_charger) == true)
+                if (!id_before_charger.Contains("null") && message.id.Contains(id_before_charger) == true)
                 {
-                    receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                    value_before_charger = receive_obj.data;
+                    //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                    value_before_charger = message.data;
                     //Debug.Log("Batt power value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
 
                 }
-                else if (!id_after_charger.Contains("null") && json.Contains(id_after_charger) == true)
+                else if (!id_after_charger.Contains("null") && message.id.Contains(id_after_charger) == true)
                 {
-                    receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                    value_after_charger = receive_obj.data;
+                    //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                    value_after_charger = message.data;
                     //Debug.Log("After bat power value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                 }
 
@@ -132,10 +132,10 @@ namespace HG.iot.mqtt.example
                     //parse intersting message
                     for (int i = 0; i < id_to_parse.Length; i++)
                     {
-                        if (json.Contains(id_to_parse[i]) == true)
+                        if (message.id.Contains(id_to_parse[i]) == true)
                         {
-                            receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                            prod_list[i] = receive_obj.data;
+                            //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                            prod_list[i] = message.data;
                             //Debug.Log("Global value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                         }
                     }
@@ -143,8 +143,8 @@ namespace HG.iot.mqtt.example
    
             }
 
-            else
-                Debug.LogWarning("message arrived, but failed JSON conversion");
+            //else
+              //  Debug.LogWarning("message arrived, but failed JSON conversion");
 
             temp_val = 0.0f;
 

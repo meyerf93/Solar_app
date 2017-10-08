@@ -83,7 +83,7 @@ namespace HG.iot.mqtt.example
                 {
                     _cacheGlobalTopic.Send(
                     //{"dttp": null, "data": 22.5, "t": "2017-05-15T06:47:42Z", "id": "zwave1/:3260679919/:2/:/infos.1/:/1/:/1"}
-                    new GlobalMessage { dttp = "", data = 22.5, t = "2017-05-15T06:47:42Z", id = id_lux[j] },
+                    new GlobalMessage { data = 22.5, t = "2017-05-15T06:47:42Z", id = id_lux[j] },
                     false,
                     QualityOfServiceEnum.ExactlyOnce);
                 }
@@ -98,7 +98,7 @@ namespace HG.iot.mqtt.example
         void onMqttMessageArrived_GlobalTopic(GlobalMessage message)
         {
             //Debug.Log("message just arrived");
-            GlobalMessage receive_obj;
+            //GlobalMessage receive_obj;
 
             //Debug.Log("Message arrived on GlobalTopic");
             //Debug.Log("Note that the message parameter in the arrival notification is strong typed to that of the topic's message");
@@ -107,15 +107,15 @@ namespace HG.iot.mqtt.example
             {
                 right_message = false;
                 //Debug.Log(JsonUtility.ToJson(message));
-                string json = JsonUtility.ToJson(message);
+                //string json = JsonUtility.ToJson(message);
 
                 for (int i = 0; i < id_lux.Length; i++)
                 {
                     if (lux_list.Count < id_lux.Length) lux_list.Add(0.0F);
-                    if (json.Contains(id_lux[i]) == true)
+                    if (message.id.Contains(id_lux[i]) == true)
                     {
-                        receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        lux_list[i] = receive_obj.data;
+                        //(receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                        lux_list[i] = message.data;
                         //Debug.Log("Value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                         right_message = true;
                     }
@@ -124,18 +124,18 @@ namespace HG.iot.mqtt.example
                 for (int i = 0; i < id_light.Length; i++)
                 {
                     if (light_list.Count < id_light.Length) light_list.Add(false);
-                    if (json.Contains(id_light[i]) == true)
+                    if (message.id.Contains(id_light[i]) == true)
                     {
-                        receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        if (receive_obj.data > 0) light_list[i] = true;
+                        //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                        if (message.data > 0) light_list[i] = true;
                         //Debug.Log("Value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                         right_message = true;
                     }
                 }
             }
 
-            else
-                Debug.LogWarning("message arrived, but failed JSON conversion");
+            //else
+              //  Debug.LogWarning("message arrived, but failed JSON conversion");
 
             if (right_message)
             {

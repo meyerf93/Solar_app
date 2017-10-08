@@ -57,12 +57,12 @@ namespace HG.iot.mqtt.example
 
             for (int i= 0; i< id_parse_list.Length; i++)
             {
+                //print("value of id :" + id_parse_list[i] + ", value of mdl : " + id_parse_list[i].Split('/')[0]);
                 _cacheRequestTopic.Send(
                 new RequestMessage { cmd = id_parse_list[i], mdl = id_parse_list[i].Split('/')[0] },
                 false,
                 QualityOfServiceEnum.ExactlyOnce);
             }
-            
         }
 
         void onMqttMessageDelivered_RequestTopic(string messageId)

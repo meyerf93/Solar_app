@@ -88,7 +88,7 @@ namespace HG.iot.mqtt.example
                 {
                     _cacheGlobalTopic.Send(
                     //{"dttp": null, "data": 22.5, "t": "2017-05-15T06:47:42Z", "id": "zwave1/:3260679919/:2/:/infos.1/:/1/:/1"}
-                    new GlobalMessage { dttp = "this is text", data = 45, t = "2017-05-15T06:47:42Z", id = id_to_parse[j] },
+                    new GlobalMessage {data = 45, t = "2017-05-15T06:47:42Z", id = id_to_parse[j] },
 
                     false,
                     QualityOfServiceEnum.ExactlyOnce);
@@ -105,7 +105,7 @@ namespace HG.iot.mqtt.example
         void onMqttMessageArrived_GlobalTopic(GlobalMessage message)
         {
             //Debug.Log("message just arrived");
-            GlobalMessage receive_obj;
+            //GlobalMessage receive_obj;
 
             //Debug.Log("Message arrived on GlobalTopic");
             //Debug.Log("Note that the message parameter in the arrival notification is strong typed to that of the topic's message")
@@ -113,16 +113,16 @@ namespace HG.iot.mqtt.example
             if (!message.JSONConversionFailed)
             {
                 //Debug.Log(JsonUtility.ToJson(message));
-                string json = JsonUtility.ToJson(message);
+                //string json = JsonUtility.ToJson(message);
                 //Debug.Log(id_to_parse);
                 //parse intersting message
                 for (int j = 0; j < id_to_parse.Length; j++)
                 {
-                    if (json.Contains(id_to_parse[j]))
+                    if (message.id.Contains(id_to_parse[j]))
                     {
-                        receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        light_mean[j] = (int)receive_obj.data;
-                        //Debug.Log("Value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
+                        //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                        light_mean[j] = (int)message.data;
+                        //Debug.Log("Value of json object : data : " + message.data + ", t : " + message.t + ", id : " + message.id);
 
                         float mean = 0.0f;
                         //Debug.Log("count light_mean  value : " + light_mean.Count);
@@ -184,7 +184,7 @@ namespace HG.iot.mqtt.example
                 }
             }
             else
-                Debug.LogWarning("message arrived, but failed JSON conversion");
+              Debug.LogWarning("message arrived, but failed JSON conversion");
         }
 
 

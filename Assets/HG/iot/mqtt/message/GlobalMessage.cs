@@ -8,7 +8,7 @@ namespace HG.iot.mqtt.example
 	[Serializable]
 	public sealed class GlobalMessage: Message
 	{
-		public string dttp;
+        public string dttp;
 		public double data;
         public string t;
         public string id;

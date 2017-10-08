@@ -13,7 +13,7 @@ namespace HG.iot.mqtt.example
         public Text text_value;
 
         public bool debug_mode_on;
-
+        public bool receive_in_kw;
         public string battery_power_id;
         public string after_bat_consump_id;
 
@@ -22,6 +22,7 @@ namespace HG.iot.mqtt.example
         private double value_after_bat;
         private double value_battery;
 
+ 
         ITopic _cacheGlobalTopic = null;
 
 		// Topic.SimpleNotifications=TRUE
@@ -74,7 +75,7 @@ namespace HG.iot.mqtt.example
 
                     _cacheGlobalTopic.Send(
                     //{"dttp": null, "data": 100, "t": "2017-05-15T06:47:42Z", "id": "knx1/:1.2.26/:/dim.7"}
-                    new GlobalMessage { dttp = "this is text", data = 1234.5, t = "2017-05-15T06:47:42Z", id = id_to_parse[j] },
+                    new GlobalMessage { data = 1234.5, t = "2017-05-15T06:47:42Z", id = id_to_parse[j] },
 
                     false,
                     QualityOfServiceEnum.AtLeastOnce);
@@ -90,7 +91,7 @@ namespace HG.iot.mqtt.example
         void onMqttMessageArrived_GlobalTopic(GlobalMessage message)
         {
             //Debug.Log("message just arrived");
-            GlobalMessage receive_obj;
+            //GlobalMessage receive_obj;
 
             for(int i = 0; i < id_to_parse.Length; i++)
             {
@@ -102,37 +103,35 @@ namespace HG.iot.mqtt.example
 
             if (!message.JSONConversionFailed)
             {
- 
-                string json = JsonUtility.ToJson(message);
-
-
+                 //string json = JsonUtility.ToJson(message);
+                 
                 //parse intersting message
                 for (int i = 0; i < id_to_parse.Length; i++)
                 {
-                    if (!battery_power_id.Contains("null") &&json.Contains(battery_power_id) == true)
+                    if (!battery_power_id.Contains("null") &&message.id.Contains(battery_power_id) == true)
                     {
-                        receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        value_before_bat = receive_obj.data;
+                        //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                        value_before_bat = message.data;
                         //Debug.Log("Batt power value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
 
                     }
-                    else if (!after_bat_consump_id.Contains("null") && json.Contains(after_bat_consump_id) == true)
+                    else if (!after_bat_consump_id.Contains("null") && message.id.Contains(after_bat_consump_id) == true)
                     {
-                        receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        value_after_bat = receive_obj.data;
+                        //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                        value_after_bat = message.data;
                         //Debug.Log("After bat power value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                     }
-                    else if (json.Contains(id_to_parse[i]) == true)
+                    else if (message.id.Contains(id_to_parse[i]) == true)
                     {
-                        receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
-                        prod_list[i] = receive_obj.data;
+                        //receive_obj = JsonUtility.FromJson<GlobalMessage>(json);
+                        prod_list[i] = message.data;
                         //Debug.Log("Global value of json object : data : " + receive_obj.data + ", t : " + receive_obj.t + ", id : " + receive_obj.id);
                     }
                 }
             }
 
-            else
-                Debug.LogWarning("message arrived, but failed JSON conversion");
+           // else
+             //   Debug.LogWarning("message arrived, but failed JSON conversion");
 
             prod_slider.value = 0.0f;
             int j = 0;
@@ -161,8 +160,9 @@ namespace HG.iot.mqtt.example
 
             if (value_after_bat > 0) prod_slider.value += (float)value_after_bat;
             if (value_battery > 0) prod_slider.value += (float)value_battery;
-
+            if (receive_in_kw) prod_slider.value = prod_slider.value* 1000;
             text_value.text= prod_slider.value.ToString("F1")+" W";
+
         }
 
         void onMqttSubscriptionSuccess_GlobalTopic(SubscriptionResponse response)
