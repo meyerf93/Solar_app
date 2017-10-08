@@ -105,7 +105,7 @@ namespace HG.iot.mqtt.example
             }
             //else Debug.LogWarning("message arrived, but failed JSON conversion");
 
-            if (!InKWH) energyValue /= 1000; 
+            if (!InKWH) energyValue = energyValue /= 1000; 
             text_value.text = energyValue.ToString("F1") + " kWh";
         }
 

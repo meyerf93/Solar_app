@@ -22291,7 +22291,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse:
   - zwave1/:3260679919/:9/:/infos.1/:/1/:/1
-  - zwave1/:3260679919/:3/:/infos.1/:/1/:/1
   text_value: {fileID: 1631960735}
   prefix: Core
   unit: "\xB0C"
@@ -32724,7 +32723,7 @@ MonoBehaviour:
   prod_slider: {fileID: 590565325}
   text_value: {fileID: 1913782651}
   debug_mode_on: 0
-  receive_in_kw: 0
+  receive_in_kw: 1
   battery_power_id: null
   after_bat_consump_id: null
 --- !u!114 &590565325
@@ -104453,7 +104452,6 @@ GameObject:
   m_Component:
   - component: {fileID: 1930469522}
   - component: {fileID: 1930469521}
-  - component: {fileID: 1930469523}
   m_Layer: 0
   m_Name: ChargeLocked
   m_TagString: Untagged
@@ -104488,17 +104486,6 @@ Transform:
   m_Father: {fileID: 661752823}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &1930469523
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1930469520}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fd41fe000e5a7044d902bb265b7d3123, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1931375613
 GameObject:
   m_ObjectHideFlags: 0
