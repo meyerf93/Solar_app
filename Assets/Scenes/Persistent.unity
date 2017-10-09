@@ -3002,6 +3002,7 @@ GameObject:
   - component: {fileID: 35595691}
   - component: {fileID: 35595693}
   - component: {fileID: 35595692}
+  - component: {fileID: 35595694}
   m_Layer: 5
   m_Name: Lights_list
   m_TagString: Untagged
@@ -3109,6 +3110,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 1
+--- !u!114 &35595694
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 35595687}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbb966a33b2ac7429da1c82d3aa9696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pop_up_list:
+  - {fileID: 1067879758}
+  - {fileID: 2037972922}
 --- !u!1 &36062616
 GameObject:
   m_ObjectHideFlags: 0
@@ -6319,6 +6334,7 @@ GameObject:
   - component: {fileID: 79268401}
   - component: {fileID: 79268405}
   - component: {fileID: 79268400}
+  - component: {fileID: 79268406}
   m_Layer: 5
   m_Name: Electric_list
   m_TagString: Untagged
@@ -6431,6 +6447,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 1
+--- !u!114 &79268406
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 79268399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbb966a33b2ac7429da1c82d3aa9696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pop_up_list:
+  - {fileID: 151005980}
+  - {fileID: 1444133939}
+  - {fileID: 106428817}
 --- !u!1 &83336511
 GameObject:
   m_ObjectHideFlags: 0
@@ -12067,7 +12098,7 @@ MonoBehaviour:
           m_FloatArgument: 0
           m_StringArgument: 
           m_BoolArgument: 0
-        m_CallState: 2
+        m_CallState: 1
     m_TypeName: UnityEngine.UI.Toggle+ToggleEvent, UnityEngine.UI, Version=1.0.0.0,
       Culture=neutral, PublicKeyToken=null
   m_IsOn: 0
@@ -34414,6 +34445,7 @@ GameObject:
   - component: {fileID: 624012817}
   - component: {fileID: 624012819}
   - component: {fileID: 624012818}
+  - component: {fileID: 624012820}
   m_Layer: 5
   m_Name: Car_list
   m_TagString: Untagged
@@ -34526,6 +34558,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 1
+--- !u!114 &624012820
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 624012813}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbb966a33b2ac7429da1c82d3aa9696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pop_up_list:
+  - {fileID: 526691569}
+  - {fileID: 530176841}
+  - {fileID: 112926921}
 --- !u!1 &624683182
 GameObject:
   m_ObjectHideFlags: 0
@@ -50593,6 +50640,7 @@ MonoBehaviour:
   - {fileID: 132628511}
   - {fileID: 1310519174}
   - {fileID: 1516950801}
+  - {fileID: 1156050393}
 --- !u!114 &916656303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -62281,6 +62329,21 @@ MonoBehaviour:
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
+--- !u!114 &1156050393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1e49f9b230c60264580b1181493d3c69, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  delay: 0
+  Building: {fileID: 1479709053}
+  defaultRotation: 0
+  rotation: {x: 0, y: 0, z: 0}
 --- !u!1 &1156656461
 GameObject:
   m_ObjectHideFlags: 0
@@ -69284,6 +69347,7 @@ GameObject:
   - component: {fileID: 1289879705}
   - component: {fileID: 1289879710}
   - component: {fileID: 1289879706}
+  - component: {fileID: 1289879711}
   m_Layer: 5
   m_Name: Lights_list
   m_TagString: Untagged
@@ -69391,6 +69455,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_AllowSwitchOff: 1
+--- !u!114 &1289879711
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1289879704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbb966a33b2ac7429da1c82d3aa9696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pop_up_list:
+  - {fileID: 407837375}
+  - {fileID: 416142532}
 --- !u!1 &1290696584
 GameObject:
   m_ObjectHideFlags: 0
@@ -72070,6 +72148,7 @@ GameObject:
   - component: {fileID: 1332349458}
   - component: {fileID: 1332349461}
   - component: {fileID: 1332349462}
+  - component: {fileID: 1332349463}
   m_Layer: 5
   m_Name: Car_list
   m_TagString: Untagged
@@ -72181,6 +72260,20 @@ CanvasGroup:
   m_Interactable: 1
   m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
+--- !u!114 &1332349463
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1332349456}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbb966a33b2ac7429da1c82d3aa9696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pop_up_list:
+  - {fileID: 727769000}
+  - {fileID: 716327664}
 --- !u!1 &1334520618
 GameObject:
   m_ObjectHideFlags: 0
@@ -92037,6 +92130,7 @@ GameObject:
   - component: {fileID: 1701572118}
   - component: {fileID: 1701572117}
   - component: {fileID: 1701572116}
+  - component: {fileID: 1701572121}
   m_Layer: 5
   m_Name: Electric_list
   m_TagString: Untagged
@@ -92151,6 +92245,20 @@ CanvasRenderer:
     type: 2}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1701572114}
+--- !u!114 &1701572121
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1701572114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9dbb966a33b2ac7429da1c82d3aa9696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  pop_up_list:
+  - {fileID: 204033402}
+  - {fileID: 1007654563}
 --- !u!1 &1702898724
 GameObject:
   m_ObjectHideFlags: 0
@@ -109530,6 +109638,94 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 157952643}
         m_MethodName: Reset_transform
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1341676941}
+        m_MethodName: switch_home
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1045065603}
+        m_MethodName: switch_home
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1289879711}
+        m_MethodName: ResetPopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 79268406}
+        m_MethodName: ResetPopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1332349463}
+        m_MethodName: ResetPopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 35595694}
+        m_MethodName: ResetPopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1701572121}
+        m_MethodName: ResetPopup
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 624012820}
+        m_MethodName: ResetPopup
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
