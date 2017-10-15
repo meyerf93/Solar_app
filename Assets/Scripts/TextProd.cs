@@ -11,6 +11,7 @@ public class TextProd : MonoBehaviour {
     public Text text_2;
     public Text text_3;
     public Text text_4;
+    public Text Default;
 
     public double thresshold_1;
     public double thresshold_2;
@@ -25,6 +26,7 @@ public class TextProd : MonoBehaviour {
             text_2.enabled = false;
             text_3.enabled = false;
             text_4.enabled = true;
+            Default.enabled = false;
         }
         else if (value > thresshold_3)
         {
@@ -32,6 +34,7 @@ public class TextProd : MonoBehaviour {
             text_2.enabled = false;
             text_3.enabled = true;
             text_4.enabled = false;
+            Default.enabled = false;
         }
         else if(value > thresshold_2)
         {
@@ -39,6 +42,7 @@ public class TextProd : MonoBehaviour {
             text_2.enabled = true;
             text_3.enabled = false;
             text_4.enabled = false;
+            Default.enabled = false;
         }
         else if (value > thresshold_1)
         {
@@ -46,6 +50,15 @@ public class TextProd : MonoBehaviour {
             text_2.enabled = false;
             text_3.enabled = false;
             text_4.enabled = false;
+            Default.enabled = false;
+        }
+        else
+        {
+            text_1.enabled = false;
+            text_2.enabled = false;
+            text_3.enabled = false;
+            text_4.enabled = false;
+            Default.enabled = true;
         }
     }
 }

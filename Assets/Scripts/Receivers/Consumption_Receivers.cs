@@ -123,7 +123,7 @@ namespace HG.iot.mqtt.example
             // Debug.Log("Temp value before : " + temp_value);
             for (; j < id_to_parse.Length; j++)
             {
-                temp_value += (float)prod_list[j];
+                if (!(prod_list[j] <= 0)) temp_value += (float)prod_list[j]; 
             }
             //Debug.Log("Temp value after : " + temp_value+" ; slide value before : "+prod_slider.value);
             prod_slider.value = temp_value / 1000;

@@ -10,11 +10,11 @@ public class PercentChange : MonoBehaviour {
 
     public void Onchange(float value)
     {
-        text_value.text = (value / max_value_slider.value * 100).ToString("F1")+" %";
+        if(max_value_slider.value != 0) text_value.text = (value / max_value_slider.value * 100).ToString("F1")+" %";
     }
 
     public void MaxSliderChange(float value)
     {
-        text_value.text = (actual_slider.value / value * 100).ToString("F1") + " %";
+        if(value != 0)  text_value.text = (actual_slider.value / value * 100).ToString("F1") + " %";
     }
 }
