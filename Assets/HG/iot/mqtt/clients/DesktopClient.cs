@@ -32,7 +32,7 @@ namespace HG.iot.mqtt.clients
             _platform = new uPLibrary.Networking.M2Mqtt.MqttClient(_connectionOptions.Host);	//TODO: port and SSL not supported
 			//_platform.ProtocolVersion = (uPLibrary.Networking.M2Mqtt.MqttProtocolVersion)options.ProtocolVersion;
 
-			_platform.MqttMsgDisconnected += _platform_ConnectionClosed;
+			//_platform.MqttMsgDisconnected += _platform_ConnectionClosed;
 			//_platform.MqttMsgPublished += _platform_MqttMsgPublished;
 			_platform.MqttMsgPublishReceived += _platform_MqttMsgPublishReceived;
 			_platform.MqttMsgSubscribed += _platform_MqttMsgSubscribed;
