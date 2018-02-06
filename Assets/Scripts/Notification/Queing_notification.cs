@@ -11,6 +11,8 @@ public class Queing_notification : MonoBehaviour {
     public GameObject List_tips;
     public GameObject default_tips;
 
+    public Boolean Generate_defautl_tips;
+
     public float Space_change;
     
     public Toggle alarmButton;
@@ -33,6 +35,39 @@ public class Queing_notification : MonoBehaviour {
     {
         notificationList = new List<Notifications>();
         notif_num = notificationList.Count;
+        if (Generate_defautl_tips) generateDefaultTips();
+    }
+
+
+    public void generateDefaultTips()
+    {
+        Notifications test = null;
+        test = new Notifications("Tips_light");
+        this.sendNotification(test);
+        test = new Notifications("Tips_buy_cheap");
+        this.sendNotification(test);
+        test = new Notifications("Tips_buy_expen");
+        this.sendNotification(test);
+        test = new Notifications("Tips_sell_cheap");
+        this.sendNotification(test);
+        test = new Notifications("Tips_sell_expen");
+        this.sendNotification(test);
+        test = new Notifications("Tips_consu_down");
+        this.sendNotification(test);
+        test = new Notifications("Tips_consu_up");
+        this.sendNotification(test);
+        test = new Notifications("Tips_produ_down");
+        this.sendNotification(test);
+        test = new Notifications("Tips_produce_up");
+        this.sendNotification(test);
+        test = new Notifications("Tips_unplug");
+        this.sendNotification(test);
+        test = new Notifications("Tips_speed-");
+        this.sendNotification(test);
+        test = new Notifications("Tips_plug");
+        this.sendNotification(test);
+        test = new Notifications("Tips_speed+");
+        this.sendNotification(test);
     }
 
     public void ClickAlarmOn(bool value_toggle)
