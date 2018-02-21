@@ -1789,7 +1789,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &11230769
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1814,7 +1814,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _defaultConnectionOptions:
     Port: 1883
-    Host: 192.168.2.2
+    Host: test.mosquitto.org
     RandomClientId: 1
     Path: /mqtt
     AutoReconnect: 1
@@ -12403,7 +12403,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/cdim.2
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &208123245
 GameObject:
   m_ObjectHideFlags: 0
@@ -21472,7 +21472,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   notif: {fileID: 986041019}
   id_to_parse: knx1/:1.1.7/:/power.1
-  debug_mode_on: 0
+  debug_mode_on: 1
   time_wait_min_buy: 10
   time_wait_min_sell: 10
   good_sell_begin: 13
@@ -33085,7 +33085,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/cdim.6
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &593220774
 GameObject:
   m_ObjectHideFlags: 0
@@ -39849,7 +39849,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/cdim.9
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!114 &707532219
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48002,7 +48002,7 @@ MonoBehaviour:
   - knx1/:1.2.29/:/sdim.2
   - knx1/:1.2.29/:/sdim.3
   - knx1/:1.2.29/:/sdim.4
-  debug_mode_on: 0
+  debug_mode_on: 1
   lux_threshold: 60000
   time_wait_lux: 10
 --- !u!1 &873848664
@@ -51041,7 +51041,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/cdim.5
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &931222331
 GameObject:
   m_ObjectHideFlags: 0
@@ -51152,7 +51152,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/cdim.8
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &938570810
 GameObject:
   m_ObjectHideFlags: 0
@@ -78071,7 +78071,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/cdim.3
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1440467274
 GameObject:
   m_ObjectHideFlags: 0
@@ -80492,7 +80492,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   notif: {fileID: 986041019}
-  debug_mode_on: 0
+  debug_mode_on: 1
   id_current: keba1/:192.168.2.106/:/curr
   max_current_ma: 16000
   threshould_low: 33
@@ -83157,7 +83157,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/cdim.7
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1540108528
 GameObject:
   m_ObjectHideFlags: 0
@@ -103362,7 +103362,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/cdim.4
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!114 &1911083741
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -107121,7 +107121,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id_to_parse: knx1/:1.2.26/:/cdim.1
   mdl: knx1
-  debug_mode_on: 0
+  debug_mode_on: 1
 --- !u!1 &1976792271
 GameObject:
   m_ObjectHideFlags: 0
